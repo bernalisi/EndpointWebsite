@@ -5,13 +5,14 @@ export default function Resources() {
     {title: "RWE framework for regulatory submissions in Europe", type: "WHITEPAPER"}]
 
   return (
-    <div className="w-full bg-black flex flex-col justify-center items-start gap-4 px-14 pb-20 pt-5">
+    <div className="w-full bg-black flex flex-col justify-center items-start gap-4 px-14 pb-20 pt-5 pt-16">
       <h6 className="text-white">RESOURCES</h6>
+
       <div className="w-[100%] border-t-2 border-white flex flex-col gap-20 justify-between items-start">
         {/* header section */}
-        <h3 className="text-white text-[40px] mt-3">Check out our latest news and updates</h3>
+        <h2 className="text-white text-[48px] mt-3">Check out our latest news and updates</h2>
 
-        {/* list of articles */}
+        {/* Content of section */}
         <div className="w-full flex flex-row justify-evenly items-center gap-10">
           {Resources.map((r)=>
           <div key={r} className="w-[400px] h-[370px] flex flex-col justify-between gap-0 text-white">
@@ -20,6 +21,7 @@ export default function Resources() {
             <p className="text-[24px] font-semibold">{r.title}</p>
             <button className="w-[35%] h-8 px-3 py-1 flex justify-center items-center font-semibold border border-white bg-white transition duration-150 ease-in-out text-black hover:opacity-90"> READ MORE</button>
           </div>)}
+
         </div>
       </div>
     </div>  )
