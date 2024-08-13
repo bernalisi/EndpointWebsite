@@ -1,4 +1,4 @@
-import bg_image from "../assets/images/Background_contact_2.svg"
+import bg_image from "../assets/images/Background_contact.png"
 
 
 export default function Contact() {
