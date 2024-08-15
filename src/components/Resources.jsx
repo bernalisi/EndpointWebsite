@@ -1,3 +1,6 @@
+import dot_separator from "../assets/images/Dot-separator.svg"
+import chevron_icon from "../assets/images/Chevron down white.svg"
+
 export default function Resources() {
   const Resources = [
     {title: "Effects of the European Health Data Space" ,type: "BLOG"},
@@ -6,7 +9,10 @@ export default function Resources() {
 
   return (
     <div className="w-full bg-black flex flex-col justify-center items-start gap-4 px-14 pb-20 pt-5 pt-16">
-      <h6 className="text-white">RESOURCES</h6>
+      <div className="flex flex-row justify-start items-center gap-2">
+        <img src={dot_separator} className="h-4" />
+        <h6 className="text-white">NEWS AND PRESS RELEASES</h6>
+      </div>
 
       <div className="w-[100%] border-t-2 border-white flex flex-col gap-20 justify-between items-start">
         {/* header section */}
@@ -19,7 +25,10 @@ export default function Resources() {
             <div className="h-52 bg-slate-100"></div>
             <h6 className="text-[12px] font-light">{r.type}</h6>
             <p className="text-[24px] font-semibold">{r.title}</p>
-            <button className="w-[35%] h-8 px-3 py-1 flex justify-center items-center font-semibold border border-white bg-white transition duration-150 ease-in-out text-black hover:opacity-90"> READ MORE</button>
+            <button className="w-[100%] h-8 py-1 flex justify-start items-center font-extralight tracking-widest transition duration-150 ease-in-out text-white hover:opacity-80">
+              <a href="">Read more</a>
+              <img src={chevron_icon} alt="chevron-button" className="h-5 px-3"/>
+            </button>
           </div>)}
 
         </div>
