@@ -5,7 +5,7 @@ const Navigation = ['LIFE SCIENCES', 'PROVIDERS', 'RESOURCES']
 
 
   return (
-  <div className="w-full h-16 flex items-center justify-between bg-white border border-white px-6">
+  <div className=" sticky top-0 w-full h-16 flex items-center justify-between bg-white border border-white px-6">
     <div className="flex items-center space-x-14">
       {/* Logo */}
       <div className="flex-shrink-0">
