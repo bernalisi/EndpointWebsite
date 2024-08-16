@@ -1,24 +1,34 @@
-import Navbar from "./components/Navbar"
-import Homepage from "./components/Homepage"
-import Footer from "./components/Footer"
-import Resources from "./components/Resources"
-import Stats from "./components/Stats"
-import Platform from "./components/Platform"
-import Contact from "./components/Contact"
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
+
+import Homepage from "./pages/Homepage";
+import LifeSciences from "./pages/LifeSciences"
+import HealthcareProviders from "./pages/HealthcareProviders"
+import Resources from "./pages/Resources"
+import Navbar from "./components/layout/Navbar"
+import Footer from "./components/layout/Footer"
 
 function App() {
-
   return (
     <>
-      <div>
-       <Navbar/>
-       <Homepage/>
-       <Platform/>
-       <Stats/>
-       <Contact/>
-       <Resources/>
-       <Footer/>
-      </div>
+    {/* Layout - Navbar*/}
+    <Navbar/>
+
+      {/* React Routes */}
+      <Router>
+        <Routes>
+          <Route path="/" element={<Homepage/>}/>
+          <Route path="/LIFE SCIENCES" element={<LifeSciences/>}/>
+          <Route path="/PROVIDERS" element={<HealthcareProviders/>}/>
+          <Route path="/RESOURCES" element={<Resources/>}/>
+        </Routes>
+      </Router>
+
+    {/* Layout - Footer */}
+    <Footer/>
     </>
   )
 }
