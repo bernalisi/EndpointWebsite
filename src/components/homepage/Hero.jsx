@@ -1,5 +1,5 @@
 import chevron_down from "../../assets/images/ui/Chevron down white.svg"
-import background from "../../assets/images/homepage/Background-homepage.svg"
+import background from "../../assets/images/homepage/Central-bubble.svg"
 
 export default function Hero() {
   return (
