@@ -1,10 +1,10 @@
 import chevron_down from "../../assets/images/ui/Chevron down white.svg"
-import background from "../../assets/images/homepage/Central-bubble.svg"
+import background from "../../assets/images/homepage/Background-homepage.svg"
 
 export default function Hero() {
   return (
     <div className="bg-cover bg-center bg-no-repeat bg-black flex flex-row justify-end"
-    style={{ backgroundImage: `url(${background})` }}>
+    style={{ backgroundImage: `url(${background})`}}>
 
       <div className="w-full pt-32 pb-[333px] pl-20 flex justify-start items-start flex-col gap-6">
         {/* First paragraph */}
