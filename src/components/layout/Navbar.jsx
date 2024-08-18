@@ -6,6 +6,7 @@ import {useState, useEffect} from "react"
 export default function Navbar() {
 const Navigation = ['LIFE SCIENCES', 'PROVIDERS', 'RESOURCES']
 const [scrolling, setScrolling] = useState(false)
+const [hovering, setHovering] = useState(false)
 
 useEffect(() => {
   window.addEventListener('scroll', handleScroll);
@@ -22,12 +23,12 @@ const handleScroll = () => {
 
   return (
     <div className="absolute w-full h-full">
-      <nav className={scrolling? "sticky top-0 w-full h-16 flex items-center justify-between bg-white border border-white px-6" : "sticky top-0 w-full h-16 flex items-center justify-between bg-transparent border-b-2 border-white px-6"}>
+      <nav onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)} className={scrolling || hovering? "fixed top-0 w-full h-16 flex items-center justify-between bg-white border border-white px-6" : "fixed top-0 w-full h-16 flex items-center justify-between bg-transparent border-b-2 border-white px-6"}>
         <div className="flex items-center space-x-14">
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="/">
-              <img src={scrolling? Logo : Logo_white} alt="Logo" className="h-11"/>
+              <img src={scrolling || hovering?  Logo : Logo_white} alt="Logo" className="h-11"/>
             </a>
           </div>
 
@@ -35,7 +36,7 @@ const handleScroll = () => {
           <ul className="flex space-x-4">
             {Navigation.map((element) => (
               <li key={element}>
-                <a href={`${element}`} className={scrolling? "text-black hover:text-violet-900 font-medium" : "text-white hover:text-violet-600 font-medium"}>
+                <a href={`${element}`} className={scrolling || hovering? "text-black hover:text-violet-900 font-medium" : "text-white hover:text-violet-600 font-medium"}>
                   {element}
                 </a>
               </li>
@@ -45,7 +46,7 @@ const handleScroll = () => {
 
         {/* Buttons */}
         <div className="flex space-x-4">
-          <button className={scrolling? "h-8 px-5 py-1 flex items-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white" : "h-8 px-5 py-1 flex items-center font-semibold border-2 border-white text-white transition duration-150 ease-in-out hover:bg-white hover:text-black"}>
+          <button className={scrolling || hovering? "h-8 px-5 py-1 flex items-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white" : "h-8 px-5 py-1 flex items-center font-semibold border-2 border-white text-white transition duration-150 ease-in-out hover:bg-white hover:text-black"}>
             LOG IN
           </button>
           <button className="h-8 px-5 py-1 flex items-center font-semibold bg-violet-900 text-white hover:opacity-70 transition duration-150 ease-out">
