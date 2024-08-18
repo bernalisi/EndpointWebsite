@@ -15,20 +15,22 @@ function App() {
   return (
     <>
     {/* Layout - Navbar*/}
-    <Navbar/>
+    <div>
+      <Navbar/>
 
-      {/* React Routes */}
-      <Router>
-        <Routes>
-          <Route path="/" element={<Homepage/>}/>
-          <Route path="/LIFE SCIENCES" element={<LifeSciences/>}/>
-          <Route path="/PROVIDERS" element={<HealthcareProviders/>}/>
-          <Route path="/RESOURCES" element={<Resources/>}/>
-        </Routes>
-      </Router>
+        {/* React Routes */}
+        <Router>
+          <Routes>
+            <Route path="/" element={<Homepage/>}/>
+            <Route path="/LIFE SCIENCES" element={<LifeSciences/>}/>
+            <Route path="/PROVIDERS" element={<HealthcareProviders/>}/>
+            <Route path="/RESOURCES" element={<Resources/>}/>
+          </Routes>
+        </Router>
 
-    {/* Layout - Footer */}
-    <Footer/>
+      {/* Layout - Footer */}
+      <Footer/>
+    </div>
     </>
   )
 }
