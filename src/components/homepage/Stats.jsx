@@ -9,7 +9,7 @@ export default function Stats() {
 
 
   return (
-    <div className="w-full bg-black flex flex-col justify-center items-start gap-4 px-14 pb-20 pt-5">
+    <div className="w-full h-auto bg-black flex flex-col justify-center items-start gap-4 px-14 pt-10 pb-20">
 
       <div className="flex flex-row justify-start items-center gap-2">
         <img src={dot_separator} className="h-4" />
@@ -17,13 +17,13 @@ export default function Stats() {
       </div>
 
 
-      <div className="w-[100%] border-t-2 border-white flex flex-col gap-20 justify-between items-start">
+      <div className="w-[100%] flex flex-col gap-10 justify-between items-start">
 
         {/* header section */}
         <h2 className="text-white text-[48px] mt-3">Global, High-Quality RWD Ecosystem</h2>
 
         {/* Content of section */}
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-5">
           {Statistics.map((s) =>
           <div key={s} className="flex flex-col justify-center items-start gap-1">
             <p className="text-white text-[128px] font-medium">{`${s.data}+`}</p>

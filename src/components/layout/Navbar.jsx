@@ -14,7 +14,7 @@ useEffect(() => {
 }, []);
 
 const handleScroll = () => {
-  if (window.scrollY > 30) {
+  if (window.scrollY > 10) {
     setScrolling(true);
   } else {
     setScrolling(false);
@@ -22,7 +22,7 @@ const handleScroll = () => {
 };
 
   return (
-    <div className="absolute w-full h-full">
+    <div className="absolute w-full h-full z-50">
       <nav onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)} className={scrolling || hovering? "fixed top-0 w-full h-16 flex items-center justify-between bg-white border border-white px-6" : "fixed top-0 w-full h-16 flex items-center justify-between bg-transparent border-b-2 border-white px-6"}>
         <div className="flex items-center space-x-14">
           {/* Logo */}

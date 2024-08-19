@@ -1,10 +1,10 @@
-import bg_image from "../../assets/images/homepage/Background-homepage.svg"
+import bg_image from "../../assets/images/homepage/Background_contact.png"
 import dot_separator from "../../assets/images/ui/Dot-separator-white.svg"
 import chevron_icon from "../../assets/images/ui/Chevron down black.svg"
 
 export default function Contact() {
   return (
-    <div className="bg-cover bg-center bg-no-repeat w-full h-[1000px]  bg-black flex flex-col justify-center items-start gap-4 px-14 pb-20 pt-5"
+    <div className="bg-cover bg-center bg-no-repeat w-full h-screen  bg-black flex flex-col justify-center items-start gap-4 px-14"
     style={{ backgroundImage: `url(${bg_image})` }}>
 
        <div className="flex flex-row justify-start items-center gap-2">
