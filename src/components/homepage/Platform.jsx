@@ -6,14 +6,14 @@ import line_icon from "../../assets/images/ui/Line_icon.svg"
 
 export default function Platform() {
   return (
-    <div className="w-full bg-black flex flex-col justify-center items-start gap-4 px-14 pb-20 pt-5">
+    <div className="w-full bg-black flex flex-col justify-center items-start gap-4 px-14 pt-20">
 
       <div className="flex flex-row justify-start items-center gap-2">
         <img src={dot_separator} className="h-4" />
         <h6 className="text-white">OUR PLATFORM</h6>
       </div>
 
-      <div className="w-[100%] border-t-2 border-white flex flex-col gap-5 justify-between items-start">
+      <div className="w-[100%] flex flex-col gap-5 justify-between items-start">
 
         {/* header section */}
         <h2 className="text-white text-[48px] mt-3">The largest ecosystem of RWD providers</h2>

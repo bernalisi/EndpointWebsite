@@ -9,7 +9,7 @@ export default function Why() {
     {title: "Clean rooms", description:  "Collaborate and analyze collective datasets without sharing underlying data", image: ""}]
 
   return (
-    <div className="w-full pt-10 bg-white flex flex-col justify-center items-start gap-4 px-14 pb-20">
+    <div className="w-full h-screen mt-20 bg-white flex flex-col justify-center items-start gap-4 px-14 pb-20">
       <div className="flex flex-row justify-start items-center gap-2">
         <img src={dot_separator} className="h-4" />
         <h6 className="text-black font-semibold">WHY ENDPOINT</h6>
