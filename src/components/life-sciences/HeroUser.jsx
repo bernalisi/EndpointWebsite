@@ -1,6 +1,5 @@
 import chevron_down from "../../assets/images/ui/Chevron down white.svg"
 import background from "../../assets/images/homepage/Background_contact.png"
-import lines from "../../assets/images/ui/bg-lines-ls.svg"
 
 export default function HeroUser() {
   return (

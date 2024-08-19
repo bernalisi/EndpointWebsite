@@ -3,7 +3,7 @@ import background from "../../assets/images/homepage/Central-bubble.svg"
 
 export default function Hero() {
   return (
-    <div className="h-screen bg-cover bg-center bg-no-repeat bg-black flex flex-row justify-end"
+    <div className="h-screen bg-cover bg-center bg-no-repeat bg-black flex flex-row"
     style={{ backgroundImage: `url(${background})`}}>
 
       <div className="w-full pt-32 pb-[333px] pl-20 flex justify-start items-start flex-col gap-6">

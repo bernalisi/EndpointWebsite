@@ -45,11 +45,11 @@ const handleScroll = () => {
         </div>
 
         {/* Buttons */}
-        <div className="flex space-x-4">
-          <button className={scrolling || hovering? "h-8 px-5 py-1 flex items-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white" : "h-8 px-5 py-1 flex items-center font-semibold border-2 border-white text-white transition duration-150 ease-in-out hover:bg-white hover:text-black"}>
+        <div className="flex flex-row gap-4">
+          <button className={scrolling || hovering? "h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white" : "h-8 px-5 py-1 flex items-center font-semibold border-2 border-white text-white transition duration-150 ease-in-out hover:bg-white hover:text-black"}>
             LOG IN
           </button>
-          <button className="h-8 px-5 py-1 flex items-center font-semibold bg-violet-900 text-white hover:opacity-70 transition duration-150 ease-out">
+          <button className="h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-violet-900 border-violet-900 text-white transition duration-150 ease-in-out hover:opacity-70">
             BOOK DEMO
           </button>
         </div>
