@@ -15,6 +15,7 @@ function App() {
   return (
     <>
     {/* Layout - Navbar*/}
+    <div className="">
       <Navbar/>
 
         {/* React Routes */}
@@ -29,6 +30,7 @@ function App() {
 
       {/* Layout - Footer */}
       <Footer/>
+    </div>
     </>
   )
 }

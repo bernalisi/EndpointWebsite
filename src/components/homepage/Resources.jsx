@@ -21,7 +21,7 @@ export default function Resources() {
         {/* Content of section */}
         <div className="w-full flex flex-row justify-evenly items-center gap-10">
           {Resources.map((r)=>
-          <div key={r} className="w-[400px] h-[370px] flex flex-col justify-between gap-0 text-white">
+          <div key={r.title} className="w-[400px] h-[370px] flex flex-col justify-between gap-0 text-white">
             <div className="h-52 bg-slate-100"></div>
             <h6 className="text-[12px] font-light">{r.type}</h6>
             <p className="text-[24px] font-semibold">{r.title}</p>
