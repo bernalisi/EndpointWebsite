@@ -6,7 +6,7 @@ import Contact from "../components/layout/Contact"
 
 export default function Homepage() {
   return (
-    <div>
+    <div className="w-screen">
       <Hero/>
       <Platform/>
       <Stats/>

@@ -25,7 +25,7 @@ export default function Stats() {
         {/* Content of section */}
         <div className="flex flex-col gap-5">
           {Statistics.map((s) =>
-          <div key={s} className="flex flex-col justify-center items-start gap-1">
+          <div key={s.type} className="flex flex-col justify-center items-start gap-1">
             <p className="text-white text-[128px] font-medium">{`${s.data}+`}</p>
             <img src={line_icon} alt="line icon" className="h-1" />
             <h6 className="text-white text-[36px] font-extralight">{s.type}</h6>
