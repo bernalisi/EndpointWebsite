@@ -6,7 +6,7 @@ export default function Hero() {
     <div className="w-screen h-screen bg-cover bg-center bg-no-repeat bg-black flex flex-row"
     style={{ backgroundImage: `url(${background})`}}>
 
-      <div className="w-screen h-screen mt-[60px] px-4 sm:px-6 lg:px-8 pt-32 pb-[333px] flex max-md:items-center max-sm:justify-end items-start flex-col gap-6">
+      <div className="w-screen h-screen mt-[60px] px-2 sm:px-6 lg:px-8 pt-32 pb-[333px] flex max-md:items-center max-sm:justify-end items-start flex-col gap-6">
         {/* First paragraph */}
         <h1 className="w-[100%] lg:w-[60%] xl:w-[55%] text-white px-4 xl:text-[70px] lg:text-[70px] md:text-[60px] sm:text-[50px] text-[40px] max-md:text-center font-extralight leading-tight">The one-stop shop for all your RWD needs</h1>
 

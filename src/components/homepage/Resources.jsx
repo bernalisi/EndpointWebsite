@@ -9,7 +9,7 @@ export default function Resources() {
   ];
 
   return (
-    <div className="w-full h-auto bg-black flex flex-col justify-center items-start gap-4 px-4 md:px-14 pb-20">
+    <div className="w-full h-auto bg-black flex flex-col justify-center items-start gap-4 px-6 mb-20 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20">
       <div className="flex flex-row justify-start items-center gap-2">
         <img src={dot_separator} className="h-4" />
         <h6 className="text-white text-sm md:text-base">NEWS AND PRESS RELEASES</h6>
@@ -17,7 +17,7 @@ export default function Resources() {
 
       <div className="w-full flex flex-col gap-10 md:gap-32 justify-between items-start">
         {/* header section */}
-        <h2 className="text-white text-2xl md:text-[48px] mt-3 text-center md:text-left">
+        <h2 className="text-white text-2xl md:text-[48px] mt-3 text-start md:text-left">
           Check out our latest news and updates
         </h2>
 
