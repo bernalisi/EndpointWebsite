@@ -4,7 +4,7 @@ import line_icon from "../../assets/images/ui/Line_icon_white.svg"
 export default function Stats() {
   const Statistics = [
     { type: "Data Providers", data: 200 },
-    { type: "Patients", data: "1,000,000,000" },
+    { type: "Patients", data: "1,000,000" },
     { type: "Countries", data: 50 },
   ];
 

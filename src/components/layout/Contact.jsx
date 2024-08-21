@@ -24,7 +24,7 @@ export default function Contact() {
 
       {/* Content here */}
       <div className="mt-32 md:mt-14 flex flex-col justify-center items-start gap-8 md:gap-10">
-        <h3 className="text-white text-[60px] md:text-[70px] lg:text-[85px] font-medium">
+        <h3 className="text-white text-[60px] max-xs:text-[40px] md:text-[70px] lg:text-[85px] font-medium">
           Unlocking data. Uncovering insights.
         </h3>
         <button className="w-auto h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90">

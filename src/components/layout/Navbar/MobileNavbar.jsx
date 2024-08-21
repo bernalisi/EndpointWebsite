@@ -1,10 +1,12 @@
 import Logo from "../../../assets/logos/Endpoint logo black dot purle.svg"
 import Logo_white from "../../../assets/logos/Endpoint logo white.svg"
+import Menu_option_white from "../../../assets/images/ui/Menu_option_white.svg"
+import Menu_option_black from "../../../assets/images/ui/Menu_option_black.svg"
 import {useState, useEffect} from "react"
 // import {useNavigate} from "react-router-dom"
 
 export default function MobileNavbar() {
-const Navigation = ['LIFE SCIENCES', 'PROVIDERS', 'RESOURCES']
+// const Navigation = ['LIFE SCIENCES', 'PROVIDERS', 'RESOURCES']
 const [scrolling, setScrolling] = useState(false)
 const [hovering, setHovering] = useState(false)
 
@@ -35,12 +37,13 @@ const handleScroll = () => {
 
         {/* Buttons */}
         <div className="flex flex-row gap-4">
-          <button className={scrolling || hovering? "h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white" : "h-8 px-5 py-1 flex items-center font-semibold border-2 border-white text-white transition duration-150 ease-in-out hover:bg-white hover:text-black"}>
+          <button className={scrolling || hovering? "max-xs:hidden h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white" : "max-xs:hidden h-8 px-5 py-1 flex items-center font-semibold border-2 border-white text-white transition duration-150 ease-in-out hover:bg-white hover:text-black"}>
             LOG IN
           </button>
-          <button className="h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-violet-900 border-violet-900 text-white transition duration-150 ease-in-out hover:opacity-70">
+          <button className="max-xs:hidden h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-violet-900 border-violet-900 text-white transition duration-150 ease-in-out hover:opacity-70">
             BOOK DEMO
           </button>
+          <img src={scrolling || hovering? Menu_option_black : Menu_option_white} alt="mobile menu option" className="xs:hidden h-7" />
         </div>
       </nav>
   </div>
