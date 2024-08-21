@@ -8,7 +8,7 @@ import Homepage from "./pages/Homepage";
 import LifeSciences from "./pages/LifeSciences"
 import HealthcareProviders from "./pages/HealthcareProviders"
 import Resources from "./pages/Resources"
-import Navbar from "./components/layout/Navbar"
+import DesktopNavbar from "./components/layout/Navbar/Navbar"
 import Footer from "./components/layout/Footer"
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
     <>
     {/* Layout - Navbar*/}
     <div className="">
-      <Navbar/>
+      <DesktopNavbar/>
 
         {/* React Routes */}
         <Router>
