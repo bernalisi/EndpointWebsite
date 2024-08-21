@@ -1,9 +1,9 @@
-import Logo from "../../assets/logos/Endpoint logo black dot purle.svg"
-import Logo_white from "../../assets/logos/Endpoint logo white.svg"
+import Logo from "../../../assets/logos/Endpoint logo black dot purle.svg"
+import Logo_white from "../../../assets/logos/Endpoint logo white.svg"
 import {useState, useEffect} from "react"
 // import {useNavigate} from "react-router-dom"
 
-export default function Navbar() {
+export default function DesktopNavbar() {
 const Navigation = ['LIFE SCIENCES', 'PROVIDERS', 'RESOURCES']
 const [scrolling, setScrolling] = useState(false)
 const [hovering, setHovering] = useState(false)
