@@ -22,15 +22,15 @@ export default function Resources() {
         </h2>
 
         {/* Content of section */}
-        <div className="w-full flex flex-col md:flex-row justify-center md:justify-evenly items-center md:items-start gap-10 md:gap-10">
+        <div className="w-full flex flex-col lg:flex-row justify-center lg:justify-evenly items-center lg:items-start gap-10 md:gap-10">
           {Resources.map((r) => (
             <div
               key={r.title}
-              className="w-full md:w-[400px] h-auto md:h-[370px] flex flex-col justify-between gap-4 text-white"
+              className="w-[80%] lg:w-[400px] h-auto md:h-[370px] flex flex-col justify-between gap-4 text-white"
             >
-              <div className="h-40 md:h-52 bg-slate-100"></div>
+              <img className="h-40 md:h-52 bg-slate-100"></img>
               <h6 className="text-xs md:text-[12px] font-light">{r.type}</h6>
-              <p className="text-lg md:text-[24px] font-semibold">{r.title}</p>
+              <p className="text-lg md:text-[24px] line-clamp-2 font-semibold">{r.title}</p>
               <button className="w-full h-10 md:h-8 py-1 flex justify-start items-center font-extralight tracking-widest transition duration-150 ease-in-out text-white hover:opacity-80">
                 <a href="" className="flex items-center gap-2">
                   Read more

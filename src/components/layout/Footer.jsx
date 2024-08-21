@@ -6,12 +6,12 @@ export default function Footer() {
 
   return (
     <div className="w-full bg-black flex flex-col items-center px-4 md:px-14 pt-5 pb-10 md:pb-20">
-      <div className="w-full pt-10 border-t-2 border-white flex flex-col md:flex-row gap-10 md:gap-20 justify-between items-start md:items-end">
+      <div className="w-full pt-10 border-t-2 border-white flex flex-col md:flex-row gap-10 md:gap-20 justify-between items-center md:items-end">
         {/* First block */}
-        <div className="w-full md:w-[500px] h-auto flex flex-col gap-6 md:gap-10 justify-end">
+        <div className="w-[75%] md:w-[500px] h-auto flex flex-col gap-6 md:gap-10 items-center md:items-start justify-end flex-grow">
           {/* Sign up to newsletter */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-white text-xl md:text-[24px]">
+            <h3 className="text-white text-xl md:text-[24px] flex-grow-0">
               Subscribe to our monthly newsletter.
             </h3>
             <input
@@ -33,26 +33,26 @@ export default function Footer() {
         {/* Second block - Copyright */}
         <div className="w-full md:w-[700px] h-auto flex flex-col justify-end">
 
-Copia codice
-<ul className="flex flex-col md:flex-row justify-center md:justify-end text-white text-center md:text-left">
-  {/* Copyright Item */}
-  <li className="mb-2 md:mb-0 md:mr-4">All Content Copyright 2024</li>
 
-  {/* Navigation Items */}
-  {Navigation.map((item, index) => (
-    <React.Fragment key={item}>
-      {/* Separator */}
-      {index > 0 && <span className="hidden md:inline-block md:px-2"></span>}
+        <ul className="flex flex-col md:flex-row justify-center md:justify-end text-white text-center md:text-left">
+          {/* Copyright Item */}
+          <li className="mb-2 md:mb-0 md:mr-4">All Content Copyright 2024</li>
 
-      {/* Navigation Link */}
-      <li className="mb-2 md:mb-0">
-        <a href={`#${item}`} className="hover:underline">
-          {item}
-        </a>
-      </li>
-    </React.Fragment>
-  ))}
-</ul>
+          {/* Navigation Items */}
+          {Navigation.map((item, index) => (
+            <React.Fragment key={item}>
+              {/* Separator */}
+              {index > 0 && <span className="hidden md:inline-block md:px-2"></span>}
+
+              {/* Navigation Link */}
+              <li className="mb-2 md:mb-0">
+                <a href={`#${item}`} className="hover:underline">
+                  {item}
+                </a>
+              </li>
+            </React.Fragment>
+          ))}
+        </ul>
         </div>
       </div>
     </div>
