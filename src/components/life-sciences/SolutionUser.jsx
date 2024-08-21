@@ -3,7 +3,7 @@ import solution from "../../assets/images/life-sciences/ls-solution.svg"
 
 export default function SolutionUser() {
   return (
-    <div className="w-full h-screen mt-20 bg-white flex flex-col justify-center items-start gap-4 px-14 pb-20">
+    <div className="w-full h-screen pt-20 bg-white flex flex-col justify-center items-start gap-4 px-14 pb-20">
       <div className="flex flex-row justify-start items-center gap-2">
         <img src={dot_separator} className="h-4" />
         <h6 className="text-black font-semibold">OUR SOLUTIONS FOR LIFE SCIENCES</h6>
