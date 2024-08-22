@@ -26,9 +26,9 @@ export default function Footer() {
               SUBMIT
             </button>
             <ul className="flex md:flex-row justify-center md:justify-start gap-2">
-              <li><img src={Linkedin} alt="Linkedin" className="h-8"/></li>
-              <li><img src={X} alt="X" className="h-8"/></li>
-              <li><img src={Medium} alt="Medium" className="h-8"/></li>
+              <li><img src={Linkedin} alt="Linkedin" className="h-8 hover:opacity-70"/></li>
+              <li><img src={X} alt="X" className="h-8 hover:opacity-70"/></li>
+              <li><img src={Medium} alt="Medium" className="h-8 hover:opacity-70"/></li>
             </ul>
           </div>
 
