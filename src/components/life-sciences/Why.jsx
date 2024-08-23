@@ -9,7 +9,7 @@ export default function Why() {
     {title: "Clean rooms", description:  "Collaborate and analyze collective datasets without sharing underlying data", image: ""}]
 
   return (
-    <div className="w-full h-screen pt-20 bg-white flex flex-col justify-center items-start gap-4 px-14 pb-20">
+    <div className="w-full h-screen pt-20 bg-white flex flex-col justify-center items-start gap-4 px-4 lg:px-14 pb-20">
       <div className="flex flex-row justify-start items-center gap-2">
         <img src={dot_separator} className="h-4" />
         <h6 className="text-black font-semibold">WHY ENDPOINT</h6>
@@ -20,9 +20,9 @@ export default function Why() {
         {/* Header section */}
         <h2 className="text-black text-[24px] mt-3">Our unique model allows us to instantly identify all relevant RWD sources</h2>
 
-        <div className="w-full h-[600px] flex flex-row justify-center items-center gap-20">
-          {Whyes.map((why) =>
-          <div key={why} className="w-[200px] h-[330px] flex flex-col justify-start gap-7 text-white">
+        <div className="w-full h-auto flex flex-wrap flex-row justify-center items-center gap-20">
+          {Whyes.map((why, index) =>
+          <div key={why + index} className="w-[10%] lg:w-[200px] lg:h-[330px] flex flex-col justify-start gap-7 text-white">
             <div className="h-52 bg-slate-300"></div>
             <div className="flex flex-col gap-2">
               <h6 className="text-[20px] semi-bold font-light text-black">{why.title}</h6>

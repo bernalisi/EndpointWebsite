@@ -34,8 +34,8 @@ const handleScroll = () => {
 
           {/* Navigation Menu */}
           <ul className="flex space-x-4">
-            {Navigation.map((element) => (
-              <li key={element}>
+            {Navigation.map((element, index) => (
+              <li key={index}>
                 <a href={`${element}`} className={scrolling || hovering? "text-black hover:text-violet-900 font-medium" : "text-white hover:text-violet-600 font-medium"}>
                   {element}
                 </a>
