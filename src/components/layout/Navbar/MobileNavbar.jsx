@@ -31,7 +31,7 @@ const handleScroll = () => {
 
 const menuClosed = (
 <div className="absolute w-full h-full z-50">
-  <nav onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)} className={scrolling || hovering? "fixed top-0 w-full h-16 flex items-center justify-between bg-white border border-white px-6" : "fixed top-0 w-full h-16 flex items-center justify-between bg-transparent px-6"}>
+  <nav onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)} className={scrolling || hovering? "bg-white fixed top-0 w-full h-16 flex items-center justify-between border-white px-6" : "fixed top-0 w-full h-16 flex items-center justify-between bg-transparent px-6"}>
     <div className="flex items-center space-x-14">
       {/* Logo */}
       <div className="flex-shrink-0">
@@ -43,17 +43,11 @@ const menuClosed = (
 
     {/* Buttons */}
     <div className="flex flex-row gap-4">
-      <button className={scrolling || hovering? "max-xs:hidden h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white" : "max-xs:hidden h-8 px-5 py-1 flex items-center font-semibold border-2 border-white text-white transition duration-150 ease-in-out hover:bg-white hover:text-black"}>
-        LOG IN
-      </button>
-      <button className={scrolling || hovering? "max-xs:hidden h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-violet-900 border-violet-900 text-white transition duration-150 ease-in-out hover:opacity-70":"max-xs:hidden h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-white border-white text-black transition duration-150 ease-in-out hover:opacity-70"}>
-        BOOK DEMO
-      </button>
-      <img src={scrolling || hovering? Menu_option_black : Menu_option_white} alt="mobile menu option" onClick={() => toggleMenu()} className="xs:hidden h-5" />
+      <img src={scrolling || hovering? Menu_option_black : Menu_option_white} alt="mobile menu option" onClick={() => toggleMenu()} className="h-5" />
     </div>
   </nav>
 </div>
-) ;
+);
 
 
 const menuOpened = (
@@ -87,9 +81,9 @@ const menuOpened = (
         {/* Navigation menu */}
         <div className="w-full pt-14">
           <ul className="flex flex-col items-center gap-10 p-4">
-            {navigation.map((element) => (
-              <li className="py-2 px-3 hover:font-bold" key={element}>
-                <a href="#" className="text-black">
+            {navigation.map((element, index) => (
+              <li className="py-2 px-3 hover:font-bold" key={index}>
+                <a href={`${element}`} className="text-black">
                   {element}
                 </a>
               </li>
