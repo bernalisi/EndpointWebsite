@@ -5,7 +5,7 @@ import background from "../../assets/images/homepage/Background-colors.svg"
 export default function HeroUser() {
   return (
     <>
-      <div className="w-full h-screen flex flex-col md:flex-row">
+      <div className="w-full h-screen flex flex-col md:flex-row bg-white">
         {/* First half */}
         <div className="h-[50%] md:w-[50%] md:h-auto bg-cover bg-center bg-repeat bg-black"
         style={{ backgroundImage: `url(${background})`}}>
@@ -24,8 +24,6 @@ export default function HeroUser() {
             <img src={chevron_icon} alt="chevron-button" className="h-5"/>
           </a>
         </button>
-
-
 
         </div>
       </div>

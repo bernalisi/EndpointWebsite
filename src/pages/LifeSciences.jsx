@@ -5,7 +5,7 @@ import Why from "../components/life-sciences/Why"
 
 export default function LifeSciences() {
   return (
-    <div>
+    <div className="bg-white">
       <HeroUser/>
       <SolutionUser/>
       <Why/>

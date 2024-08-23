@@ -15,7 +15,7 @@ function App() {
   return (
     <>
     {/* Layout - Navbar*/}
-    <div className="bg-black">
+    <div>
       <DesktopNavbar/>
 
         {/* React Routes */}
