@@ -5,7 +5,7 @@ import chevron_icon from "../../assets/images/ui/Chevron down black.svg"
 export default function Contact() {
   return (
     <div
-      className="bg-cover bg-center bg-no-repeat w-full h-screen flex flex-col justify-start items-start gap-4 px-6 pb-20 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20"
+      className="bg-cover bg-center bg-no-repeat w-full max-sm:h-auto max-sm:pb-20 h-screen flex flex-col justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20"
       style={{ backgroundImage: `url(${bg_image})` }}
     >
       <div className="flex flex-row justify-start items-center gap-2">

@@ -12,7 +12,7 @@ export default function SolutionUser() {
       <div className="w-[100%] flex flex-col gap-10 justify-between items-start">
         {/* Header section */}
         <h2 className="text-black text-2xl sm:text-3xl lg:text-4xl xl:text-[48px] mt-3">Search through +200 real-world data sources globally</h2>
-        <p className="text-black text-base sm:text-lg lg:text-xl xl:text-[24px] max-sm: pb-20">Endpoint covers the whole product lifecycle, helping you understand which datasets can answer what research questions across the product lifecycle.</p>
+        <p className="text-black text-base sm:text-lg lg:text-xl xl:text-[24px] max-sm: pb-20">Endpoint covers the whole product lifecycle, helping you understand which datasets can answer what research questions.</p>
 
         <div className="w-[100%] flex flex-row justify-evenly pt-10">
           <img src={solution} alt="solution" className="h-[90%]"/>

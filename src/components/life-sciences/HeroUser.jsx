@@ -5,9 +5,9 @@ import background from "../../assets/images/homepage/Background-colors.svg"
 export default function HeroUser() {
   return (
     <>
-      <div className="w-full h-screen flex flex-col md:flex-row bg-white">
+      <div className="w-full max-xs:h-auto h-screen flex flex-col md:flex-row bg-white">
         {/* First half */}
-        <div className="h-[50%] md:w-[50%] md:h-auto bg-cover bg-center bg-repeat bg-black"
+        <div className="max-xs:h-[350px] h-[50%] md:w-[50%] md:h-auto bg-cover bg-center bg-repeat bg-black"
         style={{ backgroundImage: `url(${background})`}}>
         </div>
 
@@ -18,12 +18,12 @@ export default function HeroUser() {
           <h6 className="text-white tracking-widest sm:text-base md:text-[18px]">LIFE SCIENCES</h6>
           <p className="text-white font-semibold text-[28px] md:text-[24px] lg:text-[28px]">Discover and compliantly access fit-for-purpose RWD</p>
           <p className="text-white font-normal text-[15px] md:text-[14px] lg:text-[15px]">Endpoint is a powerful self-service platform for life sciences, enabling on-demand discovery of hundreds of curated RWD assets from leading healthcare organizations globally.</p>
-           <button className="w-auto h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90">
-          <a href="" className="flex items-center gap-2">
-            READ MORE
-            <img src={chevron_icon} alt="chevron-button" className="h-5"/>
-          </a>
-        </button>
+          <button className="w-auto h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90">
+            <a href="" className="flex items-center gap-2">
+              READ MORE
+              <img src={chevron_icon} alt="chevron-button" className="h-5"/>
+            </a>
+           </button>
 
         </div>
       </div>
