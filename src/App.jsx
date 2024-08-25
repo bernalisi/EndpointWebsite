@@ -25,6 +25,7 @@ function App() {
             <Route path="/LIFE SCIENCES" element={<LifeSciences/>}/>
             <Route path="/PROVIDERS" element={<HealthcareProviders/>}/>
             <Route path="/RESOURCES" element={<Resources/>}/>
+            <Route path="/CONTACT US" element={<Resources/>}/>
           </Routes>
         </Router>
 
