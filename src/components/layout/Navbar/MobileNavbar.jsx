@@ -4,7 +4,6 @@ import Menu_option_white from "../../../assets/images/ui/Menu_option_white.svg"
 import Menu_option_black from "../../../assets/images/ui/Menu_option_black.svg"
 import Menu_open_black from "../../../assets/images/ui/Menu_open_black.svg"
 import {useState, useEffect} from "react"
-import Logo_white_purple_dot from "../../../assets/logos/Endpoint logo white dot purple.svg"
 // import {useNavigate} from "react-router-dom"
 
 export default function MobileNavbar() {

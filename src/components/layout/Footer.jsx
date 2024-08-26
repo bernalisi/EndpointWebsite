@@ -25,7 +25,7 @@ export default function Footer() {
             <button className="w-full md:w-28 h-10 md:h-8 px-5 py-1 flex items-center justify-center font-semibold bg-violet-900 text-white hover:opacity-70 transition duration-150 ease-out">
               SUBMIT
             </button>
-            <ul className="flex md:flex-row justify-center md:justify-start gap-2">
+            <ul className="flex md:flex-row justify-center md:justify-start pt-8 gap-2">
               <li><img src={Linkedin} alt="Linkedin" className="h-8 hover:opacity-70"/></li>
               <li><img src={X} alt="X" className="h-8 hover:opacity-70"/></li>
               <li><img src={Medium} alt="Medium" className="h-8 hover:opacity-70"/></li>
@@ -40,7 +40,6 @@ export default function Footer() {
 
         {/* Second block - Copyright */}
         <div className="w-full md:w-[700px] h-auto flex flex-col justify-end">
-
 
         <ul className="flex flex-col md:flex-row justify-center md:justify-end text-black text-center md:text-left">
           {/* Copyright Item */}
