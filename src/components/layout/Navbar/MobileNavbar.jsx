@@ -7,7 +7,7 @@ import {useState, useEffect} from "react"
 // import {useNavigate} from "react-router-dom"
 
 export default function MobileNavbar() {
-const navigation = ['HOMEPAGE','LIFE SCIENCES', 'PROVIDERS', 'RESOURCES']
+const navigation = [{title: 'HOMEPAGE', url:""} ,{title: 'LIFE SCIENCES', url:'life sciences'}, {title: 'PROVIDERS', url:'providers'}, {title: 'RESOURCES', url:'resources'}]
 const [scrolling, setScrolling] = useState(false)
 const [hovering, setHovering] = useState(false)
 const [menuOpen, setMenuOpen] = useState(false)
@@ -41,7 +41,6 @@ const menuClosed = (
       </div>
     </div>
 
-    {/* Buttons */}
     <div className="flex flex-row gap-4">
       <img src={scrolling || hovering? Menu_option_black : Menu_option_white} alt="mobile menu option" onClick={() => toggleMenu()} className="h-5" />
     </div>
@@ -61,7 +60,10 @@ const menuOpened = (
           {/* Log-in & Book Demo buttons */}
           <div className="flex flex-col gap-4 justify-start items-start">
             <button className="h-8 px-5 flex flex-row items-center justify-center font-semibold border bg-violet-900 border-violet-900 text-white transition duration-150 ease-in-out hover:opacity-70">
-              BOOK DEMO
+              <a href="https://calendly.com/bernardo-tryendpoint/book-a-demo-with-bernardo">BOOK DEMO</a>
+            </button>
+            <button className="h-8 px-5 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white">
+              <a href="/CONTACT US">CONTACT US</a>
             </button>
             <button className="h-8 px-5 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white">
               LOG IN
@@ -79,18 +81,24 @@ const menuOpened = (
         </div>
 
         {/* Navigation menu */}
-        <div className="w-full pt-14">
+        <div className="w-full pt-32">
           <ul className="flex flex-col items-center gap-10 p-4">
             {navigation.map((element, index) => (
               <li className="py-2 px-3 hover:font-bold" key={index}>
-                <a href={`${element}`} className="text-black">
-                  {element}
+                <a href={`${element.url}`} className="text-black text-[18px]">
+                  {element.title}
                 </a>
               </li>
             ))}
           </ul>
 
         </div>
+
+      </div>
+      <div className="fixed w-full bottom-0 flex flex-row justify-center items-center bg-white p-5">
+        <a href="/">
+          <img src={Logo} alt="Logo" className="h-11"/>
+        </a>
       </div>
     </div>
   </>

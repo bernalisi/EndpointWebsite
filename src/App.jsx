@@ -7,8 +7,9 @@ import {
 import Homepage from "./pages/Homepage";
 import LifeSciences from "./pages/LifeSciences"
 import HealthcareProviders from "./pages/HealthcareProviders"
+import ContactUs from "./pages/ContactUs"
 import Resources from "./pages/Resources"
-import DesktopNavbar from "./components/layout/Navbar/Navbar"
+import Navbar from "./components/layout/Navbar/Navbar"
 import Footer from "./components/layout/Footer"
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
     <>
     {/* Layout - Navbar*/}
     <div>
-      <DesktopNavbar/>
+      <Navbar/>
 
         {/* React Routes */}
         <Router>
@@ -25,6 +26,7 @@ function App() {
             <Route path="/LIFE SCIENCES" element={<LifeSciences/>}/>
             <Route path="/PROVIDERS" element={<HealthcareProviders/>}/>
             <Route path="/RESOURCES" element={<Resources/>}/>
+            <Route path="/CONTACT US" element={<ContactUs/>}/>
           </Routes>
         </Router>
 
