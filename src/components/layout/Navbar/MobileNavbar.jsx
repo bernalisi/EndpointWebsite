@@ -51,7 +51,7 @@ const menuClosed = (
 
 const menuOpened = (
   <>
-    <div className="absolute w-full h-full z-50">
+    <div className="absolute w-full h-full z-40">
       <div className="fixed w-full h-screen pt-5 flex flex-col items-end justify-start bg-white border border-white px-6">
 
         {/* Top section */}
