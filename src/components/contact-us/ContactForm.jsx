@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
-import { useForm, Controller } from 'react-hook-form';
+import { useForm} from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-import Select from 'react-select';
 import background from '../../assets/images/homepage/Background-colors.svg'; // Replace with your background image path
+import ChevronDown from "../../assets/images/ui/Chevron down black.svg"
 
 // Define Yup schemas for each category
 const lifeScienceSchema = Yup.object().shape({
@@ -40,7 +40,7 @@ const categories = [
 ];
 
 export default function ContactForm() {
-  const { control, handleSubmit, watch, reset, register, setValue, formState: { errors } } = useForm({
+  const {handleSubmit, watch, reset, register, setValue, formState: { errors } } = useForm({
     resolver: yupResolver(schema),
     defaultValues: {
       category: "",
@@ -77,53 +77,58 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-cover bg-center bg-repeat w-full h-auto flex flex-col lg:flex-row justify-center items-center gap-5 pt-20 pb-20"
+    <div className="bg-cover bg-center bg-repeat w-full h-[1100px] lg:h-[1200px] flex flex-col justify-start items-center lg:pt-40 gap-5 pt-20 pb-20"
       style={{ backgroundImage: `url(${background})` }}>
 
       {/* Information section */}
-      <div className="w-[90%] lg:w-[30%] flex flex-col justify-start text-white">
+      <div className="w-[90%] lg:w-[50%] flex flex-col justify-start lg:justify-start text-white">
         <h1 className="text-[50px] font-normal">Contact us</h1>
       </div>
 
       {/* Form section */}
-      <div className="z-50 w-[95%] lg:w-[40%] bg-gray-50 p-10">
+      <div className="w-[95%] lg:w-[50%] bg-gray-50 p-10">
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5 justify-start items-start">
-          <label className="w-full text-[15px] font-semibold flex flex-col gap-1">
+          <label className="w-full text-[15px] font-semibold flex flex-col gap-1 relative">
             I AM
-            <Controller
-              name="category"
-              control={control}
-              render={({ field }) => (
-                <Select
-                  {...field}
-                  options={categories}
-                  placeholder={selectedCategory ? selectedCategory : "Select category"}
-                  onChange={(option) => field.onChange(option?.value)}
-                />
-              )}
-            />
+            <div className="relative">
+              <select
+                {...register("category")}
+                className="appearance-none w-full h-14 p-2 border border-gray-300 font-light hover:border-violet-900 focus:outline-none focus:border-violet-900"
+                defaultValue=""
+              >
+                <option value="" disabled>Select category</option>
+                {categories.map((category) => (
+                  <option key={category.value} value={category.value}>
+                    {category.label}
+                  </option>
+                ))}
+              </select>
+              {/* Chevron Icon */}
+              <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                <img src={ChevronDown} alt="Chevron down icon" className="h-6 rotate-90"/>
+              </div>
+            </div>
           </label>
 
           {errors.category && <p className="text-red-500">{errors.category.message}</p>}
 
           {/* Dynamically render fields based on the selected category */}
-          {selectedCategory && Object.keys(watch("fields")).map((fieldKey) => (
-            <div key={fieldKey}>
+          {selectedCategory && Object.keys(watch("fields")).map((field) => (
+            <div key={field} className="w-full">
               <label className="flex flex-col gap-2 justify-start items-stretch text-[15px] font-semibold">
-              {fieldKey.replace(/_/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2').toUpperCase()}
-                <input
-                  {...register(`fields.${fieldKey}`)}
-                  placeholder={`Enter ${fieldKey}`}
-                  className="bg-white px-6 h-14 py-1 border border-gray-400"
+              {field.replace(/_/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2').toUpperCase()}
+                <input className="w-full h-14 p-2 border border-gray-300 hover:border-violet-900 font-light"
+                  {...register(`fields.${field}`)}
                 />
-                {errors.fields?.[fieldKey] && <p className="text-red-500">{errors.fields[fieldKey].message}</p>}
+                {errors.fields?.[field] && <p className="text-red-500">{errors.fields[field].message}</p>}
               </label>
             </div>
           ))}
-
-          <button type="submit" className="max-xs:w-full sm:w-40 h-10 px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-violet-900 border-violet-900 text-white transition duration-150 ease-in-out hover:opacity-70">
-            Submit
-          </button>
+          <div className="w-full flex flex-row max-sm:justify-start mt-5">
+            <button type="submit" className="max-xs:w-[50%] sm:w-40 h-10 px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-black hover:opacity-70  text-white transition duration-150 ease-in-out">
+              GET IN TOUCH
+            </button>
+          </div>
         </form>
       </div>
     </div>

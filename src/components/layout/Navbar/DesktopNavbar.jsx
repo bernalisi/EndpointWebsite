@@ -22,7 +22,7 @@ const handleScroll = () => {
 };
 
   return (
-    <div className="absolute w-full h-full z-40">
+    <div className="absolute w-full h-16 z-40">
       <nav onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)} className={scrolling || hovering? "fixed top-0 w-full h-16 flex items-center justify-between bg-white border border-white px-6" : "fixed top-0 w-full h-16 flex items-center justify-between bg-transparent px-6"}>
         <div className="flex items-center space-x-14">
           {/* Logo */}

@@ -16,19 +16,20 @@ function App() {
   return (
     <>
     {/* Layout - Navbar*/}
-    <div>
+    <div className="relative">
       <Navbar/>
 
         {/* React Routes */}
-        <Router>
-          <Routes>
-            <Route path="/" element={<Homepage/>}/>
-            <Route path="/LIFE SCIENCES" element={<LifeSciences/>}/>
-            <Route path="/PROVIDERS" element={<HealthcareProviders/>}/>
-            <Route path="/RESOURCES" element={<Resources/>}/>
-            <Route path="/CONTACT US" element={<ContactUs/>}/>
-          </Routes>
-        </Router>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Homepage/>}/>
+              <Route path="/LIFE SCIENCES" element={<LifeSciences/>}/>
+              <Route path="/PROVIDERS" element={<HealthcareProviders/>}/>
+              <Route path="/RESOURCES" element={<Resources/>}/>
+              <Route path="/CONTACT US" element={<ContactUs/>}/>
+            </Routes>
+          </Router>
+
 
       {/* Layout - Footer */}
       <Footer/>
