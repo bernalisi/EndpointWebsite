@@ -7,7 +7,7 @@ import {useState, useEffect} from "react"
 // import {useNavigate} from "react-router-dom"
 
 export default function MobileNavbar() {
-const navigation = [{title: 'HOMEPAGE', url:""} ,{title: 'LIFE SCIENCES', url:'life sciences'}, {title: 'PROVIDERS', url:'providers'}, {title: 'RESOURCES', url:'resources'}]
+const navigation = [{title: 'HOMEPAGE', url:"/"} ,{title: 'LIFE SCIENCES', url:'life sciences'}, {title: 'PROVIDERS', url:'providers'}, {title: 'RESOURCES', url:'resources'}]
 const [scrolling, setScrolling] = useState(false)
 const [hovering, setHovering] = useState(false)
 const [menuOpen, setMenuOpen] = useState(false)
