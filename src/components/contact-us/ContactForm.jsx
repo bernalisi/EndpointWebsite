@@ -4,6 +4,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import background from '../../assets/images/homepage/Snake_violet.svg'; // Replace with your background image path
 import ChevronDown from "../../assets/images/ui/Chevron down black.svg"
+import ModalSuccessOpen from "../../components/contact-us/ModalSuccessOpen"
+
 
 // Define Yup schemas for each category
 const lifeScienceSchema = Yup.object().shape({
@@ -70,8 +72,17 @@ export default function ContactForm() {
     }
   }, [selectedCategory, setValue]);
 
+  // Modal after submit
+  const [modalOpen, setModalOpen] = useState(true)
+
   const onSubmit = (data) => {
     console.log(data);
+    setModalOpen(true);
+    reset();
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
   };
 
   // code to resize bg image snake
@@ -90,12 +101,15 @@ export default function ContactForm() {
 
   return (
     <div className="bg-black bg-center w-full min-h-[1100px] max-h-auto lg:min-h-[1200px] lg:max-h-auto flex flex-col justify-start items-center lg:pt-40 gap-5 pt-20 pb-20"
-      style={{
-        backgroundImage: `url(${background})`,
-        backgroundSize: bgSize, // Example dimensions for width and height
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-      }}>
+    style={{
+      backgroundImage: `url(${background})`,
+      backgroundSize: bgSize, // Example dimensions for width and height
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+    }}>
+
+      {/* Modal component render when mdalOpen = true */}
+      <ModalSuccessOpen isOpen={modalOpen} onClose={closeModal}/>
 
       {/* Information section */}
       <div className="w-[90%] lg:w-[50%] flex flex-col justify-start lg:justify-start text-white">
