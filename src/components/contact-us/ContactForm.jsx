@@ -73,7 +73,7 @@ export default function ContactForm() {
   }, [selectedCategory, setValue]);
 
   // Modal after submit
-  const [modalOpen, setModalOpen] = useState(true)
+  const [modalOpen, setModalOpen] = useState(false)
 
   const onSubmit = (data) => {
     console.log(data);
