@@ -117,7 +117,7 @@ export default function ContactForm() {
             <div key={field} className="w-full">
               <label className="flex flex-col gap-2 justify-start items-stretch text-[15px] font-semibold">
               {field.replace(/_/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2').toUpperCase()}
-                <input className="w-full h-14 p-2 border border-gray-300 hover:border-violet-900 font-light"
+                <input className="w-full h-14 p-2 border border-gray-300 hover:border-violet-900 font-light rounded-none"
                   {...register(`fields.${field}`)}
                 />
                 {errors.fields?.[field] && <p className="text-red-500">{errors.fields[field].message}</p>}
@@ -125,7 +125,7 @@ export default function ContactForm() {
             </div>
           ))}
           <div className="w-full flex flex-row max-sm:justify-start mt-5">
-            <button type="submit" className="max-xs:w-[50%] sm:w-40 h-10 px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-black hover:opacity-70  text-white transition duration-150 ease-in-out">
+            <button type="submit" className="max-xs:w-[55%] max-xs:text-[13px] sm:w-40 h-10 px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-black hover:opacity-70  text-white transition duration-150 ease-in-out">
               GET IN TOUCH
             </button>
           </div>

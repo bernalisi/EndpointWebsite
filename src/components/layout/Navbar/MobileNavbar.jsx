@@ -81,8 +81,8 @@ const menuOpened = (
         </div>
 
         {/* Navigation menu */}
-        <div className="w-full pt-32">
-          <ul className="flex flex-col items-center gap-10 p-4">
+        <div className="w-full pt-32 max-xs:pt-20">
+          <ul className="flex flex-col items-center gap-10 p-4 max-xs:gap-6">
             {navigation.map((element, index) => (
               <li className="py-2 px-3 hover:font-bold" key={index}>
                 <a href={`${element.url}`} className="text-black text-[18px]">
@@ -97,7 +97,7 @@ const menuOpened = (
       </div>
       <div className="fixed w-full bottom-0 flex flex-row justify-center items-center bg-white p-5">
         <a href="/">
-          <img src={Logo} alt="Logo" className="h-11"/>
+          <img src={Logo} alt="Logo" className="h-11 max-xs:h-8"/>
         </a>
       </div>
     </div>
