@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm} from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
@@ -29,7 +29,7 @@ const schema = Yup.object().shape({
     then: () => lifeScienceSchema,
     otherwise: () => healthcareProviderSchema,
   }),
-  comment: Yup.string()
+  comment: Yup.string().optional(),
 });
 
 // Define options for the select dropdown
@@ -74,11 +74,25 @@ export default function ContactForm() {
     console.log(data);
   };
 
+  // code to resize bg image snake
+
+  const [bgSize, setBgSize] = useState(window.innerWidth < 600? '1000px' : '2900px')
+
+  useEffect(() => {
+    const handleResize = () => {
+      setBgSize(window.innerWidth < 600? '1000px' : '2900px');
+    }
+
+    window.addEventListener('resize',handleResize)
+
+    return() => window.removeEventListener('resize', handleResize);
+  },[]);
+
   return (
-    <div className="bg-black w-full min-h-[1100px] max-h-auto lg:min-h-[1200px] lg:max-h-auto flex flex-col justify-start items-center lg:pt-40 gap-5 pt-20 pb-20"
+    <div className="bg-black bg-center w-full min-h-[1100px] max-h-auto lg:min-h-[1200px] lg:max-h-auto flex flex-col justify-start items-center lg:pt-40 gap-5 pt-20 pb-20"
       style={{
         backgroundImage: `url(${background})`,
-        backgroundSize: window.innerWidth < 600 ? '1000px' : '3000px', // Example dimensions for width and height
+        backgroundSize: bgSize, // Example dimensions for width and height
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
       }}>
@@ -134,7 +148,9 @@ export default function ContactForm() {
 
               <label className="flex flex-col gap-2 justify-start items-stretch text-[15px] font-semibold">
                 COMMENT
-                <textarea className="w-full min-h-24 p-2 border border-gray-300 hover:border-violet-900 font-light rounded-none"/>
+                <textarea className="w-full min-h-24 p-2 border border-gray-300 hover:border-violet-900 font-light rounded-none"
+                {...register("comment")}/>
+                 {errors.comment && <p className="text-red-500">{errors.comment.message}</p>}
               </label>
             </div>
              }
