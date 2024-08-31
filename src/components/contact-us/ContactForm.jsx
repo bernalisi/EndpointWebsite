@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm} from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-import background from '../../assets/images/homepage/Background-colors.svg'; // Replace with your background image path
+import background from '../../assets/images/homepage/Snake_violet.svg'; // Replace with your background image path
 import ChevronDown from "../../assets/images/ui/Chevron down black.svg"
 
 // Define Yup schemas for each category
@@ -11,7 +11,6 @@ const lifeScienceSchema = Yup.object().shape({
   last_name: Yup.string().required("Last name is required"),
   company_email: Yup.string().email("Invalid email address").required("Email is required"),
   company: Yup.string().required("Organization is required"),
-  comment: Yup.string(),
 });
 
 const healthcareProviderSchema = Yup.object().shape({
@@ -20,7 +19,6 @@ const healthcareProviderSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email address").required("Email is required"),
   institution: Yup.string().required("Institution is required"),
   role: Yup.string().required("Role is required"),
-  comment: Yup.string(),
 });
 
 // Define the main schema
@@ -31,6 +29,7 @@ const schema = Yup.object().shape({
     then: () => lifeScienceSchema,
     otherwise: () => healthcareProviderSchema,
   }),
+  comment: Yup.string().optional(),
 });
 
 // Define options for the select dropdown
@@ -45,6 +44,7 @@ export default function ContactForm() {
     defaultValues: {
       category: "",
       fields: {},
+      comment: "",
     },
   });
 
@@ -58,7 +58,6 @@ export default function ContactForm() {
         last_name: "",
         company_email: "",
         company: "",
-        comment: "",
       });
     } else if (selectedCategory === "Healthcare Provider") {
       setValue("fields", {
@@ -67,7 +66,6 @@ export default function ContactForm() {
         email: "",
         institution: "",
         role: "",
-        comment: "",
       });
     }
   }, [selectedCategory, setValue]);
@@ -76,9 +74,28 @@ export default function ContactForm() {
     console.log(data);
   };
 
+  // code to resize bg image snake
+
+  const [bgSize, setBgSize] = useState(window.innerWidth < 600? '1000px' : '2900px')
+
+  useEffect(() => {
+    const handleResize = () => {
+      setBgSize(window.innerWidth < 600? '1000px' : '2900px');
+    }
+
+    window.addEventListener('resize',handleResize)
+
+    return() => window.removeEventListener('resize', handleResize);
+  },[]);
+
   return (
-    <div className="bg-cover bg-center bg-repeat w-full h-[1100px] lg:h-[1200px] flex flex-col justify-start items-center lg:pt-40 gap-5 pt-20 pb-20"
-      style={{ backgroundImage: `url(${background})` }}>
+    <div className="bg-black bg-center w-full min-h-[1100px] max-h-auto lg:min-h-[1200px] lg:max-h-auto flex flex-col justify-start items-center lg:pt-40 gap-5 pt-20 pb-20"
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundSize: bgSize, // Example dimensions for width and height
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+      }}>
 
       {/* Information section */}
       <div className="w-[90%] lg:w-[50%] flex flex-col justify-start lg:justify-start text-white">
@@ -86,7 +103,7 @@ export default function ContactForm() {
       </div>
 
       {/* Form section */}
-      <div className="w-[95%] lg:w-[50%] bg-gray-50 p-10">
+      <div className="w-[90%] lg:w-[50%] bg-gray-50 p-10">
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5 justify-start items-start">
           <label className="w-full text-[15px] font-semibold flex flex-col gap-1 relative">
             I AM
@@ -113,17 +130,31 @@ export default function ContactForm() {
           {errors.category && <p className="text-red-500">{errors.category.message}</p>}
 
           {/* Dynamically render fields based on the selected category */}
-          {selectedCategory && Object.keys(watch("fields")).map((field) => (
-            <div key={field} className="w-full">
+          {selectedCategory &&
+
+            <div className="w-full flex flex-col gap-5">
+             {
+              Object.keys(watch("fields")).map((field) => (
+                <div key={field} className="w-full">
+                  <label className="flex flex-col gap-2 justify-start items-stretch text-[15px] font-semibold">
+                  {field.replace(/_/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2').toUpperCase()}
+                    <input className="w-full h-14 p-2 border border-gray-300 hover:border-violet-900 font-light rounded-none"
+                      {...register(`fields.${field}`)}
+                    />
+                    {errors.fields?.[field] && <p className="text-red-500">{errors.fields[field].message}</p>}
+                  </label>
+                </div>
+              ))}
+
               <label className="flex flex-col gap-2 justify-start items-stretch text-[15px] font-semibold">
-              {field.replace(/_/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2').toUpperCase()}
-                <input className="w-full h-14 p-2 border border-gray-300 hover:border-violet-900 font-light rounded-none"
-                  {...register(`fields.${field}`)}
-                />
-                {errors.fields?.[field] && <p className="text-red-500">{errors.fields[field].message}</p>}
+                COMMENT
+                <textarea className="w-full min-h-24 p-2 border border-gray-300 hover:border-violet-900 font-light rounded-none"
+                {...register("comment")}/>
+                 {errors.comment && <p className="text-red-500">{errors.comment.message}</p>}
               </label>
             </div>
-          ))}
+             }
+
           <div className="w-full flex flex-row max-sm:justify-start mt-5">
             <button type="submit" className="max-xs:w-[55%] max-xs:text-[13px] sm:w-40 h-10 px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-black hover:opacity-70  text-white transition duration-150 ease-in-out">
               GET IN TOUCH
