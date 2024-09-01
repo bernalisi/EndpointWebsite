@@ -191,8 +191,8 @@ export default function ContactForm() {
             <h6 className="font-bold text-[22px] max-xs:text-[20px]">Endpoint - Europe Office</h6>
             <p>Florence, Italy</p>
             <p>Via Giovanni Pico Della Mirandola, 8, 50132</p>
-            <a href="tel: 393315878083" className="w-[40%] lg:w-[40%] flex items-center gap-2 mt-3 hover:border-b-2 hover:border-violet-900 hover:scale-105 transition-transform duration-300 ease-in-out transform">
-              <p className="text-violet-900 font-semibold text-[20px] ">Call Us</p>
+            <a href="tel: 393315878083" className="w-[40%] lg:w-[40%] xl:w-[30%] flex items-center gap-2 mt-3 hover:border-b-2 hover:border-violet-900 hover:scale-105 transition-transform duration-300 ease-in-out transform">
+              <p className="text-violet-900 font-semibold text-[20px]">Call Us</p>
               <img src={CallUsIcon} alt="call us icon" className="h-4"/>
             </a>
           </div>
