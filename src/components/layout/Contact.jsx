@@ -28,7 +28,7 @@ export default function Contact() {
           Unlocking data. Uncovering insights.
         </h3>
         <button className="w-auto h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90">
-          <a href="" className="flex items-center gap-2">
+          <a href="/contact us" className="flex items-center gap-2">
             CONTACT US
             <img src={chevron_icon} alt="chevron-button" className="h-5"/>
           </a>

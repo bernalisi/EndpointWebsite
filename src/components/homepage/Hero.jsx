@@ -22,7 +22,6 @@ export default function Hero() {
               <img src={chevron_down_black} alt="chevron-button" className="h-5"/>
             </a>
            </button>
-
         </div>
       </div>
     </div>

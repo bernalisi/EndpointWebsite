@@ -34,7 +34,7 @@ export default function Platform() {
             </div>
             <div className="w-full mt-8 sm:mt-10 lg:mt-12 border-t-2 border-black">
               <button className="w-full h-full px-6 sm:px-10 lg:px-14 py-6 sm:py-7 flex justify-start items-center font-extralight tracking-widest transition duration-150 ease-in-out text-black hover:opacity-80 hover:font-extrabold">
-                <a href="">Learn more</a>
+                <a href="/life sciences">Learn more</a>
                 <img src={chevron_icon} alt="chevron-button" className="h-4 sm:h-5 lg:h-6 px-2 sm:px-3" />
               </button>
             </div>
@@ -52,7 +52,7 @@ export default function Platform() {
             </div>
             <div className="w-full mt-8 sm:mt-10 lg:mt-12 border-t-2 border-black">
               <button className="w-full h-full px-6 sm:px-10 lg:px-14 py-6 sm:py-7 flex justify-start items-center font-extralight tracking-widest transition duration-150 ease-in-out text-black hover:opacity-80 hover:font-extrabold">
-                <a href="">Learn more</a>
+                <a href="/providers">Learn more</a>
                 <img src={chevron_icon} alt="chevron-button" className="h-4 sm:h-5 lg:h-6 px-2 sm:px-3" />
               </button>
             </div>
