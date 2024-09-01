@@ -6,6 +6,7 @@ import * as Yup from 'yup';
 import background from '../../assets/images/homepage/Snake_violet.svg'; // Replace with your background image path
 import ChevronDown from "../../assets/images/ui/Chevron down black.svg"
 import ModalSuccessOpen from "../../components/contact-us/ModalSuccessOpen"
+import CallUsIcon from "../../assets/images/ui/CallUsIcon.svg"
 
 // Define Yup schemas for each category
 const lifeScienceSchema = Yup.object().shape({
@@ -102,7 +103,7 @@ export default function ContactForm() {
   },[]);
 
   return (
-    <div className="bg-black bg-center w-full min-h-[1100px] max-h-auto lg:min-h-[1200px] lg:max-h-auto flex flex-col justify-start items-center lg:pt-40 gap-5 pt-20 pb-20"
+    <div className="bg-black bg-center w-full min-h-[1100px] max-h-auto lg:min-h-[1200px] lg:max-h-auto flex flex-col justify-start items-center lg:flex-row lg:items-start lg:justify-end lg:pt-40 gap-5 lg:gap-0 pt-20 pb-20"
     style={{
       backgroundImage: `url(${background})`,
       backgroundSize: bgSize, // Example dimensions for width and height
@@ -110,73 +111,99 @@ export default function ContactForm() {
       backgroundPosition: 'center',
     }}>
 
+      <div className="flex flex-col w-full lg:w-[40%] gap-2 items-center lg:px-10">
+        <div className="w-[90%] lg:w-[100%] flex flex-col justify-start lg:justify-start text-white">
+          <h1 className="text-[50px] font-normal">Find us</h1>
+        </div>
+        <div className="w-[90%] lg:w-[100%] bg-gray-50 p-10 flex flex-col gap-10">
+          <div>
+            <h6 className="font-bold text-[22px]">Endpoint - Europe Office</h6>
+            <p>Florence, Italy</p>
+            <p>Via Giovanni Pico Della Mirandola, 8, 50132</p>
+            <a href="tel: 393315878083" className="w-[20%] flex items-center gap-2 mt-3 hover:border-b-2 hover:border-violet-900 hover:scale-105 transition-transform duration-300 ease-in-out transform">
+              <p className="text-violet-900 font-semibold text-[20px] ">Call Us</p>
+              <img src={CallUsIcon} alt="call us icon" className="h-4"/>
+            </a>
+          </div>
+          <div>
+            <h6 className="font-bold text-[22px]">Endpoint - US Office</h6>
+            <p>Dover, Delaware</p>
+            <p>Via Giovanni Pico Della Mirandola, 8, 50132</p>
+          </div>
+
+
+        </div>
+      </div>
+
       {/* Modal component render when mdalOpen = true */}
       <ModalSuccessOpen isOpen={modalOpen} onClose={closeModal}/>
 
-      {/* Information section */}
-      <div className="w-[90%] lg:w-[50%] flex flex-col justify-start lg:justify-start text-white">
-        <h1 className="text-[50px] font-normal">Contact us</h1>
-      </div>
+      <div className="max-lg:disabled flex flex-col w-full lg:w-[60%] gap-2 items-center lg:px-10">
+        {/* Information section */}
+        <div className="w-[90%] lg:w-[100%] flex flex-col justify-start lg:justify-start text-white">
+          <h1 className="text-[50px] font-normal">Contact us</h1>
+        </div>
 
-      {/* Form section */}
-      <div className="w-[90%] lg:w-[50%] bg-gray-50 p-10">
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5 justify-start items-start">
-          <label className="w-full text-[15px] font-semibold flex flex-col gap-1 relative">
-            I AM
-            <div className="relative">
-              <select
-                {...register("category")}
-                className="appearance-none w-full h-14 p-2 border border-gray-300 font-light hover:border-violet-900 focus:outline-none focus:border-violet-900"
-                defaultValue=""
-              >
-                <option value="" disabled>Select category</option>
-                {categories.map((category) => (
-                  <option key={category.value} value={category.value}>
-                    {category.label}
-                  </option>
-                ))}
-              </select>
-              {/* Chevron Icon */}
-              <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                <img src={ChevronDown} alt="Chevron down icon" className="h-6 rotate-90"/>
-              </div>
-            </div>
-          </label>
-
-          {errors.category && <p className="text-red-500">{errors.category.message}</p>}
-
-          {/* Dynamically render fields based on the selected category */}
-          {selectedCategory &&
-
-            <div className="w-full flex flex-col gap-5">
-             {
-              Object.keys(watch("fields")).map((field) => (
-                <div key={field} className="w-full">
-                  <label className="flex flex-col gap-2 justify-start items-stretch text-[15px] font-semibold">
-                  {field.replace(/_/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2').toUpperCase()}
-                    <input className="w-full h-14 p-2 border border-gray-300 hover:border-violet-900 font-light rounded-none"
-                      {...register(`fields.${field}`)}
-                    />
-                    {errors.fields?.[field] && <p className="text-red-500">{errors.fields[field].message}</p>}
-                  </label>
+        {/* Form section */}
+        <div className="w-[90%] lg:w-[100%] bg-gray-50 p-10">
+          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5 justify-start items-start">
+            <label className="w-full text-[15px] font-semibold flex flex-col gap-1 relative">
+              I AM
+              <div className="relative">
+                <select
+                  {...register("category")}
+                  className="appearance-none w-full h-14 p-2 border border-gray-300 font-light hover:border-violet-900 focus:outline-none focus:border-violet-900"
+                  defaultValue=""
+                >
+                  <option value="" disabled>Select category</option>
+                  {categories.map((category) => (
+                    <option key={category.value} value={category.value}>
+                      {category.label}
+                    </option>
+                  ))}
+                </select>
+                {/* Chevron Icon */}
+                <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                  <img src={ChevronDown} alt="Chevron down icon" className="h-6 rotate-90"/>
                 </div>
-              ))}
+              </div>
+            </label>
 
-              <label className="flex flex-col gap-2 justify-start items-stretch text-[15px] font-semibold">
-                COMMENT
-                <textarea className="w-full min-h-24 p-2 border border-gray-300 hover:border-violet-900 font-light rounded-none"
-                {...register("comment")}/>
-                 {errors.comment && <p className="text-red-500">{errors.comment.message}</p>}
-              </label>
+            {errors.category && <p className="text-red-500">{errors.category.message}</p>}
+
+            {/* Dynamically render fields based on the selected category */}
+            {selectedCategory &&
+
+              <div className="w-full flex flex-col gap-5">
+              {
+                Object.keys(watch("fields")).map((field) => (
+                  <div key={field} className="w-full">
+                    <label className="flex flex-col gap-2 justify-start items-stretch text-[15px] font-semibold">
+                    {field.replace(/_/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2').toUpperCase()}
+                      <input className="w-full h-14 p-2 border border-gray-300 hover:border-violet-900 font-light rounded-none"
+                        {...register(`fields.${field}`)}
+                      />
+                      {errors.fields?.[field] && <p className="text-red-500">{errors.fields[field].message}</p>}
+                    </label>
+                  </div>
+                ))}
+
+                <label className="flex flex-col gap-2 justify-start items-stretch text-[15px] font-semibold">
+                  COMMENT
+                  <textarea className="w-full min-h-24 p-2 border border-gray-300 hover:border-violet-900 font-light rounded-none"
+                  {...register("comment")}/>
+                  {errors.comment && <p className="text-red-500">{errors.comment.message}</p>}
+                </label>
+              </div>
+              }
+
+            <div className="w-full flex flex-row max-sm:justify-start mt-5">
+              <button type="submit" className="max-xs:w-[55%] max-xs:text-[13px] sm:w-40 h-10 px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-black hover:opacity-70  text-white transition duration-150 ease-in-out">
+                GET IN TOUCH
+              </button>
             </div>
-             }
-
-          <div className="w-full flex flex-row max-sm:justify-start mt-5">
-            <button type="submit" className="max-xs:w-[55%] max-xs:text-[13px] sm:w-40 h-10 px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-black hover:opacity-70  text-white transition duration-150 ease-in-out">
-              GET IN TOUCH
-            </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   );
