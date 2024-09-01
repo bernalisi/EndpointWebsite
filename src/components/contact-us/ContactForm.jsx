@@ -103,7 +103,7 @@ export default function ContactForm() {
   },[]);
 
   return (
-    <div className="bg-black bg-center w-full min-h-[1100px] max-h-auto lg:min-h-[1200px] lg:max-h-auto flex flex-col justify-start items-center lg:flex-row lg:items-start lg:justify-end lg:pt-40 gap-5 lg:gap-0 pt-20 pb-20"
+    <div className="bg-black bg-center w-full min-h-[1100px] max-h-auto lg:min-h-[1200px] lg:max-h-auto flex flex-col justify-start items-center lg:flex-row lg:items-start lg:justify-evenly lg:pt-40 gap-10 lg:gap-0 pt-20 pb-20"
     style={{
       backgroundImage: `url(${background})`,
       backgroundSize: bgSize, // Example dimensions for width and height
@@ -111,34 +111,10 @@ export default function ContactForm() {
       backgroundPosition: 'center',
     }}>
 
-      <div className="flex flex-col w-full lg:w-[40%] gap-2 items-center lg:px-10">
-        <div className="w-[90%] lg:w-[100%] flex flex-col justify-start lg:justify-start text-white">
-          <h1 className="text-[50px] font-normal">Find us</h1>
-        </div>
-        <div className="w-[90%] lg:w-[100%] bg-gray-50 p-10 flex flex-col gap-10">
-          <div>
-            <h6 className="font-bold text-[22px]">Endpoint - Europe Office</h6>
-            <p>Florence, Italy</p>
-            <p>Via Giovanni Pico Della Mirandola, 8, 50132</p>
-            <a href="tel: 393315878083" className="w-[20%] flex items-center gap-2 mt-3 hover:border-b-2 hover:border-violet-900 hover:scale-105 transition-transform duration-300 ease-in-out transform">
-              <p className="text-violet-900 font-semibold text-[20px] ">Call Us</p>
-              <img src={CallUsIcon} alt="call us icon" className="h-4"/>
-            </a>
-          </div>
-          <div>
-            <h6 className="font-bold text-[22px]">Endpoint - US Office</h6>
-            <p>Dover, Delaware</p>
-            <p>Via Giovanni Pico Della Mirandola, 8, 50132</p>
-          </div>
-
-
-        </div>
-      </div>
-
       {/* Modal component render when mdalOpen = true */}
       <ModalSuccessOpen isOpen={modalOpen} onClose={closeModal}/>
 
-      <div className="max-lg:disabled flex flex-col w-full lg:w-[60%] gap-2 items-center lg:px-10">
+      <div className="max-lg:disabled flex flex-col w-full lg:w-[55%] gap-2 items-center">
         {/* Information section */}
         <div className="w-[90%] lg:w-[100%] flex flex-col justify-start lg:justify-start text-white">
           <h1 className="text-[50px] font-normal">Contact us</h1>
@@ -203,6 +179,28 @@ export default function ContactForm() {
               </button>
             </div>
           </form>
+        </div>
+      </div>
+
+      <div className="flex flex-col w-full lg:w-[30%] gap-2 items-center">
+        <div className="w-[90%] lg:w-[100%] flex flex-col justify-start lg:justify-start text-white">
+          <h1 className="text-[50px] font-normal">Find us</h1>
+        </div>
+        <div className="w-[90%] lg:w-[100%] bg-gray-50 p-10 flex flex-col gap-10">
+          <div className="h-[130px]">
+            <h6 className="font-bold text-[22px] max-xs:text-[20px]">Endpoint - Europe Office</h6>
+            <p>Florence, Italy</p>
+            <p>Via Giovanni Pico Della Mirandola, 8, 50132</p>
+            <a href="tel: 393315878083" className="w-[40%] lg:w-[40%] flex items-center gap-2 mt-3 hover:border-b-2 hover:border-violet-900 hover:scale-105 transition-transform duration-300 ease-in-out transform">
+              <p className="text-violet-900 font-semibold text-[20px] ">Call Us</p>
+              <img src={CallUsIcon} alt="call us icon" className="h-4"/>
+            </a>
+          </div>
+          <div className="lg:mt-10 xl:mt-0">
+            <h6 className="font-bold text-[22px] max-xs:text-[20px]">Endpoint - US Office</h6>
+            <p>Dover, Delaware</p>
+            <p>8 The Green, Ste R, 19901</p>
+          </div>
         </div>
       </div>
     </div>
