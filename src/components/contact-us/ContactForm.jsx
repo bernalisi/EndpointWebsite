@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useForm} from 'react-hook-form';
+import {useNavigate} from "react-router-dom"
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import background from '../../assets/images/homepage/Snake_violet.svg'; // Replace with your background image path
 import ChevronDown from "../../assets/images/ui/Chevron down black.svg"
 import ModalSuccessOpen from "../../components/contact-us/ModalSuccessOpen"
-
 
 // Define Yup schemas for each category
 const lifeScienceSchema = Yup.object().shape({
@@ -74,6 +74,7 @@ export default function ContactForm() {
 
   // Modal after submit
   const [modalOpen, setModalOpen] = useState(false)
+  const navigate = useNavigate()
 
   const onSubmit = (data) => {
     console.log(data);
@@ -83,6 +84,7 @@ export default function ContactForm() {
 
   const closeModal = () => {
     setModalOpen(false);
+    navigate("/")
   };
 
   // code to resize bg image snake
