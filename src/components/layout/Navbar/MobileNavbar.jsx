@@ -31,7 +31,7 @@ const handleScroll = () => {
 
 const menuClosed = (
 <div className="absolute w-full h-16 z-50">
-  <nav onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)} className={scrolling || hovering? "bg-white fixed top-0 w-full h-16 flex items-center justify-between border-white px-6" : "fixed top-0 w-full h-16 flex items-center justify-between bg-transparent px-6"}>
+  <nav onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)} className={scrolling || hovering? "fixed bg-white top-0 w-full h-16 flex items-center justify-between border-white px-6" : "fixed top-0 w-full h-16 flex items-center justify-between bg-transparent px-6"}>
     <div className="flex items-center space-x-14">
       {/* Logo */}
       <div className="flex-shrink-0">
