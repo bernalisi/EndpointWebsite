@@ -4,7 +4,7 @@ import {useState, useEffect} from "react"
 // import {useNavigate} from "react-router-dom"
 
 export default function DesktopNavbar() {
-const Navigation = ['LIFE SCIENCES', 'PROVIDERS', 'RESOURCES']
+const Navigation = [{title: 'LIFE SCIENCES', url:'life sciences'}, {title: 'PROVIDERS', url:'providers'}, {title: 'BLOG', url:'https://endpoint-data.medium.com/'}]
 const [scrolling, setScrolling] = useState(false)
 const [hovering, setHovering] = useState(false)
 
@@ -36,8 +36,8 @@ const handleScroll = () => {
           <ul className="flex space-x-4">
             {Navigation.map((element, index) => (
               <li key={index}>
-                <a href={`${element}`} className={scrolling || hovering? "text-black hover:text-violet-900 font-medium" : "text-white hover:text-violet-600 font-medium"}>
-                  {element}
+                <a href={`${element.url}`} className={scrolling || hovering? "text-black hover:text-violet-900 font-medium" : "text-white hover:text-violet-600 font-medium"}>
+                  {element.title}
                 </a>
               </li>
             ))}
