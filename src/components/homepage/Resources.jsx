@@ -2,9 +2,20 @@ import { useContext } from 'react';
 import { ArticlesContext } from '../resources/ArticlesContext';
 import dot_separator from "../../assets/images/ui/Dot-separator.svg";
 import Article from "../../components/resources/Article"
+import {motion} from "framer-motion"
 
 export default function Resources() {
   const { articles } = useContext(ArticlesContext);
+
+  const animation_variants = {
+    hidden: {opacity: 0},
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 1,
+      }
+    }
+  }
 
   return (
     <div className="w-full h-auto lg:min-h-screen lg:max-h-auto bg-black flex flex-col justify-center items-start gap-4 px-6 pb-20 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:py-0">
@@ -18,7 +29,13 @@ export default function Resources() {
           Check out our latest news and updates
         </h2>
 
-        <div className="w-full flex flex-col lg:flex-row justify-center lg:justify-evenly items-center lg:items-start gap-10 md:gap-10">
+        <motion.div
+          variants={animation_variants}
+          initial="hidden"
+          animate="show"
+          className="w-full flex flex-col lg:flex-row justify-center lg:justify-evenly items-center lg:items-start gap-10 md:gap-10"
+          >
+
           {articles.map((article) => (
             <Article
             key={article.link}
@@ -28,7 +45,8 @@ export default function Resources() {
             link={article.link}
             />
           ))}
-        </div>
+
+        </motion.div>
       </div>
     </div>
   );

@@ -1,17 +1,14 @@
-import dot_separator from "../../assets/images/ui/Dot-separator.svg"
 import chevron_icon from "../../assets/images/ui/Chevron down black.svg"
 import life_science_icon from "../../assets/images/homepage/LifeScience_icon.svg"
 import provider_icon from "../../assets/images/homepage/Provider_icon.svg"
 import line_icon from "../../assets/images/ui/Line_icon.svg"
+import SectionSeparator from "../ui/SectionSeparator"
 
 export default function Platform() {
   return (
     <div className="w-full bg-black flex flex-col justify-center items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20">
 
-      <div className="flex flex-row justify-start items-center gap-2">
-        <img src={dot_separator} className="h-4" />
-        <h6 className="text-white text-sm sm:text-base">OUR PLATFORM</h6>
-      </div>
+      <SectionSeparator TitleSection="OUR PLATFORM"/>
 
       <div className="w-full flex flex-col gap-5 justify-between items-start">
 
