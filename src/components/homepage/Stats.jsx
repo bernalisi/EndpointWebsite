@@ -1,4 +1,3 @@
-import dot_separator from "../../assets/images/ui/Dot-separator.svg"
 import line_icon from "../../assets/images/ui/Line_icon_white.svg"
 import SectionSeparator from "../ui/SectionSeparator";
 

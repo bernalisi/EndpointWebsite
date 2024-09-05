@@ -1,5 +1,4 @@
 import bg_image from "../../assets/images/homepage/Background_contact.png"
-import dot_separator from "../../assets/images/ui/Dot-separator-white.svg"
 import chevron_icon from "../../assets/images/ui/Chevron down black.svg"
 import SectionSeparatorWhite from "../../components/ui/SectionSeparator_white"
 

@@ -3,6 +3,18 @@ import life_science_icon from "../../assets/images/homepage/LifeScience_icon.svg
 import provider_icon from "../../assets/images/homepage/Provider_icon.svg"
 import line_icon from "../../assets/images/ui/Line_icon.svg"
 import SectionSeparator from "../ui/SectionSeparator"
+import {motion} from "framer-motion"
+
+
+const CardVariations = {
+  start: {
+    scale: 1,
+  },
+  hover: {
+    scale: 1.03,
+    transition: {duration: 0.3, ease: "linear"}
+  }
+}
 
 export default function Platform() {
   return (
@@ -20,7 +32,7 @@ export default function Platform() {
         <div className="w-full flex flex-col lg:flex-row justify-evenly items-center gap-8 sm:gap-10 lg:gap-12 mt-10 sm:mt-12 lg:mt-14 mb-10 sm:mb-14 lg:mb-20">
 
           {/* Life Science Card */}
-          <div className="w-full lg:w-[640px] h-auto lg:h-[500px] flex flex-col justify-start pt-10 gap-7 items-start bg-blue-400 rounded-xl">
+          <motion.div variants={CardVariations} initial="start" whileHover="hover" className="w-full lg:w-[640px] h-auto lg:h-[500px] flex flex-col justify-start pt-10 gap-7 items-start bg-blue-400 rounded-xl">
             <div className="w-full flex flex-row justify-between items-center pr-6 sm:pr-10 lg:pr-14">
               <img src={line_icon} alt="line icon" className="h-1" />
               <img src={life_science_icon} alt="provider icon" className="h-16 sm:h-20 lg:h-28" />
@@ -35,10 +47,10 @@ export default function Platform() {
                 <img src={chevron_icon} alt="chevron-button" className="h-4 sm:h-5 lg:h-6 px-2 sm:px-3" />
               </button>
             </div>
-          </div>
+          </motion.div>
 
           {/* Providers Card */}
-          <div className="w-full lg:w-[640px] h-auto lg:h-[500px] flex flex-col justify-start pt-10 gap-7 items-start bg-violet-400 rounded-xl">
+          <motion.div variants={CardVariations} initial="start" whileHover="hover" className="w-full lg:w-[640px] h-auto lg:h-[500px] flex flex-col justify-start pt-10 gap-7 items-start bg-violet-400 rounded-xl">
             <div className="w-full flex flex-row justify-between items-center pr-6 sm:pr-10 lg:pr-14">
               <img src={line_icon} alt="line icon" className="h-1" />
               <img src={provider_icon} alt="provider icon" className="h-16 sm:h-20 lg:h-28" />
@@ -53,7 +65,7 @@ export default function Platform() {
                 <img src={chevron_icon} alt="chevron-button" className="h-4 sm:h-5 lg:h-6 px-2 sm:px-3" />
               </button>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>

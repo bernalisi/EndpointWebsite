@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import { ArticlesContext } from '../resources/ArticlesContext';
-import dot_separator from "../../assets/images/ui/Dot-separator.svg";
 import Article from "../../components/resources/Article"
 import {motion} from "framer-motion"
 import SectionSeparator from '../ui/SectionSeparator';
