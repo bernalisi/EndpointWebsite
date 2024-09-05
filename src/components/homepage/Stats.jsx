@@ -1,5 +1,6 @@
 import dot_separator from "../../assets/images/ui/Dot-separator.svg"
 import line_icon from "../../assets/images/ui/Line_icon_white.svg"
+import SectionSeparator from "../ui/SectionSeparator";
 
 export default function Stats() {
   const Statistics = [
@@ -11,10 +12,7 @@ export default function Stats() {
   return (
     <div className="w-full h-auto bg-black flex flex-col justify-start items-start gap-4 px-6 mb-20 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:py-20">
 
-      <div className="flex flex-row justify-start items-center gap-2">
-        <img src={dot_separator} className="h-4" />
-        <h6 className="text-white text-sm md:text-base">UNLOCKING DISCOVERY</h6>
-      </div>
+      <SectionSeparator TitleSection="UNLOCKING DISCOVERY"/>
 
       <div className="w-full flex flex-col gap-10 justify-between items-start">
 

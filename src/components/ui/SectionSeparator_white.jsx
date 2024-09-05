@@ -1,5 +1,5 @@
 import {motion} from 'framer-motion'
-import dot_separator from "../../assets/images/ui/Dot-separator.svg"
+import dot_separator from "../../assets/images/ui/Dot-separator-white.svg"
 
 export default function SectionSeparator({TitleSection}) {
 
