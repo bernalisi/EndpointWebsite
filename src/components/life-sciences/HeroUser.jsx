@@ -1,6 +1,6 @@
 import chevron_down_black from "../../assets/images/ui/Chevron down black.svg"
 import scroll_down from "../../assets/images/ui/Scroll_down.svg"
-import background from "../../assets/images/life-sciences/LifeSciences_Background.png"
+import background from "../../assets/images/life-sciences/Life Science Background.svg"
 import {motion} from "framer-motion"
 
 const ParentVariations = {
@@ -41,7 +41,7 @@ const scrollVariants = {
   }
 }
 
-export default function Hero() {
+export default function HeroUser() {
   return (
     <div className="w-screen h-screen lg:h-auto bg-cover bg-center  bg-repeat bg-black flex flex-row justify-end"
     style={{ backgroundImage: `url(${background})`}}>

@@ -1,6 +1,6 @@
 import chevron_down_black from "../../assets/images/ui/Chevron down black.svg"
 import scroll_down from "../../assets/images/ui/Scroll_down.svg"
-import background from "../../assets/images/homepage/Ball_elements_violet.svg"
+import background from "../../assets/images/homepage/Background homepage.svg"
 import {motion} from "framer-motion"
 
 const ParentVariations = {
