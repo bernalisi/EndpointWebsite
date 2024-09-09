@@ -1,0 +1,46 @@
+[
+  {
+    "question": "How does Endpoint ensure compliance with data privacy regulations?",
+    "answer": "Endpoint ensures compliance with data privacy regulations by implementing advanced encryption, access controls, and continuous monitoring to meet all legal requirements."
+  },
+  {
+    "question": "Who can access my data on Endpoint?",
+    "answer": "Access to your data on Endpoint is strictly controlled. Only authorized researchers and organizations that meet specific criteria are granted access."
+  },
+  {
+    "question": "What is synthetic data used for?",
+    "answer": "Synthetic data is used to enable research and analysis while maintaining privacy by mimicking real data without exposing sensitive information."
+  },
+  {
+    "question": "What is a clean room, and how does it work?",
+    "answer": "A clean room is a secure environment where data can be analyzed without the raw data being exposed, ensuring maximum privacy and security."
+  },
+  {
+    "question": "Do I need to anonymize my data before sharing it?",
+    "answer": "No, Endpoint takes care of the anonymization process to ensure that shared data complies with all privacy standards."
+  },
+  {
+    "question": "Is there a fee for data transactions?",
+    "answer": "There may be fees associated with data transactions depending on the nature and scale of the data exchange. Please refer to our pricing page for details."
+  },
+  {
+    "question": "How does Endpoint operate as a two-sided marketplace?",
+    "answer": "Endpoint connects data providers with data consumers, facilitating secure and efficient transactions between both parties."
+  },
+  {
+    "question": "In which geographies does Endpoint operate?",
+    "answer": "Endpoint operates globally, with a presence in North America, Europe, and parts of Asia-Pacific."
+  },
+  {
+    "question": "How is synthetic data used in the research process?",
+    "answer": "Synthetic data is used to validate models, test hypotheses, and conduct exploratory analyses without risking privacy breaches."
+  },
+  {
+    "question": "Who controls access to real-world data?",
+    "answer": "Data providers retain full control over who can access their real-world data, with detailed consent management tools provided by Endpoint."
+  },
+  {
+    "question": "How does Endpoint ensure the quality of the data requests?",
+    "answer": "Endpoint reviews all data requests for validity, purpose, and compliance with our ethical guidelines before granting access."
+  }
+]
