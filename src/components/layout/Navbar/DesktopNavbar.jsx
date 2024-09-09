@@ -28,7 +28,7 @@ const handleScroll = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="/">
-              <img src={scrolling || hovering?  Logo : Logo_white} alt="Logo" className="h-11"/>
+              <img src={scrolling || hovering? Logo : Logo_white} alt="Logo" className="h-11"/>
             </a>
           </div>
 

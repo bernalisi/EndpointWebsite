@@ -1,32 +1,71 @@
-import chevron_icon from "../../assets/images/ui/Chevron down black.svg"
-import background from "../../assets/images/homepage/Background-colors.svg"
+import chevron_down_black from "../../assets/images/ui/Chevron down black.svg"
+import scroll_down from "../../assets/images/ui/Scroll_down.svg"
+import background from "../../assets/images/life-sciences/Life Science Background.svg"
+import {motion} from "framer-motion"
 
+const ParentVariations = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  }
+}
+
+const ChildVariations = {
+  hidden: {
+    opacity: 0,
+    x:-150
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {ease: "easeOut", duration: 0.7}
+  }
+}
+
+const scrollVariants = {
+  hidden: {
+    opacity: 1,
+    y:0,
+  },
+
+  show: {
+    y: [4,3,2,1,0,-1,-2,-3,-4,-3,-2,-1,0,1,2,3,4],
+    opacity: 1,
+    transition: {
+      duration: 2, ease: "easeInOut",
+      repeat: Infinity,
+      repeatType: "loop"
+    }
+  }
+}
 
 export default function HeroUser() {
   return (
-    <>
-      <div className="w-full max-xs:h-auto h-screen flex flex-col md:flex-row bg-white">
-        {/* First half */}
-        <div className="max-xs:h-[350px] h-[50%] md:w-[50%] md:h-auto bg-cover bg-center bg-repeat bg-black"
-        style={{ backgroundImage: `url(${background})`}}>
-        </div>
+    <div className="w-screen h-screen lg:h-auto bg-cover bg-center  bg-repeat bg-black flex flex-row justify-end"
+    style={{ backgroundImage: `url(${background})`}}>
 
-        {/* Second half */}
-        <div className="h-[50%] md:w-[50%] md:h-auto bg-black max-md:border-t-[10px] border-blue-400 md:border-l-[20px] flex flex-col justify-start items-start md:justify-center md:items-start px-6 md:px-12 py-16 gap-8">
-          {/* <h6 className="text-white font-semibold text-[40px] md:text-[60px] lg:text-[80px]">LifeSciences</h6> */}
+      <motion.div variants={ParentVariations} initial="hidden" animate="visible" className="w-screen h-screen mt-[60px] lg:mt-[100px] px-2 sm:px-6 lg:px-14 xl:px-52 pt-32 pb-[333px] flex max-md:items-center max-sm:justify-end items-end flex-col gap-6">
+        {/* First paragraph */}
+        <motion.h1 variants={ChildVariations} initial="hidden" animate="visible" className="w-[100%] lg:w-[40%] xl:w-[50%] text-white px-4 xl:text-[80px] lg:text-[50px] md:text-[60px] sm:text-[50px] xl:mb-16 text-[40px] max-sm:text-left max-md:text-center font-semibold leading-tight">Life Sciences</motion.h1>
 
-          <h6 className="text-white tracking-widest sm:text-base md:text-[18px]">LIFE SCIENCES</h6>
-          <p className="text-white font-semibold text-[28px] md:text-[24px] lg:text-[28px]">Discover and compliantly access fit-for-purpose RWD</p>
-          <p className="text-white font-normal text-[15px] md:text-[14px] lg:text-[15px]">Endpoint is a powerful self-service platform for life sciences, enabling on-demand discovery of hundreds of curated RWD assets from leading healthcare organizations globally.</p>
-          <button className="w-auto h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90">
+        {/* Second paragraph */}
+        <motion.a variants={ChildVariations} initial="hidden" animate="visible" className="w-[75%] md:w-[90%] lg:w-[40%] xl:w-[50%] px-4 max-sm:hidden max-md:text-center text-white lg:text-[15px] xl:text-[25px] md:text-[20px] sm:text-[15px] font-normal pt-5 leading-relaxed text-justify">
+        Navigate the most extensive universe of RWD sources to unleash the  the full potential of observational research.</motion.a>
+
+        <div className="lg:w-[40%] xl:w-[50%] w-[50%] max-sm:w-[100%] max-sm:px-5 flex flex-row justify-center max-sm:justify-start">
+          <motion.div variants={scrollVariants} initial="hidden" whileInView="show">
+            <img src={scroll_down} alt="chevron down icon" className="h-5 max-sm:hidden md:h-5 xl:mt-5" />
+          </motion.div>
+          <button className="sm:hidden w-auto h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90">
             <a href="" className="flex items-center gap-2">
               READ MORE
-              <img src={chevron_icon} alt="chevron-button" className="h-5"/>
+              <img src={chevron_down_black} alt="chevron-button" className="h-5"/>
             </a>
-           </button>
-
+          </button>
         </div>
-      </div>
-    </>
+      </motion.div>
+    </div>
   )
 }
