@@ -57,11 +57,11 @@ export default function SolutionProvider() {
   };
 
   return (
-    <div className="w-full h-auto bg-white flex flex-col justify-start items-center px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 xl:mt-10">
+    <div className="w-full h-auto bg-white flex flex-col justify-start items-start px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 xl:mt-10">
       <SectionSeparator TitleSection="OUR SOLUTIONS FOR HEALTHCARE PROVIDERS" />
 
       {/* Title & Paragraph */}
-      <div className="w-full mb-8 text-center">
+      <div className="w-full mb-8 text-start">
         <h2 className="text-black text-2xl sm:text-3xl lg:text-4xl xl:text-[48px] mt-3">
           The largest ecosystem of RWD providers
         </h2>
@@ -93,38 +93,37 @@ export default function SolutionProvider() {
             }, [inView, key]);
 
             return (
-              <>
-                <div className="relative w-full flex justify-center">
-                  {/* White background card to cover the line for inactive cards */}
-                  <div
-                    className={`absolute bg-white p-8 shadow-lg rounded-lg w-full transition-all duration-300 max-w-[700px] lg:min-h-[350px] ${
-                      defaultKey === Number(key) ? "scale-110" : "scale-90"
-                    }`}
-                  ></div>
+              <div key={index} className="relative w-full flex justify-center">
+                {/* White background card to cover the line for inactive cards */}
+                <div
+                  className={`absolute bg-white p-4 sm:p-8 shadow-lg rounded-lg w-full transition-all duration-300 min-h-[200px] max-w-[350px] sm:max-w-[500px] lg:max-w-[700px] lg:min-h-[350px] ${
+                    defaultKey === Number(key)
+                      ? "scale 100 lg:scale-110"
+                      : "scale-90"
+                  }`}
+                ></div>
 
-                  <div
-                    ref={ref}
-                    key={key}
-                    className={`relative flex flex-col items-center z-10 mb-12 transition-all duration-300 ${
-                      defaultKey === Number(key)
-                        ? "scale-110 opacity-100 border-l-8 border-violet-900"
-                        : "scale-90 opacity-50"
-                    }`}
-                  >
-                    <div className="w-full flex justify-center">
-                      <div className="bg-white p-8 shadow-lg rounded-lg text-center lg:min-h-[350px] flex flex-col justify-center max-w-[700px]">
-                        {/* Made the card wider */}
-                        <h3 className="text-3xl font-bold text-violet-900 mb-4">
-                          {useCaseNavigation[key].title}
-                        </h3>
-                        <p className="text-lg text-gray-700">
-                          {useCaseNavigation[key].description}
-                        </p>
-                      </div>
+                <div
+                  ref={ref}
+                  key={key}
+                  className={`relative flex flex-col items-center z-10 mb-12 transition-all duration-300 ${
+                    defaultKey === Number(key)
+                      ? "scale-100 lg:scale-110 opacity-100 lg:border-l-8 lg:border-violet-900"
+                      : "scale-90 opacity-50"
+                  }`}
+                >
+                  <div className="w-full flex justify-center">
+                    <div className="bg-white p-4 sm:p-8 shadow-lg rounded-lg text-center min-h-[200px] lg:min-h-[350px] flex flex-col justify-center max-w-[350px] sm:max-w-[500px] lg:max-w-[700px]">
+                      <h3 className="text-xl sm:text-3xl font-bold text-violet-900 mb-4">
+                        {useCaseNavigation[key].title}
+                      </h3>
+                      <p className="text-sm sm:text-lg text-gray-700">
+                        {useCaseNavigation[key].description}
+                      </p>
                     </div>
                   </div>
                 </div>
-              </>
+              </div>
             );
           })}
         </div>

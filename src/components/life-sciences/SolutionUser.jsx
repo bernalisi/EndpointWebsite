@@ -28,7 +28,7 @@ export default function SolutionUser() {
 
       {/* Header Section */}
       <div className="w-full flex flex-col gap-6 justify-between items-start">
-        <h2 className="text-black text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[48px] mt-6">
           Discover, Compare, Access RWD Seamlessly
         </h2>
         <p className="text-black text-lg sm:text-xl lg:text-2xl leading-relaxed">
@@ -41,12 +41,12 @@ export default function SolutionUser() {
       {/* Navigation and Content Section */}
       <div className="w-full flex flex-col justify-start items-center mt-16 gap-10">
         {/* Navigation Bar */}
-        <div className="w-full flex flex-row justify-center items-center gap-8 border-b pb-4">
+        <div className="w-full flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 border-b pb-4">
           {Object.keys(solutionNavigation).map((key) => (
             <button
-              className={`w-[20%] pb-2 text-lg font-medium transition-all duration-200 ${
+              className={`w-full sm:w-auto py-2 text-lg text-center font-medium transition-all duration-200 ${
                 defaultSolution === Number(key)
-                  ? "text-violet-900 border-b-4 border-violet-900"
+                  ? "text-violet-900 border-b-4 border-violet-900 bg-violet-200"
                   : "text-gray-600 border-b-4 border-transparent"
               } hover:text-violet-900 hover:border-violet-900`}
               key={key}

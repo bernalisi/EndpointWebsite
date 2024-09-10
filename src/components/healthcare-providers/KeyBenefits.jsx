@@ -4,23 +4,23 @@ export default function WhyProvider() {
   const reasons = [
     {
       title: "Accelerate medical research",
-      img: "/src/assets/images/healthcare-providers/medicalresearch.svg",
+      img: "/medicalresearch.svg",
     },
     {
       title: "Unlock new revenue streams",
-      img: "/src/assets/images/healthcare-providers/moneymaking.svg",
+      img: "/moneymaking.svg",
     },
     {
       title: "Stay in control of your data",
-      img: "/src/assets/images/healthcare-providers/controldata.svg",
+      img: "/controldata.svg",
     },
     {
       title: "Seamless data sharing",
-      img: "/src/assets/images/healthcare-providers/sharedata.svg",
+      img: "/sharedata.svg",
     },
     {
       title: "Ensure full compliance",
-      img: "/src/assets/images/healthcare-providers/compliance.svg",
+      img: "/compliance.svg",
     },
   ];
 
