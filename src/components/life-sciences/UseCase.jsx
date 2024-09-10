@@ -24,36 +24,44 @@ export default function UseCase({ defaultUseCase }) {
         </h6>
       </div>
       <div className="m-4 sm:m-7 flex flex-col xl:flex-row justify-start items-start gap-4 xl:gap-10">
-        <p className="text-violet-900 text-[16px] sm:text-[20px] font-medium">
+        <p className="text-violet-900 w-[130px] text-[16px] sm:text-[20px] font-medium">
           {capitalizeFirstLetter(jsonKeys[2])}
         </p>
-        <p className="text-[14px] sm:text-[16px]">{selectedUseCase.client}</p>
+        <p className="text-[14px] w-full sm:text-[16px]">
+          {selectedUseCase.client}
+        </p>
       </div>
       <div className="m-4 sm:m-7 flex flex-col xl:flex-row justify-start items-start gap-4 xl:gap-10">
-        <p className="text-violet-900 text-[16px] sm:text-[20px] font-medium">
+        <p className="text-violet-900 w-[130px] text-[16px] sm:text-[20px] font-medium">
           {capitalizeFirstLetter(jsonKeys[3])}
         </p>
-        <p className="text-[14px] sm:text-[16px]">
+        <p className="text-[14px] w-full sm:text-[16px]">
           {selectedUseCase.challenge}
         </p>
       </div>
       <div className="m-4 sm:m-7 flex flex-col xl:flex-row justify-start items-start gap-4 xl:gap-10">
-        <p className="text-violet-900 text-[16px] sm:text-[20px] font-medium">
+        <p className="text-violet-900 w-[130px] text-[16px] sm:text-[20px] font-medium">
           {capitalizeFirstLetter(jsonKeys[4])}
         </p>
-        <p className="text-[14px] sm:text-[16px]">{selectedUseCase.solution}</p>
+        <p className="text-[14px] w-full sm:text-[16px]">
+          {selectedUseCase.solution}
+        </p>
       </div>
       <div className="m-4 sm:m-7 flex flex-col xl:flex-row justify-start items-start gap-4 xl:gap-10">
-        <p className="text-violet-900 text-[16px] sm:text-[20px] font-medium">
+        <p className="text-violet-900 w-[130px] text-[16px] sm:text-[20px] font-medium">
           {capitalizeFirstLetter(jsonKeys[5])}
         </p>
-        <p className="text-[14px] sm:text-[16px]">{selectedUseCase.outcome}</p>
+        <p className="text-[14px] w-full sm:text-[16px]">
+          {selectedUseCase.outcome}
+        </p>
       </div>
       <div className="m-4 sm:m-7 flex flex-col xl:flex-row justify-start items-start gap-4 xl:gap-10">
-        <p className="text-violet-900 text-[16px] sm:text-[20px] font-medium">
+        <p className="text-violet-900 w-[130px] text-[16px] sm:text-[20px] font-medium">
           {capitalizeFirstLetter(jsonKeys[6])}
         </p>
-        <p className="text-[14px] sm:text-[16px]">{selectedUseCase.benefits}</p>
+        <p className="text-[14px] w-full sm:text-[16px]">
+          {selectedUseCase.benefits}
+        </p>
       </div>
       <p className="m-4 sm:m-7 px-4 py-1 text-[16px] sm:text-[20px] xl:text-[24px] text-black rounded-full font-bold">
         Ready to execute more efficient and comprehensive RWE studies? Explore

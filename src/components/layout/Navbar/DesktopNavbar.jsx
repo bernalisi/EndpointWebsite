@@ -63,7 +63,7 @@ export default function DesktopNavbar() {
       <nav
         className={
           scrolling || hovering || isSpecificPage
-            ? "fixed top-0 w-full h-16 flex items-center justify-between bg-white border border-black px-6"
+            ? "fixed top-0 w-full h-16 flex items-center justify-between bg-white borde px-6"
             : "fixed top-0 w-full h-16 flex items-center justify-between bg-transparent px-6"
         }
       >
@@ -87,7 +87,11 @@ export default function DesktopNavbar() {
               <li key={index}>
                 <a
                   href={`${element.url}`}
-                  target="_blank"
+                  target={
+                    element.url === "https://endpoint-data.medium.com/"
+                      ? "_blank"
+                      : "_self"
+                  }
                   className={
                     scrolling || hovering || isSpecificPage
                       ? "text-black hover:text-violet-900 font-medium"

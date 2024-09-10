@@ -19,15 +19,15 @@ export default function Why() {
 
       <div className="flex flex-col xl:flex-row justify-start gap-10 w-full">
         {/* Navigation */}
-        <div className="w-full xl:w-[15%] mt-10 flex-wrap xl:mt-20 flex flex-row xl:flex-col justify-start items-start gap-2 sm:gap-3">
+        <div className="w-full xl:w-[15%] mt-10 flex-wrap xl:mt-20 flex flex-row xl:flex-col justify-start text-left items-start gap-2 sm:gap-3">
           {Object.keys(useCaseNavigation).map((key) => (
             <button
               key={key}
               onClick={() => setDefaultUseCase(Number(key))}
               className={
                 defaultUseCase === Number(key)
-                  ? "border-l-4 border-violet-900 text-violet-900 py-2 px-2 sm:px-4 w-full text-sm sm:text-base"
-                  : "border-l-4 hover:border-violet-900 hover:text-violet-900 py-2 px-2 sm:px-4 w-full text-sm sm:text-base"
+                  ? "border-l-4 border-violet-900 text-left text-violet-900 py-2 px-2 sm:px-4 w-full text-sm sm:text-base"
+                  : "border-l-4 hover:border-violet-900 text-left hover:text-violet-900 py-2 px-2 sm:px-4 w-full text-sm sm:text-base"
               }
             >
               {useCaseNavigation[key].title}
