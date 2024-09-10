@@ -69,7 +69,7 @@ export default function HeroProvider() {
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[75%] md:w-[90%] lg:w-[40%] xl:w-[50%] px-4 max-sm:hidden max-md:text-center text-white lg:text-[15px] xl:text-[25px] md:text-[20px] sm:text-[15px] font-normal pt-5 leading-relaxed text-justify"
+          className="w-[75%] md:w-[90%] lg:w-[40%] font-thin xl:w-[50%] px-4 max-sm:hidden max-md:text-center text-white lg:text-[15px] xl:text-[24px] md:text-[20px] sm:text-[15px] pt-5 leading-relaxed text-justify"
         >
           Securely share, control, and monetize your healthcare data to advance
           medical research with Endpoint
@@ -84,7 +84,7 @@ export default function HeroProvider() {
             <img
               src={scroll_down}
               alt="chevron down icon"
-              className="h-4 max-sm:hidden md:h-4 xl:mt-5"
+              className="h-3 max-sm:hidden md:h-3 xl:mt-5"
             />
           </motion.div>
           <button className="sm:hidden w-auto h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90">

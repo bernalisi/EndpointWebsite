@@ -46,7 +46,7 @@ export default function SolutionUser() {
             <button
               className={`w-full sm:w-auto py-2 text-lg text-center font-medium transition-all duration-200 ${
                 defaultSolution === Number(key)
-                  ? "text-violet-900 border-b-4 border-violet-900 bg-violet-200"
+                  ? "text-violet-900 border-b-4 border-violet-900 p-3 bg-violet-200"
                   : "text-gray-600 border-b-4 border-transparent"
               } hover:text-violet-900 hover:border-violet-900`}
               key={key}

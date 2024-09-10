@@ -84,7 +84,7 @@ export default function HeroUser() {
             <img
               src={scroll_down}
               alt="chevron down icon"
-              className="h-4 max-sm:hidden md:h-4 xl:mt-5"
+              className="h-3 max-sm:hidden md:h-3 xl:mt-5"
             />
           </motion.div>
           <button className="sm:hidden w-auto h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90">

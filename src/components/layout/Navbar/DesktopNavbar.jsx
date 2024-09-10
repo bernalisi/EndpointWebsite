@@ -1,6 +1,7 @@
 import Logo from "../../../assets/logos/Endpoint logo black dot purle.svg";
 import Logo_white from "../../../assets/logos/Endpoint logo white.svg";
 import { useState, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom"; // Import useLocation
 
 export default function DesktopNavbar() {
   const Navigation = [
@@ -13,6 +14,7 @@ export default function DesktopNavbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [hovering, setHovering] = useState(false);
   const dropdownRef = useRef(null); // Ref to detect clicks outside the dropdown
+  const location = useLocation(); // Get the current URL
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -51,12 +53,17 @@ export default function DesktopNavbar() {
     };
   }, [isDropdownOpen]);
 
+  // Check if the URL is "/Privacy%20Policy" or "/Terms%20of%20use"
+  const isSpecificPage =
+    location.pathname === "/Privacy%20Policy" ||
+    location.pathname === "/Terms%20of%20use";
+
   return (
     <div className="absolute w-full h-16 z-40">
       <nav
         className={
-          scrolling || hovering
-            ? "fixed top-0 w-full h-16 flex items-center justify-between bg-white border border-white px-6"
+          scrolling || hovering || isSpecificPage
+            ? "fixed top-0 w-full h-16 flex items-center justify-between bg-white border border-black px-6"
             : "fixed top-0 w-full h-16 flex items-center justify-between bg-transparent px-6"
         }
       >
@@ -65,7 +72,9 @@ export default function DesktopNavbar() {
           <div className="flex-shrink-0">
             <a href="/">
               <img
-                src={scrolling || hovering ? Logo : Logo_white}
+                src={
+                  scrolling || hovering || isSpecificPage ? Logo : Logo_white
+                }
                 alt="Logo"
                 className="h-11"
               />
@@ -78,8 +87,9 @@ export default function DesktopNavbar() {
               <li key={index}>
                 <a
                   href={`${element.url}`}
+                  target="_blank"
                   className={
-                    scrolling || hovering
+                    scrolling || hovering || isSpecificPage
                       ? "text-black hover:text-violet-900 font-medium"
                       : "text-white hover:text-violet-600 font-medium"
                   }
@@ -97,7 +107,7 @@ export default function DesktopNavbar() {
             <button
               onClick={handleLoginClick} // Toggle dropdown on click
               className={
-                scrolling || hovering
+                scrolling || hovering || isSpecificPage
                   ? "h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white"
                   : "h-8 px-5 py-1 flex items-center font-semibold border-2 border-white text-white transition duration-150 ease-in-out hover:bg-white hover:text-black"
               }
@@ -128,7 +138,7 @@ export default function DesktopNavbar() {
 
           <button
             className={
-              scrolling || hovering
+              scrolling || hovering || isSpecificPage
                 ? "h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white"
                 : "h-8 px-5 py-1 flex items-center font-semibold border-2 border-white text-white transition duration-150 ease-in-out hover:bg-white hover:text-black"
             }
@@ -137,7 +147,7 @@ export default function DesktopNavbar() {
           </button>
           <button
             className={
-              scrolling || hovering
+              scrolling || hovering || isSpecificPage
                 ? "h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-violet-900 border-violet-900 text-white transition duration-150 ease-in-out hover:opacity-70"
                 : "h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-white border-white text-black transition duration-150 ease-in-out hover:opacity-70"
             }

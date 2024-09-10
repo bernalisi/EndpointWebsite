@@ -3,9 +3,11 @@ import Linkedin from "../../assets/images/footer/Linkedin.svg";
 import X from "../../assets/images/footer/X.svg";
 import Medium from "../../assets/images/footer/Medium.svg";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
   const Navigation = ["Privacy Policy", "Terms of use", "Cookies Settings"];
+  const navigate = useNavigate();
 
   return (
     <div className="w-full bg-white flex flex-col items-center px-4 md:px-14 pt-5 pb-10 md:pb-20">
@@ -68,7 +70,13 @@ export default function Footer() {
 
                 {/* Navigation Link */}
                 <li className="mb-2 md:mb-0">
-                  <a href={`#${item}`} className="hover:underline">
+                  <a
+                    onClick={() => {
+                      navigate(`${item}`);
+                      window.scrollTo(0, 0);
+                    }}
+                    className="hover:underline"
+                  >
                     {item}
                   </a>
                 </li>
