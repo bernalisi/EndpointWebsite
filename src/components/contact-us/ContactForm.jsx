@@ -1,23 +1,28 @@
-import { useEffect, useState } from 'react';
-import { useForm} from 'react-hook-form';
-import {useNavigate} from "react-router-dom"
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as Yup from 'yup';
-import ChevronDown from "../../assets/images/ui/Chevron down black.svg"
-import ModalSuccessOpen from "../../components/contact-us/ModalSuccessOpen"
+import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as Yup from "yup";
+import ChevronDown from "../../assets/images/ui/Chevron down black.svg";
+import ModalSuccessOpen from "../../components/contact-us/ModalSuccessOpen";
+import emailjs from "emailjs-com";
 
 // Define Yup schemas for each category
 const lifeScienceSchema = Yup.object().shape({
   first_name: Yup.string().required("First name is required"),
   last_name: Yup.string().required("Last name is required"),
-  company_email: Yup.string().email("Invalid email address").required("Email is required"),
+  company_email: Yup.string()
+    .email("Invalid email address")
+    .required("Email is required"),
   company: Yup.string().required("Organization is required"),
 });
 
 const healthcareProviderSchema = Yup.object().shape({
   first_name: Yup.string().required("First name is required"),
   last_name: Yup.string().required("Last name is required"),
-  email: Yup.string().email("Invalid email address").required("Email is required"),
+  email: Yup.string()
+    .email("Invalid email address")
+    .required("Email is required"),
   institution: Yup.string().required("Institution is required"),
   role: Yup.string().required("Role is required"),
 });
@@ -36,11 +41,18 @@ const schema = Yup.object().shape({
 // Define options for the select dropdown
 const categories = [
   { value: "Life Science", label: "Life Science" },
-  { value: "Healthcare Provider", label: "Healthcare Provider" }
+  { value: "Healthcare Provider", label: "Healthcare Provider" },
 ];
 
 export default function ContactForm() {
-  const {handleSubmit, watch, reset, register, setValue, formState: { errors } } = useForm({
+  const {
+    handleSubmit,
+    watch,
+    reset,
+    register,
+    setValue,
+    formState: { errors },
+  } = useForm({
     resolver: yupResolver(schema),
     defaultValues: {
       category: "",
@@ -72,25 +84,55 @@ export default function ContactForm() {
   }, [selectedCategory, setValue]);
 
   // Modal after submit
-  const [modalOpen, setModalOpen] = useState(false)
-  const navigate = useNavigate()
+  const [modalOpen, setModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   const onSubmit = (data) => {
-    console.log(data);
-    setModalOpen(true);
-    reset();
+    const templateParams = {
+      category: data.category,
+      first_name: data.fields.first_name,
+      last_name: data.fields.last_name,
+      email:
+        selectedCategory === "Life Science"
+          ? data.fields.company_email
+          : data.fields.email,
+      institution_or_company:
+        selectedCategory === "Life Science"
+          ? data.fields.company
+          : data.fields.institution,
+      role:
+        selectedCategory === "Healthcare Provider" ? data.fields.role : "N/A",
+      comment: data.comment || "No comment provided",
+    };
+
+    emailjs
+      .send(
+        "service_qy0b24m",
+        "template_cuc5ecf",
+        templateParams,
+        import.meta.env.VITE_PUBLIC_API_EMAIL_JS
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setModalOpen(true); // Open the modal on success
+          reset(); // Reset form after successful submission
+        },
+        (error) => {
+          console.log("FAILED...", error);
+        }
+      );
   };
 
   const closeModal = () => {
     setModalOpen(false);
-    navigate("/")
+    navigate("/");
   };
 
   return (
-
     <>
-      {/* Modal component render when mdalOpen = true */}
-      <ModalSuccessOpen isOpen={modalOpen} onClose={closeModal}/>
+      {/* Modal component render when modalOpen = true */}
+      <ModalSuccessOpen isOpen={modalOpen} onClose={closeModal} />
 
       <div className="max-lg:disabled flex flex-col w-full lg:w-[55%] gap-2 items-center">
         {/* Information section */}
@@ -100,7 +142,11 @@ export default function ContactForm() {
 
         {/* Form section */}
         <div className="w-[90%] lg:w-[100%] bg-gray-50 p-10">
-          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5 justify-start items-start">
+          <form
+            id="contactForm" // ID for emailjs to reference
+            onSubmit={handleSubmit(onSubmit)}
+            className="flex flex-col gap-5 justify-start items-start"
+          >
             <label className="w-full text-[15px] font-semibold flex flex-col gap-1 relative">
               I AM
               <div className="relative">
@@ -109,7 +155,9 @@ export default function ContactForm() {
                   className="appearance-none w-full h-14 p-2 border border-gray-300 font-light hover:border-violet-900 focus:outline-none focus:border-violet-900"
                   defaultValue=""
                 >
-                  <option value="" disabled>Select category</option>
+                  <option value="" disabled>
+                    Select category
+                  </option>
                   {categories.map((category) => (
                     <option key={category.value} value={category.value}>
                       {category.label}
@@ -118,41 +166,60 @@ export default function ContactForm() {
                 </select>
                 {/* Chevron Icon */}
                 <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                  <img src={ChevronDown} alt="Chevron down icon" className="h-6 rotate-90"/>
+                  <img
+                    src={ChevronDown}
+                    alt="Chevron down icon"
+                    className="h-6 rotate-90"
+                  />
                 </div>
               </div>
             </label>
 
-            {errors.category && <p className="text-red-500">{errors.category.message}</p>}
+            {errors.category && (
+              <p className="text-red-500">{errors.category.message}</p>
+            )}
 
             {/* Dynamically render fields based on the selected category */}
-            {selectedCategory &&
-
+            {selectedCategory && (
               <div className="w-full flex flex-col gap-5">
-              {
-                Object.keys(watch("fields")).map((field) => (
+                {Object.keys(watch("fields")).map((field) => (
                   <div key={field} className="w-full">
                     <label className="flex flex-col gap-2 justify-start items-stretch text-[15px] font-semibold">
-                    {field.replace(/_/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2').toUpperCase()}
-                      <input className="w-full h-14 p-2 border border-gray-300 hover:border-violet-900 font-light rounded-none"
+                      {field
+                        .replace(/_/g, " ")
+                        .replace(/([a-z])([A-Z])/g, "$1 $2")
+                        .toUpperCase()}
+                      <input
+                        className="w-full h-14 p-2 border border-gray-300 hover:border-violet-900 font-light rounded-none"
                         {...register(`fields.${field}`)}
                       />
-                      {errors.fields?.[field] && <p className="text-red-500">{errors.fields[field].message}</p>}
+                      {errors.fields?.[field] && (
+                        <p className="text-red-500">
+                          {errors.fields[field].message}
+                        </p>
+                      )}
                     </label>
                   </div>
                 ))}
 
                 <label className="flex flex-col gap-2 justify-start items-stretch text-[15px] font-semibold">
                   COMMENT
-                  <textarea className="w-full min-h-24 p-2 border border-gray-300 hover:border-violet-900 font-light rounded-none"
-                  {...register("comment")}/>
-                  {errors.comment && <p className="text-red-500">{errors.comment.message}</p>}
+                  <textarea
+                    className="w-full min-h-24 p-2 border border-gray-300 hover:border-violet-900 font-light rounded-none"
+                    {...register("comment")}
+                  />
+                  {errors.comment && (
+                    <p className="text-red-500">{errors.comment.message}</p>
+                  )}
                 </label>
               </div>
-              }
+            )}
 
             <div className="w-full flex flex-row max-sm:justify-start mt-5">
-              <button type="submit" className="max-xs:w-[55%] max-xs:text-[13px] sm:w-40 h-10 px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-black hover:opacity-70  text-white transition duration-150 ease-in-out">
+              <button
+                type="submit"
+                className="max-xs:w-[55%] max-xs:text-[13px] sm:w-40 h-10 px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-black hover:opacity-70  text-white transition duration-150 ease-in-out"
+              >
                 GET IN TOUCH
               </button>
             </div>

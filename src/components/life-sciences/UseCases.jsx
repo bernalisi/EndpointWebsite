@@ -14,7 +14,7 @@ export default function Why() {
   };
 
   return (
-    <div className="w-full h-[1000px] bg-white flex flex-col justify-start xl:justify-start items-start gap-4 px-4 sm:px-10 lg:px-14 pt-10 sm:pt-16 xl:mt-10">
+    <div className="w-full h-[1050px] bg-white flex flex-col justify-start xl:justify-start items-start gap-4 px-4 sm:px-10 lg:px-14 pt-10 sm:pt-16 xl:mt-10">
       <SectionSeparator TitleSection="EXPLORE OUR USE CASES" />
 
       <div className="flex flex-col xl:flex-row justify-start gap-10 w-full">
