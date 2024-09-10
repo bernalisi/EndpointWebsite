@@ -1,46 +1,46 @@
 [
   {
     "question": "How does Endpoint ensure compliance with data privacy regulations?",
-    "answer": "Endpoint ensures compliance with data privacy regulations by implementing advanced encryption, access controls, and continuous monitoring to meet all legal requirements."
+    "answer": "Endpoint is fully compliant with major privacy regulations, including HIPAA and GDPR. Data is shared securely through our clean rooms, which provide a privacy-protected environment for collaborations. Synthetic data can be created and used to allow research without risking exposure to sensitive information. However, providers are responsible for anonymizing their real-world data before uploading it, as we do not handle anonymization."
   },
   {
     "question": "Who can access my data on Endpoint?",
-    "answer": "Access to your data on Endpoint is strictly controlled. Only authorized researchers and organizations that meet specific criteria are granted access."
+    "answer": "Only verified third-party researchers and pharmaceutical companies can see metadata that describes your data sources. This metadata gives them an understanding of what your data includes without accessing any sensitive information. Synthetic data samples can only be viewed and experimented with in a secure sandbox environment after purchase, ensuring that your data is used responsibly and securely."
   },
   {
     "question": "What is synthetic data used for?",
-    "answer": "Synthetic data is used to enable research and analysis while maintaining privacy by mimicking real data without exposing sensitive information."
+    "answer": "Synthetic data is used to help researchers and our models discover the right datasets and ensure fit-for-purpose determination. By testing hypotheses and evaluating data relevance in a secure sandbox environment, researchers can validate their research approach before moving forward. This ensures that the datasets selected are the most suitable for their research, saving time and resources."
   },
   {
     "question": "What is a clean room, and how does it work?",
-    "answer": "A clean room is a secure environment where data can be analyzed without the raw data being exposed, ensuring maximum privacy and security."
+    "answer": "A clean room is a secure, privacy-protected environment where real-world data can be safely shared and accessed for research purposes. Endpoint offers clean rooms for data providers to upload their real-world datasets. While we provide the platform for secure data sharing, providers must anonymize their data before uploading. The clean room ensures that all data remains compliant with regulatory standards throughout the research process."
   },
   {
     "question": "Do I need to anonymize my data before sharing it?",
-    "answer": "No, Endpoint takes care of the anonymization process to ensure that shared data complies with all privacy standards."
+    "answer": "Yes, as a data provider, you are responsible for anonymizing your real-world data before uploading it to Endpoint. Our platform supports the secure sharing of anonymized or synthetic data in our clean rooms, but we do not perform anonymization services ourselves."
   },
   {
     "question": "Is there a fee for data transactions?",
-    "answer": "There may be fees associated with data transactions depending on the nature and scale of the data exchange. Please refer to our pricing page for details."
+    "answer": "No, we do not charge a transaction fee for data transactions between providers and researchers. Data providers can set the terms and price for accessing their data, and Endpoint does not take a cut from these transactions."
   },
   {
     "question": "How does Endpoint operate as a two-sided marketplace?",
-    "answer": "Endpoint connects data providers with data consumers, facilitating secure and efficient transactions between both parties."
+    "answer": "Endpoint functions as a two-sided marketplace that connects data providers with researchers and pharmaceutical companies. On one side, healthcare providers, hospitals, labs, and other institutions can upload and securely share their data. On the other side, verified life sciences companies and researchers can discover, purchase, and use that data for research, all while ensuring regulatory compliance."
   },
   {
     "question": "In which geographies does Endpoint operate?",
-    "answer": "Endpoint operates globally, with a presence in North America, Europe, and parts of Asia-Pacific."
+    "answer": "Endpoint is currently focused on healthcare data providers and researchers located in Europe and the United States. We are continually expanding our network to ensure the best quality of data and research partnerships in these regions."
   },
   {
     "question": "How is synthetic data used in the research process?",
-    "answer": "Synthetic data is used to validate models, test hypotheses, and conduct exploratory analyses without risking privacy breaches."
+    "answer": "Synthetic data samples allow researchers to test the feasibility of their projects in a secure environment. Researchers can purchase synthetic data to experiment with hypotheses and validate their research approach without accessing real-world data, reducing compliance risks and ensuring data relevance before moving forward."
   },
   {
-    "question": "Who controls access to real-world data?",
-    "answer": "Data providers retain full control over who can access their real-world data, with detailed consent management tools provided by Endpoint."
+    "question": "Who controls access to real-world data and research collaborations?",
+    "answer": "You retain full control over all real-world data transactions and research collaborations. After synthetic data has proven fit-for-purpose, you decide who gets access to your real-world data, for how long, and under what terms. This ensures that all real-world data transactions align with your goals and comply with your data-sharing preferences."
   },
   {
-    "question": "How does Endpoint ensure the quality of the data requests?",
-    "answer": "Endpoint reviews all data requests for validity, purpose, and compliance with our ethical guidelines before granting access."
+    "question": "How does Endpoint ensure the quality of data requests?",
+    "answer": "Endpoint verifies all data users before they can access metadata or purchase synthetic data samples. This process ensures that only credible, licensed researchers and pharmaceutical companies are allowed to request data. By using synthetic data for feasibility testing, researchers submit more focused, relevant requests, ensuring that your data is used for impactful research projects and reducing unfit or irrelevant inquiries."
   }
 ]

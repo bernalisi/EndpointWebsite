@@ -1,7 +1,7 @@
 import Logo from "../../assets/logos/Endpoint logo black dot purle.svg";
-import Linkedin from "../../assets/images/footer/Linkedin.svg"
-import X from "../../assets/images/footer/X.svg"
-import Medium from "../../assets/images/footer/Medium.svg"
+import Linkedin from "../../assets/images/footer/Linkedin.svg";
+import X from "../../assets/images/footer/X.svg";
+import Medium from "../../assets/images/footer/Medium.svg";
 import React from "react";
 
 export default function Footer() {
@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="w-[75%] md:w-[500px] h-auto flex flex-col gap-6 md:gap-10 items-center md:items-start justify-end flex-grow">
           {/* Sign up to newsletter */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-black text-xl md:text-[24px] flex-grow-0">
+            {/* <h3 className="text-black text-xl md:text-[24px] flex-grow-0">
               Subscribe to our monthly newsletter.
             </h3>
             <input
@@ -24,42 +24,57 @@ export default function Footer() {
             />
             <button className="w-full md:w-28 h-10 md:h-8 px-5 py-1 flex items-center justify-center font-semibold bg-violet-900 text-white hover:opacity-70 transition duration-150 ease-out">
               SUBMIT
-            </button>
+            </button> */}
+            <div className="flex justify-center md:justify-start">
+              <img src={Logo} alt="Logo" className="h-10 md:h-11" />
+            </div>
             <ul className="flex md:flex-row justify-center md:justify-start pt-8 gap-2">
-              <li><img src={Linkedin} alt="Linkedin" className="h-8 hover:opacity-70"/></li>
-              <li><img src={X} alt="X" className="h-8 hover:opacity-70"/></li>
-              <li><img src={Medium} alt="Medium" className="h-8 hover:opacity-70"/></li>
+              <li>
+                <img
+                  src={Linkedin}
+                  alt="Linkedin"
+                  className="h-8 hover:opacity-70"
+                />
+              </li>
+              <li>
+                <img src={X} alt="X" className="h-8 hover:opacity-70" />
+              </li>
+              <li>
+                <img
+                  src={Medium}
+                  alt="Medium"
+                  className="h-8 hover:opacity-70"
+                />
+              </li>
             </ul>
           </div>
 
           {/* Logo */}
-          <div className="flex justify-center md:justify-start">
-            <img src={Logo} alt="Logo" className="h-10 md:h-11" />
-          </div>
         </div>
 
         {/* Second block - Copyright */}
         <div className="w-full md:w-[700px] h-auto flex flex-col justify-end">
+          <ul className="flex flex-col md:flex-row justify-center md:justify-end text-black text-center md:text-left">
+            {/* Copyright Item */}
+            <li className="mb-2 md:mb-0 md:mr-4">All Content Copyright 2024</li>
 
-        <ul className="flex flex-col md:flex-row justify-center md:justify-end text-black text-center md:text-left">
-          {/* Copyright Item */}
-          <li className="mb-2 md:mb-0 md:mr-4">All Content Copyright 2024</li>
+            {/* Navigation Items */}
+            {Navigation.map((item, index) => (
+              <React.Fragment key={item}>
+                {/* Separator */}
+                {index > 0 && (
+                  <span className="hidden md:inline-block md:px-2"></span>
+                )}
 
-          {/* Navigation Items */}
-          {Navigation.map((item, index) => (
-            <React.Fragment key={item}>
-              {/* Separator */}
-              {index > 0 && <span className="hidden md:inline-block md:px-2"></span>}
-
-              {/* Navigation Link */}
-              <li className="mb-2 md:mb-0">
-                <a href={`#${item}`} className="hover:underline">
-                  {item}
-                </a>
-              </li>
-            </React.Fragment>
-          ))}
-        </ul>
+                {/* Navigation Link */}
+                <li className="mb-2 md:mb-0">
+                  <a href={`#${item}`} className="hover:underline">
+                    {item}
+                  </a>
+                </li>
+              </React.Fragment>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
