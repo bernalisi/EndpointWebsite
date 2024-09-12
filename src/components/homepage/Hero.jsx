@@ -3,6 +3,7 @@ import scroll_down from "../../assets/images/ui/Scroll_down.svg";
 import background from "../../assets/images/homepage/Background homepage.svg";
 import { motion } from "framer-motion";
 
+// Animations
 const ParentVariations = {
   hidden: {
     opacity: 0,
