@@ -14,9 +14,9 @@ export default function Faq() {
       <SectionSeparator TitleSection="FAQS" />
 
       {/* Title */}
-      <h2 className="text-black text-2xl sm:text-3xl lg:text-4xl xl:text-[48px] mt-3">
+      <h3 className="text-black text-[28px] lg:text-[48px] font-semibold mt-3 py-[20px]">
         Frequently Asked Questions
-      </h2>
+      </h3>
 
       {/* FAQ Table */}
       <div className="w-full mt-5 border border-gray-200 rounded-lg shadow-md">
@@ -37,7 +37,7 @@ export default function Faq() {
             </div>
             {/* Answer Row */}
             {activeIndex === index && (
-              <div className="p-4 bg-violet-200 transition-all duration-300 ease-in-out">
+              <div className="p-4 bg-violet-100 transition-all duration-300 ease-in-out">
                 <p className="text-base">{faq.answer}</p>
               </div>
             )}

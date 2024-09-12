@@ -28,9 +28,9 @@ export default function SolutionUser() {
 
       {/* Header Section */}
       <div className="w-full flex flex-col gap-6 justify-between items-start">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[48px] mt-6">
+        <h3 className="text-black text-[28px] lg:text-[48px] font-semibold mt-3 py-[20px]">
           Discover, Compare, Access RWD Seamlessly
-        </h2>
+        </h3>
         <p className="text-black text-lg sm:text-xl lg:text-2xl leading-relaxed">
           Our platform empowers life sciences to explore over 200 real-world
           data sources globally, helping you answer key research questions

@@ -12,7 +12,7 @@ export default function ContactProvider() {
 
       <div className="w-full flex flex-col gap-10 md:gap-20 justify-between items-start">
         {/* header section */}
-        <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-[48px] leading-normal xl:leading-tight mt-3">
+        <h2 className="text-white text-3xl lg:text-4xl leading-normal xl:leading-tight mt-3">
           Let’s discuss how Endpoint can help you securely share your data. Get
           the conversation started today.
         </h2>

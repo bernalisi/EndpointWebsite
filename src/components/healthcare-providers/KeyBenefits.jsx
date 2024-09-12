@@ -29,9 +29,9 @@ export default function WhyProvider() {
       <SectionSeparator TitleSection="KEY BENEFITS" />
 
       {/* Title & Paragraph */}
-      <h2 className="text-black text-2xl sm:text-3xl lg:text-4xl xl:text-[48px] mt-3">
+      <h3 className="text-black text-[28px] lg:text-[48px] font-semibold mt-3 py-[20px]">
         Why join Endpoint?
-      </h2>
+      </h3>
       <p className="text-black text-base sm:text-lg lg:text-xl xl:text-2xl mb-8">
         Become part of a network where your data fuels life-saving research
         while keeping you in control of who accesses it, how it&apos;s used, and
@@ -52,7 +52,7 @@ export default function WhyProvider() {
                 className="w-12 h-12 object-contain" // Smaller image size
               />
             </div>
-            <h3 className="text-black text-sm sm:text-base lg:text-lg xl:text-xl font-medium">
+            <h3 className="text-black text-sm sm:text-base lg:text-lg xl:text-xl max-w-[175px] font-medium">
               {reason.title}
             </h3>
           </div>

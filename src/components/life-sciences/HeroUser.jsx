@@ -69,7 +69,7 @@ export default function HeroUser() {
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[75%] md:w-[90%] lg:w-[40%] xl:w-[50%] px-4 max-sm:hidden max-md:text-center text-white lg:text-[15px] xl:text-[25px] md:text-[20px] sm:text-[15px] font-normal pt-5 leading-relaxed text-justify"
+          className="w-[75%] md:w-[90%] lg:w-[40%] font-thin xl:w-[50%] px-4 max-sm:hidden max-md:text-center text-white lg:text-[15px] xl:text-[20px] md:text-[20px] sm:text-[15px] pt-5 leading-relaxed text-justify"
         >
           Navigate the most extensive universe of RWD sources to unleash the the
           full potential of observational research.
