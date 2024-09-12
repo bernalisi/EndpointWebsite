@@ -121,17 +121,17 @@ export default function DesktopNavbar() {
 
             {/* Dropdown menu */}
             {isDropdownOpen && (
-              <div className="absolute top-full mt-1 w-48 bg-white shadow-lg rounded-lg z-50">
+              <div className="absolute top-full mt-1 py-2 w-[220px] bg-white shadow-lg z-50">
                 <a
                   href="https://endpoint-discover.vercel.app/"
                   className="block px-4 py-2 text-black hover:bg-gray-100"
                   target="_blank"
                 >
-                  as Life Science
+                  as Life Sciences
                 </a>
                 <a
                   href="https://endpoint-providers-frontend.vercel.app/"
-                  className="block px-4 py-2 text-black hover:bg-gray-100"
+                  className="block px-4 py-2 text-black hover:bg-violet-100"
                   target="_blank"
                 >
                   as Healthcare Provider
