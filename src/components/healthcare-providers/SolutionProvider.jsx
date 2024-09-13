@@ -38,7 +38,7 @@ export default function SolutionProvider() {
   };
 
   return (
-    <div className="w-full h-auto bg-white flex flex-col lg:flex-row px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 xl:mt-10">
+    <div className="w-full h-auto lg:h-screen bg-white flex flex-col lg:flex-row px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 xl:mt-10">
       {/* Left Side: Navigation Titles */}
       <div className="lg:w-1/4 sticky top-20">
         <ul className="space-y-4">

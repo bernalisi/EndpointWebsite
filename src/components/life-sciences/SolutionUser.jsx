@@ -23,7 +23,7 @@ export default function SolutionUser() {
   };
 
   return (
-    <div className="w-full h-auto bg-white flex flex-col justify-start items-start px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 xl:mt-10">
+    <div className="w-full h-screen bg-white flex flex-col justify-start items-start px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 xl:mt-10">
       <SectionSeparator TitleSection="OUR SOLUTIONS FOR LIFE SCIENCES" />
 
       {/* Header Section */}
@@ -58,7 +58,7 @@ export default function SolutionUser() {
         </div>
 
         {/* Content Section */}
-        <div className="w-full max-w-4xl p-6 bg-violet-50 rounded-lg shadow-md">
+        <div className="w-full max-w-4xl p-6 bg-violet-50 shadow-md">
           <p className="text-lg sm:text-xl lg:text-2xl text-gray-800 leading-relaxed">
             {solutionNavigation[defaultSolution].description}
           </p>
