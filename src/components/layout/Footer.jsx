@@ -87,18 +87,22 @@ export default function Footer() {
             </div>
             <ul className="flex md:flex-row justify-center md:justify-start pt-8 gap-2">
               <li>
-                <img
-                  src={Linkedin}
-                  alt="Linkedin"
-                  className="h-8 hover:opacity-70"
-                />
+              <a href="https://www.linkedin.com/company/endpointdata" target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={Linkedin}
+                    alt="Linkedin"
+                    className="h-8 hover:opacity-70"
+                  />
+                 </a>
               </li>
               <li>
-                <img
-                  src={Medium}
-                  alt="Medium"
-                  className="h-8 hover:opacity-70"
-                />
+                <a href="https://medium.com/@endpoint-data" target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={Medium}
+                    alt="Medium"
+                    className="h-8 hover:opacity-70"
+                  />
+                 </a>
               </li>
             </ul>
           </div>

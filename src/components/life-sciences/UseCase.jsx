@@ -83,7 +83,7 @@ export default function UseCase({ defaultUseCase }) {
               key={index}
               className="text-[14px] sm:text-[16px] mb-2 flex items-center pb-2"
             >
-              <FaCheckCircle className="text-purple-600 mr-2 w-7 h-7" />{" "}
+              <FaCheckCircle className="text-purple-900 mr-2 w-7 h-7" />{" "}
               {benefit}
             </li>
           ))}
