@@ -6,24 +6,24 @@ export default function SolutionUser() {
 
   const solutionNavigation = {
     1: {
-      title: "Data Discovery & Search",
+      title: "DATA DISCOVERY & SEARCH",
       description:
         "Effortlessly search, filter, and save fit-for-purpose datasets from a wide network of data providers, using advanced filtering options to locate the most relevant data for your research.",
     },
     2: {
-      title: "Data Quality Assessment",
+      title: "DATA QUALITY ASSESSMENT",
       description:
         "Preview key quality metrics such as completeness, consistency, and relevance before purchasing datasets, ensuring high-quality data that meets your research standards.",
     },
     3: {
-      title: "Synthetic Data Sandbox",
+      title: "SYNTHETIC DATA SANDBOX",
       description:
         "Test hypotheses and refine methodologies in a risk-free, compliant environment using synthetic data, allowing you to experiment and validate research approaches before committing to full datasets.",
     },
   };
 
   return (
-    <div className="w-full h-screen bg-white flex flex-col justify-start items-start px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 xl:mt-10">
+    <div className="w-full h-auto lg:h-screen bg-white flex flex-col justify-start items-start px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 xl:mt-10">
       <SectionSeparator TitleSection="OUR SOLUTIONS FOR LIFE SCIENCES" />
 
       {/* Header Section */}
@@ -41,14 +41,14 @@ export default function SolutionUser() {
       {/* Navigation and Content Section */}
       <div className="w-full flex flex-col justify-start items-center mt-16 gap-10">
         {/* Navigation Bar */}
-        <div className="w-full flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 border-b pb-4">
+        <div className="w-full flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-36 border-b pb-4">
           {Object.keys(solutionNavigation).map((key) => (
             <button
               className={`w-full sm:w-auto py-2 text-lg text-center font-medium transition-all duration-200 ${
                 defaultSolution === Number(key)
                   ? "text-violet-900 border-b-4 border-violet-900 p-3 bg-violet-200"
-                  : "text-gray-600 border-b-4 border-transparent"
-              } hover:text-violet-900 hover:border-violet-900`}
+                  : "text-gray-600 font-thin border-b-4 border-transparent"
+              } hover:text-violet-900 font-medium hover:border-violet-900`}
               key={key}
               onClick={() => setDefaultSolution(Number(key))}
             >
@@ -58,7 +58,7 @@ export default function SolutionUser() {
         </div>
 
         {/* Content Section */}
-        <div className="w-full max-w-4xl p-6 bg-violet-50 shadow-md">
+        <div className="w-full max-w-6xl p-6 bg-violet-50 shadow-md">
           <p className="text-lg sm:text-xl lg:text-2xl text-gray-800 leading-relaxed">
             {solutionNavigation[defaultSolution].description}
           </p>
