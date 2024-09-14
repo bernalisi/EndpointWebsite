@@ -25,7 +25,7 @@ export default function Stats() {
               key={s.type}
               className="flex flex-col justify-center items-start md:items-start gap-1 text-center md:text-left"
             >
-              <p className="text-white text-[60px] md:text-[70px] lg:text-[85px] font-medium">{`${s.data}+`}</p>
+              <p className="text-white text-[48px] md:text-[70px] lg:text-[85px] font-medium">{`${s.data}+`}</p>
               <img src={line_icon} alt="line icon" className="h-1 my-2" />
               <h6 className="text-white text-xl md:text-2xl font-extralight">
                 {s.type}

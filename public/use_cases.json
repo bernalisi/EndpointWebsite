@@ -85,33 +85,6 @@
       "conclusion": "By leveraging Endpoint, the pharmaceutical company builds robust, evidence-based packages demonstrating the value of their therapy to HTA bodies and payers. This accelerates the market access process, ensuring favorable reimbursement decisions and optimal pricing."
     },
     "4": {
-      "title": "Commercial Teams",
-      "sub_title": "Identifying Portfolio Gaps, Refining Strategies, and Tracking Launch Performance with Endpoint",
-      "client": "A pharmaceutical company with a diversified portfolio, seeking to refine its commercial strategies and track the launch performance of a new oncology product across multiple markets.",
-      "challenge": {
-        "main_challenge": "The company’s commercial team needed to quickly identify portfolio gaps and opportunities across different therapeutic areas, refine commercial strategies based on real-world data (RWD), and track the launch performance of their new product."
-      },
-      "solution": {
-        "1": "Identifying Portfolio Gaps and Opportunities: Using Endpoint’s centralized platform, the company’s commercial team accessed RWD from various sources to identify gaps in their product portfolio.",
-        "2": "Refining Commercial Strategies with Real-Time Data: Endpoint provided real-time data on market trends, treatment patterns, and patient demographics. This allowed the commercial team to refine their strategies by understanding which regions and patient populations were most likely to benefit from their products.",
-        "3": "Tracking Launch Performance and Uptake: The commercial team used Endpoint’s real-time tracking tools to monitor the launch performance of their new oncology product. By accessing up-to-date sales data, patient uptake metrics, and regional market penetration, they were able to track key performance indicators (KPIs) such as prescription rates, sales velocity, and market share.",
-        "4": "Competitive Benchmarking: Endpoint’s access to a wide network of RWD enabled the team to benchmark their product’s performance against competitors. By comparing their launch metrics with similar products, they gained a clearer understanding of how their strategy was performing relative to the competition and adjusted their approach accordingly."
-      },
-      "outcome": {
-        "1": "Faster Identification of Gaps and Opportunities: Using Endpoint, the commercial team rapidly identified portfolio gaps, allowing them to prioritize therapeutic areas and regions with unmet needs. This resulted in more targeted commercial efforts and resource allocation.",
-        "2": "Optimized Commercial Strategies: With real-time access to market and patient data, the team refined their commercial strategies to focus on high-potential areas. This led to a 15% increase in overall market penetration during the first six months of the oncology product’s launch.",
-        "3": "Improved Launch Performance Tracking: The ability to track the launch performance of the new product in real time allowed the team to quickly address underperformance in specific regions, leading to a 10% increase in sales in those areas after strategy adjustments.",
-        "4": "Enhanced Competitive Positioning: By benchmarking their performance against competitors, the team gained valuable insights into the market landscape, enabling them to stay ahead of the competition and further optimize their product’s market positioning."
-      },
-      "benefits": {
-        "1": "Quick identification of portfolio gaps and opportunities.",
-        "2": "Data-driven refinement of commercial strategies for maximum impact.",
-        "3": "Real-time tracking of product launch performance and market uptake.",
-        "4": "Competitive benchmarking to enhance market positioning."
-      },
-      "conclusion": "By leveraging Endpoint’s powerful real-world data platform, the pharmaceutical company’s commercial team was able to rapidly identify portfolio opportunities, refine their commercial strategies, and optimize the launch performance of their new oncology product. Endpoint’s real-time data access allowed for faster, more informed decision-making, leading to improved market penetration and competitive positioning."
-    },
-    "5": {
       "title": "Pharmacovigilance",
       "sub_title": "Enhancing Drug Safety Monitoring and Signal Detection with Endpoint",
       "client": "A large pharmaceutical company with multiple therapies on the market, needing to continuously monitor drug safety and assess long-term adverse events beyond clinical trials.",
@@ -138,6 +111,33 @@
         "4": "Streamlined regulatory reporting and compliance."
       },
       "conclusion": "By leveraging Endpoint’s comprehensive real-world data platform, the pharmaceutical company significantly enhances its pharmacovigilance capabilities. The ability to monitor drug safety in real-time, identify adverse events, detect safety signals early, and assess long-term safety allows the company to ensure ongoing compliance with regulatory requirements and maintain a strong safety profile for its products."
+    },
+    "5": {
+      "title": "Commercial Teams",
+      "sub_title": "Identifying Portfolio Gaps, Refining Strategies, and Tracking Launch Performance with Endpoint",
+      "client": "A pharmaceutical company with a diversified portfolio, seeking to refine its commercial strategies and track the launch performance of a new oncology product across multiple markets.",
+      "challenge": {
+        "main_challenge": "The company’s commercial team needed to quickly identify portfolio gaps and opportunities across different therapeutic areas, refine commercial strategies based on real-world data (RWD), and track the launch performance of their new product."
+      },
+      "solution": {
+        "1": "Identifying Portfolio Gaps and Opportunities: Using Endpoint’s centralized platform, the company’s commercial team accessed RWD from various sources to identify gaps in their product portfolio.",
+        "2": "Refining Commercial Strategies with Real-Time Data: Endpoint provided real-time data on market trends, treatment patterns, and patient demographics. This allowed the commercial team to refine their strategies by understanding which regions and patient populations were most likely to benefit from their products.",
+        "3": "Tracking Launch Performance and Uptake: The commercial team used Endpoint’s real-time tracking tools to monitor the launch performance of their new oncology product. By accessing up-to-date sales data, patient uptake metrics, and regional market penetration, they were able to track key performance indicators (KPIs) such as prescription rates, sales velocity, and market share.",
+        "4": "Competitive Benchmarking: Endpoint’s access to a wide network of RWD enabled the team to benchmark their product’s performance against competitors. By comparing their launch metrics with similar products, they gained a clearer understanding of how their strategy was performing relative to the competition and adjusted their approach accordingly."
+      },
+      "outcome": {
+        "1": "Faster Identification of Gaps and Opportunities: Using Endpoint, the commercial team rapidly identified portfolio gaps, allowing them to prioritize therapeutic areas and regions with unmet needs. This resulted in more targeted commercial efforts and resource allocation.",
+        "2": "Optimized Commercial Strategies: With real-time access to market and patient data, the team refined their commercial strategies to focus on high-potential areas. This led to a 15% increase in overall market penetration during the first six months of the oncology product’s launch.",
+        "3": "Improved Launch Performance Tracking: The ability to track the launch performance of the new product in real time allowed the team to quickly address underperformance in specific regions, leading to a 10% increase in sales in those areas after strategy adjustments.",
+        "4": "Enhanced Competitive Positioning: By benchmarking their performance against competitors, the team gained valuable insights into the market landscape, enabling them to stay ahead of the competition and further optimize their product’s market positioning."
+      },
+      "benefits": {
+        "1": "Quick identification of portfolio gaps and opportunities.",
+        "2": "Data-driven refinement of commercial strategies for maximum impact.",
+        "3": "Real-time tracking of product launch performance and market uptake.",
+        "4": "Competitive benchmarking to enhance market positioning."
+      },
+      "conclusion": "By leveraging Endpoint’s powerful real-world data platform, the pharmaceutical company’s commercial team was able to rapidly identify portfolio opportunities, refine their commercial strategies, and optimize the launch performance of their new oncology product. Endpoint’s real-time data access allowed for faster, more informed decision-making, leading to improved market penetration and competitive positioning."
     }
   }
 }

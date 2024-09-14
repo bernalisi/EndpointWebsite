@@ -10,7 +10,7 @@ export default function UseCase({ defaultUseCase }) {
   }
 
   return (
-    <div className="w-full xl:w-[85%] h-[550px] xl:h-[800px] overflow-y-scroll flex flex-col justify-start items-start bg-white border-[1.5px] border-black mt-10 xl:mt-20 px-4 sm:px-7">
+    <div className="w-full xl:w-[85%] h-[550px] xl:h-[800px] overflow-y-scroll flex flex-col justify-start items-start bg-white border-[1.5px] border-gray-200 mt-10 xl:mt-20 px-4 sm:px-7 shadow-lg">
       {/* Use Case Title */}
       <p className="m-4 sm:m-7 px-3 sm:px-4 py-1 bg-black text-white rounded-full">
         Use Case
@@ -83,7 +83,7 @@ export default function UseCase({ defaultUseCase }) {
               key={index}
               className="text-[14px] sm:text-[16px] mb-2 flex items-center pb-2"
             >
-              <FaCheckCircle className="text-purple-900 mr-2 w-7 h-7" />{" "}
+              <FaCheckCircle className="text-violet-900 mr-2 w-7 h-7" />{" "}
               {benefit}
             </li>
           ))}

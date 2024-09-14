@@ -35,7 +35,7 @@ export default function Footer() {
         {/* First block */}
         <div className="w-[75%] md:w-[500px] h-auto flex flex-col gap-6 md:gap-10 items-center md:items-start justify-end flex-grow">
           {/* Buttons */}
-          <div className="flex flex-col gap-4 mb-8">
+          <div className="flex flex-col items-center gap-4 mb-8">
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
