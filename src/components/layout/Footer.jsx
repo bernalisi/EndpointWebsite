@@ -35,7 +35,7 @@ export default function Footer() {
         {/* First block */}
         <div className="w-[75%] md:w-[500px] h-auto flex flex-col gap-6 md:gap-10 items-center md:items-start justify-end flex-grow">
           {/* Buttons */}
-          <div className="flex flex-col items-center gap-4 mb-8">
+          <div className="flex flex-col items-center md:items-start gap-4 mb-8">
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -78,20 +78,13 @@ export default function Footer() {
                 BOOK DEMO
               </a>
             </button>
-          </div>
-
-          {/* Social Icons */}
-          <div className="flex flex-col gap-4">
-            <div className="flex justify-center md:justify-start">
-              <img src={Logo} alt="Logo" className="h-10 md:h-11" />
-            </div>
-            <ul className="flex md:flex-row justify-center md:justify-start pt-8 gap-2">
+            <ul className="flex md:flex-row justify-center md:justify-start pt-4 gap-2">
               <li>
               <a href="https://www.linkedin.com/company/endpointdata" target="_blank" rel="noopener noreferrer">
                   <img
                     src={Linkedin}
                     alt="Linkedin"
-                    className="h-8 hover:opacity-70"
+                    className="h-7 hover:opacity-70"
                   />
                  </a>
               </li>
@@ -100,11 +93,18 @@ export default function Footer() {
                   <img
                     src={Medium}
                     alt="Medium"
-                    className="h-8 hover:opacity-70"
+                    className="h-7 hover:opacity-70"
                   />
                  </a>
               </li>
             </ul>
+          </div>
+
+          {/* Social Icons */}
+          <div className="flex flex-col">
+            <div className="flex justify-center md:justify-start">
+              <img src={Logo} alt="Logo" className="h-10 md:h-11" />
+            </div>
           </div>
         </div>
 

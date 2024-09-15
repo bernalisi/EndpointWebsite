@@ -25,7 +25,7 @@ export default function WhyProvider() {
   ];
 
   return (
-    <div className="w-full lg:h-screen  bg-white flex flex-col justify-center items-start gap-4 px-14 pb-20">
+    <div className="w-full lg:h-screen bg-white flex flex-col justify-center items-start px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 xl:mt-10">
       <SectionSeparator TitleSection="KEY BENEFITS" />
 
       {/* Title & Paragraph */}
@@ -38,7 +38,7 @@ export default function WhyProvider() {
         for what purpose
       </p>
 
-      <div className="flex flex-wrap justify-center items-start gap-6 w-full">
+      <div className="flex flex-wrap justify-center items-start gap-6 lg:gap-20 lg:mt-32 w-full">
         {reasons.map((reason, index) => (
           <div
             key={index}

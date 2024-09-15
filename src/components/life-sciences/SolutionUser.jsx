@@ -23,7 +23,7 @@ export default function SolutionUser() {
   };
 
   return (
-    <div className="w-full h-auto lg:h-screen bg-white flex flex-col justify-start items-start px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 xl:mt-10">
+    <div className="w-full h-auto lg:h-auto bg-white flex flex-col justify-start items-start px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 xl:mt-10">
       <SectionSeparator TitleSection="OUR SOLUTIONS FOR LIFE SCIENCES" />
 
       {/* Header Section */}
@@ -41,13 +41,14 @@ export default function SolutionUser() {
       {/* Navigation and Content Section */}
       <div className="w-full flex flex-col justify-start items-center mt-16 gap-10">
         {/* Navigation Bar */}
+
         <div className="w-full flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-36 border-b pb-4">
           {Object.keys(solutionNavigation).map((key) => (
             <button
-              className={`w-full sm:w-auto py-2 text-lg text-center font-medium transition-all duration-200 ${
+              className={`w-full sm:w-auto py-2 text-lg text-center sm:text-left font-medium transition-all duration-200 ${
                 defaultSolution === Number(key)
                   ? "text-violet-900 border-b-4 border-violet-900 p-3 bg-violet-200"
-                  : "text-gray-600 font-thin border-b-4 border-transparent"
+                  : "text-black font-thin border-b-4 border-transparent"
               } hover:text-violet-900 font-medium hover:border-violet-900`}
               key={key}
               onClick={() => setDefaultSolution(Number(key))}
