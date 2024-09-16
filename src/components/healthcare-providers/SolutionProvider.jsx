@@ -45,7 +45,7 @@ export default function SolutionProvider() {
   };
 
   return (
-    <div className="w-full h-auto lg:h-screen bg-white flex flex-col justify-start items-start px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 xl:mt-10">
+    <div className="w-full h-auto 2xl:h-auto bg-white flex flex-col justify-start items-start px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 xl:mt-10">
         <SectionSeparator TitleSection="OUR SOLUTIONS FOR HEALTHCARE PROVIDERS" />
 
       {/* Header Section */}
@@ -58,44 +58,32 @@ export default function SolutionProvider() {
         </p>
       </div>
 
-      <div className="w-full flex flex-col justify-start items-center md:flex-row md:justify-center md:items-start mt-16 gap-10">
+      <div className="w-full flex flex-col justify-start items-center md:flex-row md:justify-start md:items-start xl:justify-start mt-16 gap-20">
         {/* Left Side: Navigation Titles */}
-        <div className="lg:w-1/4 sticky top-20">
-          <ul className="space-y-4">
+        <div className="flex flex-col max-lg:hidden md:w-[20%] lg:w-[20%] 2xl:w-[15%] sticky top-20">
+          <ul className="">
             {Object.keys(useCaseNavigation).map((key) => (
-              <li
+              <button
                 key={key}
                 className={`flex items-center ${
                   currentCard === Number(key)
-                    ? "text-black font-semibold"
-                    : "text-gray-400"
+                    ? "border-l-4 border-violet-900 text-left text-violet-900 font-bold py-4 px-2 sm:px-4 w-full text-sm sm:text-base"
+                    : "border-l-4 hover:border-violet-900 text-left hover:text-violet-900 py-4 px-2 sm:px-4 w-full text-sm sm:text-base"
                 }`}
               >
-                <span
-                  className={`mr-2 h-3 w-3 rounded-full ${
-                    currentCard === Number(key) ? "bg-violet-900" : "bg-gray-300"
-                  }`}
-                ></span>
+
                 {useCaseNavigation[key].title}
-              </li>
+              </button>
             ))}
           </ul>
         </div>
 
         {/* Right Side: Scrollable Cards with Scroll Indicator & Gradient */}
-        <div className="relative lg:w-3/4 lg:h-[400px] overflow-y-auto snap-y snap-mandatory">
-          {/* Gradient at the bottom for scroll hint */}
-          <div className="absolute bottom-0 left-0 right-0 h-10 pointer-events-none"></div>
-          {/* Scroll hint icon */}
-          {currentCard === 1 && (
-            <div className="absolute bottom-8 left-2/4 transform -translate-x-1/2">
-              <div className="animate-bounce text-violet-900 text-[27px]">↓</div>
-            </div>
-          )}
+        <div className="relative flex flex-col items-center gap-10 lg:gap-20 max-lg:w-full lg:w-[70%] lg:h-auto overflow-y-auto snap-y snap-mandatory">
 
           {Object.keys(useCaseNavigation).map((key) => {
             const { ref, inView } = useInView({
-              threshold: 0.5, // Trigger when 50% of the card is in view
+              threshold: 0.6, // Trigger when 50% of the card is in view
               triggerOnce: false,
             });
 
@@ -111,14 +99,14 @@ export default function SolutionProvider() {
                   inView ? "opacity-100" : "opacity-0"
                 }`}
               >
-                <div className="bg-[#ECE7F1] border border-violet-900 p-8 rounded-lg w-2/3 lg:w-[1050px] lg:h-[400px] min-h-[350px] mb-2">
+                <div className="bg-[#ECE7F1] hover:border hover:border-violet-900 p-8 rounded-lg max-lg:w-[90%] lg:w-[85%] xl:w-[85%] 2xl:w-[80%] max-h-auto h-[400px] sm:h-[300px] md:h-[550px] lg:h-[500px] xl:h-[500px] mb-2 mx-6">
                   <div className="flex flex-row justify-start items-center gap-10">
                     <img src={useCaseNavigation[key].url} alt="" className="h-12"/>
-                    <h3 className="text-[40px] font-semibold text-black">
+                    <h3 className="sm:text-[25px] md:text-[40px] font-semibold text-black">
                       {useCaseNavigation[key].title.toUpperCase()}
                     </h3>
                   </div>
-                  <p className="text-[24px] text-black mt-16">
+                  <p className="sm:text-[15px] lg:text-[24px] text-black mt-16">
                     {useCaseNavigation[key].description}
                   </p>
                 </div>

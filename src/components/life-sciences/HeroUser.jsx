@@ -69,13 +69,13 @@ export default function HeroUser() {
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[75%] md:w-[90%] lg:w-[40%] font-thin xl:w-[50%] px-4 max-sm:hidden max-md:text-center text-white lg:text-[15px] xl:text-[20px] md:text-[20px] sm:text-[15px] pt-5 leading-relaxed text-justify"
+          className="w-[75%] md:w-[100%] lg:w-[40%] font-thin xl:w-[50%] px-4 max-sm:hidden max-md:text-center text-white lg:text-[15px] xl:text-[20px] md:text-[20px] sm:text-[15px] pt-5 leading-relaxed text-justify"
         >
           Navigate the most extensive universe of RWD sources to unleash the the
           full potential of observational research.
         </motion.a>
 
-        <div className="lg:w-[40%] xl:w-[50%] w-[50%] max-sm:w-[100%] max-sm:px-5 flex flex-row justify-center max-sm:justify-start">
+        <div className="lg:w-[40%] xl:w-[50%] w-[50%] max-lg:w-[100%] max-sm:px-5 flex flex-row justify-center max-sm:justify-start">
           <motion.div
             variants={scrollVariants}
             initial="hidden"
