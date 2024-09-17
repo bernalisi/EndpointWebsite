@@ -22,7 +22,7 @@ export default function SectionSeparator({ TitleSection }) {
         initial="hidden"
         whileInView="show"
         viewport={{ margin: "-100px", once: true }}
-        className="text-black text-sm font-medium sm:text-base"
+        className="text-black text-sm font-medium sm:text-base 2xl:text-[20px]"
       >
         {TitleSection}
       </motion.h6>

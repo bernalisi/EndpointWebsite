@@ -55,8 +55,8 @@ export default function DesktopNavbar() {
 
   // Check if the URL is "/Privacy%20Policy" or "/Terms%20of%20use"
   const isSpecificPage =
-    location.pathname === "/Privacy%20Policy" ||
-    location.pathname === "/Terms%20of%20use";
+    location.pathname === "/privacy%20policy" ||
+    location.pathname === "/terms%20of%20use";
 
   return (
     <div className="absolute w-full h-16 z-40">
@@ -76,7 +76,7 @@ export default function DesktopNavbar() {
                   scrolling || hovering || isSpecificPage ? Logo : Logo_white
                 }
                 alt="Logo"
-                className="h-11"
+                className="h-11 2xl:h-16"
               />
             </a>
           </div>
@@ -94,8 +94,8 @@ export default function DesktopNavbar() {
                   }
                   className={
                     scrolling || hovering || isSpecificPage
-                      ? "text-black hover:text-violet-900 font-medium"
-                      : "text-white hover:text-violet-600 font-medium"
+                      ? "text-black hover:text-violet-900 font-medium 2xl:text-[20px]"
+                      : "text-white hover:text-violet-600 font-medium 2xl:text-[20px]"
                   }
                 >
                   {element.title}
@@ -112,8 +112,8 @@ export default function DesktopNavbar() {
               onClick={handleLoginClick} // Toggle dropdown on click
               className={
                 scrolling || hovering || isSpecificPage
-                  ? "h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white"
-                  : "h-8 px-5 py-1 flex items-center font-semibold border-2 border-white text-white transition duration-150 ease-in-out hover:bg-white hover:text-black"
+                  ? "h-8 2xl:text-[20px] px-5 py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white"
+                  : "h-8 2xl:text-[20px] px-5 py-1 flex items-center font-semibold border-2 border-white text-white transition duration-150 ease-in-out hover:bg-white hover:text-black"
               }
             >
               LOG IN
@@ -143,8 +143,8 @@ export default function DesktopNavbar() {
           <button
             className={
               scrolling || hovering || isSpecificPage
-                ? "h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white"
-                : "h-8 px-5 py-1 flex items-center font-semibold border-2 border-white text-white transition duration-150 ease-in-out hover:bg-white hover:text-black"
+                ? "h-8 2xl:text-[20px] px-5 py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white"
+                : "h-8 2xl:text-[20px] px-5 py-1 flex items-center font-semibold border-2 border-white text-white transition duration-150 ease-in-out hover:bg-white hover:text-black"
             }
           >
             <a href="/CONTACT US">CONTACT US</a>
@@ -152,8 +152,8 @@ export default function DesktopNavbar() {
           <button
             className={
               scrolling || hovering || isSpecificPage
-                ? "h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-violet-900 border-violet-900 text-white transition duration-150 ease-in-out hover:opacity-70"
-                : "h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-white border-white text-black transition duration-150 ease-in-out hover:opacity-70"
+                ? "h-8 2xl:text-[20px] px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-violet-900 border-violet-900 text-white transition duration-150 ease-in-out hover:opacity-70"
+                : "h-8 2xl:text-[20px] px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-white border-white text-black transition duration-150 ease-in-out hover:opacity-70"
             }
           >
             <a href="https://calendly.com/bernardo-tryendpoint/book-a-demo-with-bernardo">
