@@ -3,6 +3,7 @@ import SectionSeparator from "../../components/ui/SectionSeparatorWhiteBg";
 
 export default function SolutionUser() {
   const [defaultSolution, setDefaultSolution] = useState(1);
+  const [fade, setFade] = useState("fade-in");
 
   const solutionNavigation = {
     1: {
@@ -20,6 +21,14 @@ export default function SolutionUser() {
       description:
         "Test hypotheses and refine methodologies in a risk-free, compliant environment using synthetic data, allowing you to experiment and validate research approaches before committing to full datasets.",
     },
+  };
+
+  const handleSolutionChange = (key) => {
+    setFade("fade-out"); // Start fade-out effect
+    setTimeout(() => {
+      setDefaultSolution(key); // Change content after fade-out
+      setFade("fade-in"); // Fade-in new content
+    }, 300); // Time to complete fade-out
   };
 
   return (
@@ -47,11 +56,11 @@ export default function SolutionUser() {
             <button
               className={`w-full sm:w-auto py-2 text-lg text-center sm:text-left font-medium transition-all duration-200 ${
                 defaultSolution === Number(key)
-                  ? "text-violet-900 border-b-4 border-violet-900 p-3 bg-violet-200"
+                  ? "text-violet-900 border-b-4 border-violet-900 p-3"
                   : "text-black font-thin border-b-4 border-transparent"
               } hover:text-violet-900 font-medium hover:border-violet-900`}
               key={key}
-              onClick={() => setDefaultSolution(Number(key))}
+              onClick={() => handleSolutionChange(Number(key))}
             >
               {solutionNavigation[key].title}
             </button>
@@ -59,8 +68,10 @@ export default function SolutionUser() {
         </div>
 
         {/* Content Section */}
-        <div className="w-full max-w-6xl p-6 bg-violet-50 shadow-md">
-          <p className="text-lg sm:text-xl lg:text-2xl text-gray-800 leading-relaxed">
+        <div
+          className={`w-full text-center flex justify-center p-8 bg-violet-100 shadow-lg rounded-lg max-w-4xl mx-auto transition-opacity duration-300 ${fade}`}
+        >
+          <p className="text-lg w-full sm:text-xl lg:text-2xl text-gray-800 leading-relaxed font-normal">
             {solutionNavigation[defaultSolution].description}
           </p>
         </div>

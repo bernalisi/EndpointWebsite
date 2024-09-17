@@ -59,7 +59,7 @@ export default function HeroProvider({ scrollToNextSection }) {
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[100%] lg:w-[40%] xl:w-[50%] text-white px-4 xl:text-[80px] lg:text-[50px] md:text-[60px] sm:text-[50px] xl:mb-16 text-[40px] max-sm:text-left max-md:text-center font-semibold leading-tight"
+          className="w-[100%] lg:w-[40%] 2xl:mb-5 2xl:text-[120px] xl:w-[50%] text-white px-4 xl:text-[80px] lg:text-[50px] md:text-[60px] sm:text-[50px] xl:mb-16 text-[40px] max-sm:text-left max-md:text-center font-semibold leading-tight"
         >
           Healthcare Providers
         </motion.h1>
@@ -69,7 +69,7 @@ export default function HeroProvider({ scrollToNextSection }) {
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[75%] md:w-[100%] lg:w-[40%] font-thin xl:w-[50%] px-4 max-sm:hidden max-md:text-center text-white lg:text-[15px] xl:text-[20px] md:text-[20px] sm:text-[15px] pt-5 leading-relaxed text-justify"
+          className="w-[75%] 2xl:text-[35px] md:w-[100%] lg:w-[40%] font-thin xl:w-[50%] px-4 max-sm:hidden max-md:text-center text-white lg:text-[15px] xl:text-[20px] md:text-[20px] sm:text-[15px] pt-5 leading-relaxed text-justify"
         >
           Securely share, control, and monetize your healthcare data to advance
           medical research with Endpoint
@@ -85,7 +85,7 @@ export default function HeroProvider({ scrollToNextSection }) {
             <img
               src={scroll_down}
               alt="chevron down icon"
-              className="h-3 max-sm:hidden md:h-3 xl:mt-5"
+              className="h-3 max-sm:hidden md:h-3 xl:mt-5 2xl:h-5 2xl:mt-12"
             />
           </motion.div>
           <button

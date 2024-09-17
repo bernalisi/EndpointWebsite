@@ -71,7 +71,7 @@ export default function Hero({ scrollToNextSection }) {
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[100%] lg:w-[65%] xl:w-[60%] text-white px-4 xl:text-[60px] lg:text-[50px] md:text-[60px] sm:text-[50px] text-[40px] max-sm:text-left max-md:text-center font-semibold leading-tight"
+          className="w-[100%] lg:w-[65%] xl:w-[60%] 2xl:mb-5 2xl:text-[120px] text-white px-4 xl:text-[60px] lg:text-[50px] md:text-[60px] sm:text-[50px] text-[40px] max-sm:text-left max-md:text-center font-semibold leading-tight"
         >
           Instantly find RWD for smarter pharmaceutical research
         </motion.h1>
@@ -81,7 +81,7 @@ export default function Hero({ scrollToNextSection }) {
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[75%] md:w-[90%] lg:w-[60%] xl:w-[55%] px-4 max-sm:hidden max-md:text-center text-white lg:text-[15px] xl:text-[20px] md:text-[20px] sm:text-[15px] font-normal pt-5 leading-relaxed"
+          className="w-[75%] md:w-[90%] lg:w-[60%] xl:w-[55%] 2xl:text-[35px] px-4 max-sm:hidden max-md:text-center text-white lg:text-[15px] xl:text-[20px] md:text-[20px] sm:text-[15px] font-normal pt-5 leading-relaxed"
         >
           Our self-service platform enables quick discovery and access to
           curated healthcare data from leading organizations worldwide,
@@ -99,7 +99,7 @@ export default function Hero({ scrollToNextSection }) {
             <img
               src={scroll_down}
               alt="chevron down icon"
-              className="h-3 max-sm:hidden md:h-3 xl:mt-5"
+              className="h-3 max-sm:hidden md:h-3 xl:mt-5 2xl:h-5 2xl:mt-12"
             />
           </motion.div>
 

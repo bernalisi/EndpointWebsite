@@ -46,11 +46,18 @@ export default function SolutionProvider() {
 
   const handleScroll = (id) => {
     const element = document.getElementById(id);
-    const yOffset = -100; // Adjust for fixed header or padding
-    const y =
-      element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    const cardContainer = document.querySelector(".card-container"); // Ensure class is assigned
 
-    window.scrollTo({ top: y, behavior: "smooth" });
+    if (element && cardContainer) {
+      const yOffset = -50; // Adjust this for proper positioning within the container
+      const y =
+        element.getBoundingClientRect().top +
+        cardContainer.scrollTop -
+        cardContainer.getBoundingClientRect().top +
+        yOffset;
+
+      cardContainer.scrollTo({ top: y, behavior: "smooth" });
+    }
   };
 
   return (
@@ -92,7 +99,7 @@ export default function SolutionProvider() {
         </div>
 
         {/* Right Side: Scrollable Cards with Scroll Indicator & Gradient */}
-        <div className="relative flex flex-col items-center gap-10 lg:gap-20 max-lg:w-full lg:w-[70%] lg:h-auto overflow-y-auto snap-y snap-mandatory">
+        <div className="card-container relative flex flex-col items-center gap-10 lg:gap-20 max-lg:w-full lg:w-[70%] h-[500px] overflow-y-auto snap-y snap-mandatory">
           {Object.keys(useCaseNavigation).map((key) => {
             const { ref, inView } = useInView({
               threshold: 0.6, // Trigger when 50% of the card is in view

@@ -5,7 +5,7 @@ import SectionSeparatorWhite from "../../components/ui/SectionSeparator_white";
 export default function Contact() {
   return (
     <div
-      className="bg-cover bg-center bg-no-repeat w-full max-sm:h-auto max-sm:pb-20 h-screen flex flex-col justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20"
+      className="bg-cover bg-center 2xl:h-[700px] bg-no-repeat w-full max-sm:h-auto max-sm:pb-20 h-screen flex flex-col justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20"
       style={{ backgroundImage: `url(${bg_image})` }}
     >
       <SectionSeparatorWhite TitleSection="READY TO SIMPLIFY HOW YOU DISCOVER HEALTH DATA?" />
