@@ -75,7 +75,7 @@ export default function HeroProvider({ scrollToNextSection }) {
           medical research with Endpoint
         </motion.a>
 
-        <div className="lg:w-[40%] xl:w-[50%] w-[50%] max-lg:w-[100%] max-sm:px-5 flex flex-row justify-center max-sm:justify-start">
+        <div className="lg:w-[40%] cursor-pointer xl:w-[50%] w-[50%] max-lg:w-[100%] max-sm:px-5 flex flex-row justify-center max-sm:justify-start">
           <motion.div
             variants={scrollVariants}
             initial="hidden"
@@ -90,7 +90,7 @@ export default function HeroProvider({ scrollToNextSection }) {
           </motion.div>
           <button
             onClick={scrollToNextSection}
-            className="sm:hidden w-auto h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90"
+            className="sm:hidden cursor-pointer w-auto h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90"
           >
             <a className="flex items-center gap-2">
               READ MORE

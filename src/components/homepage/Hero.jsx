@@ -89,7 +89,7 @@ export default function Hero({ scrollToNextSection }) {
           just a few clicks.
         </motion.a>
 
-        <div className="w-[50%] max-sm:w-[100%] max-sm:px-5 flex flex-row justify-center max-sm:justify-start">
+        <div className="w-[50%] cursor-pointer max-sm:w-[100%] max-sm:px-5 flex flex-row justify-center max-sm:justify-start">
           <motion.div
             variants={scrollVariants}
             initial="hidden"
@@ -105,7 +105,7 @@ export default function Hero({ scrollToNextSection }) {
 
           {/* Button with bounce animation */}
           <motion.button
-            className="sm:hidden w-auto h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90"
+            className="sm:hidden cursor-pointer w-auto h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90"
             variants={buttonBounce}
             whileHover="hover"
             onClick={scrollToNextSection} // Use the function on click
