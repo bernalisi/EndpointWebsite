@@ -42,7 +42,7 @@ const scrollVariants = {
   },
 };
 
-export default function HeroProvider() {
+export default function HeroProvider({ scrollToNextSection }) {
   return (
     <div
       className="w-screen h-screen lg:h-auto bg-cover bg-center bg-repeat bg-black flex flex-row justify-end"
@@ -80,6 +80,7 @@ export default function HeroProvider() {
             variants={scrollVariants}
             initial="hidden"
             whileInView="show"
+            onClick={scrollToNextSection}
           >
             <img
               src={scroll_down}
@@ -87,8 +88,11 @@ export default function HeroProvider() {
               className="h-3 max-sm:hidden md:h-3 xl:mt-5"
             />
           </motion.div>
-          <button className="sm:hidden w-auto h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90">
-            <a href="" className="flex items-center gap-2">
+          <button
+            onClick={scrollToNextSection}
+            className="sm:hidden w-auto h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90"
+          >
+            <a className="flex items-center gap-2">
               READ MORE
               <img
                 src={chevron_down_black}

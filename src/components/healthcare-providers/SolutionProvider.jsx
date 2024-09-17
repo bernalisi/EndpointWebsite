@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import syntetic_data from "../../assets/images/healthcare-providers/Syntetic data.svg"
+import syntetic_data from "../../assets/images/healthcare-providers/Syntetic data.svg";
 import SectionSeparator from "../ui/SectionSeparatorWhiteBg";
 
 export default function SolutionProvider() {
@@ -12,31 +12,31 @@ export default function SolutionProvider() {
       title: "Synthetic Data Creation",
       description:
         "Quickly create synthetic versions of your real-world data to allow researchers to assess the feasibility of their projects without exposing sensitive patient information. Synthetic data can also be used internally for studies such as patient journeys and treatment patterns.",
-      url: syntetic_data
+      url: syntetic_data,
     },
     2: {
       title: "Visibility to Top Researchers",
       description:
         "Your datasets gain exposure to leading pharmaceutical companies and research institutions through Endpoint’s closed marketplace. Only verified license holders can explore and purchase synthetic data samples, ensuring your data is in the right hands.",
-      url: ""
+      url: "",
     },
     3: {
       title: "Test Feasibility",
       description:
         "Researchers experiment with synthetic data in a secure sandbox environment to test hypotheses, refine methodologies, and validate research approaches, all without compliance risks.",
-      url: ""
+      url: "",
     },
     4: {
       title: "Transition to Real Data",
       description:
         "Once synthetic data proves fit-for-purpose, researchers can request access to the real-world data. You maintain full control over how the real data is shared—whether for a limited time, specific purposes, or in collaboration with top-tier researchers.",
-      url: ""
+      url: "",
     },
     5: {
       title: "Secure Data Sharing",
       description:
         "Real-world data is shared in Endpoint’s clean rooms, ensuring all collaborations are privacy-protected and compliant with regulatory standards.",
-      url: ""
+      url: "",
     },
   };
 
@@ -44,9 +44,18 @@ export default function SolutionProvider() {
     if (inView) setCurrentCard(key);
   };
 
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    const yOffset = -100; // Adjust for fixed header or padding
+    const y =
+      element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
+
   return (
     <div className="w-full h-auto 2xl:h-auto bg-white flex flex-col justify-start items-start px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 xl:mt-10">
-        <SectionSeparator TitleSection="OUR SOLUTIONS FOR HEALTHCARE PROVIDERS" />
+      <SectionSeparator TitleSection="OUR SOLUTIONS FOR HEALTHCARE PROVIDERS" />
 
       {/* Header Section */}
       <div className="w-full flex flex-col gap-6 justify-between items-start">
@@ -54,7 +63,11 @@ export default function SolutionProvider() {
           Safeguard privacy, maximize data utilization
         </h3>
         <p className="text-black text-lg sm:text-xl lg:text-2xl leading-relaxed">
-        Endpoint connects reseachers to a vast network of data providers, allowing them to explore fragmented health data from multiple sources— registries, hospitals, labs, pharmacies, and more—in a unified platform. Data providers gain visibility to top biopharma researchers, while retaining full control over who gets to access their data.
+          Endpoint connects researchers to a vast network of data providers,
+          allowing them to explore fragmented health data from multiple sources—
+          registries, hospitals, labs, pharmacies, and more—in a unified
+          platform. Data providers gain visibility to top biopharma researchers,
+          while retaining full control over who gets to access their data.
         </p>
       </div>
 
@@ -65,13 +78,13 @@ export default function SolutionProvider() {
             {Object.keys(useCaseNavigation).map((key) => (
               <button
                 key={key}
+                onClick={() => handleScroll(`card-${key}`)}
                 className={`flex items-center ${
                   currentCard === Number(key)
                     ? "border-l-4 border-violet-900 text-left text-violet-900 font-bold py-4 px-2 sm:px-4 w-full text-sm sm:text-base"
                     : "border-l-4 hover:border-violet-900 text-left hover:text-violet-900 py-4 px-2 sm:px-4 w-full text-sm sm:text-base"
                 }`}
               >
-
                 {useCaseNavigation[key].title}
               </button>
             ))}
@@ -80,7 +93,6 @@ export default function SolutionProvider() {
 
         {/* Right Side: Scrollable Cards with Scroll Indicator & Gradient */}
         <div className="relative flex flex-col items-center gap-10 lg:gap-20 max-lg:w-full lg:w-[70%] lg:h-auto overflow-y-auto snap-y snap-mandatory">
-
           {Object.keys(useCaseNavigation).map((key) => {
             const { ref, inView } = useInView({
               threshold: 0.6, // Trigger when 50% of the card is in view
@@ -94,14 +106,19 @@ export default function SolutionProvider() {
             return (
               <div
                 key={key}
+                id={`card-${key}`} // Assigning ID for anchor scroll
                 ref={ref}
                 className={`snap-start transition-opacity duration-300 ${
                   inView ? "opacity-100" : "opacity-0"
                 }`}
               >
-                <div className="bg-[#ECE7F1] hover:border hover:border-violet-900 p-8 rounded-lg max-lg:w-[90%] lg:w-[85%] xl:w-[85%] 2xl:w-[80%] max-h-auto h-[400px] sm:h-[300px] md:h-[550px] lg:h-[500px] xl:h-[500px] mb-2 mx-6">
+                <div className="bg-violet-100 border hover:border-violet-900 p-8 rounded-lg max-lg:w-[90%] lg:w-[85%] xl:w-[85%] 2xl:w-[80%] max-h-auto h-[400px] sm:h-[300px] md:h-[550px] lg:h-[500px] xl:h-[500px] mb-2 mx-6">
                   <div className="flex flex-row justify-start items-center gap-10">
-                    <img src={useCaseNavigation[key].url} alt="" className="h-12"/>
+                    <img
+                      src={useCaseNavigation[key].url}
+                      alt=""
+                      className="h-12"
+                    />
                     <h3 className="sm:text-[25px] md:text-[40px] font-semibold text-black">
                       {useCaseNavigation[key].title.toUpperCase()}
                     </h3>

@@ -55,8 +55,8 @@ export default function DesktopNavbar() {
 
   // Check if the URL is "/Privacy%20Policy" or "/Terms%20of%20use"
   const isSpecificPage =
-    location.pathname === "/Privacy%20Policy" ||
-    location.pathname === "/Terms%20of%20use";
+    location.pathname === "/privacy%20policy" ||
+    location.pathname === "/terms%20of%20use";
 
   return (
     <div className="absolute w-full h-16 z-40">

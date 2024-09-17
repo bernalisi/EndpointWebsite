@@ -30,7 +30,6 @@ const scrollVariants = {
     opacity: 1,
     y: 0,
   },
-
   show: {
     y: [4, 3, 2, 1, 0, -1, -2, -3, -4, -3, -2, -1, 0, 1, 2, 3, 4],
     opacity: 1,
@@ -43,7 +42,19 @@ const scrollVariants = {
   },
 };
 
-export default function Hero() {
+// New bounce animation for button
+const buttonBounce = {
+  hover: {
+    scale: 1.1,
+    transition: {
+      yoyo: Infinity,
+      duration: 0.4,
+    },
+  },
+};
+
+export default function Hero({ scrollToNextSection }) {
+  // Receive the function as a prop
   return (
     <div
       className="w-screen h-screen lg:h-auto bg-cover bg-center bg-repeat bg-black flex flex-row"
@@ -77,11 +88,13 @@ export default function Hero() {
           streamlining research and data analysis for observational studies with
           just a few clicks.
         </motion.a>
+
         <div className="w-[50%] max-sm:w-[100%] max-sm:px-5 flex flex-row justify-center max-sm:justify-start">
           <motion.div
             variants={scrollVariants}
             initial="hidden"
             whileInView="show"
+            onClick={scrollToNextSection}
           >
             <img
               src={scroll_down}
@@ -89,8 +102,15 @@ export default function Hero() {
               className="h-3 max-sm:hidden md:h-3 xl:mt-5"
             />
           </motion.div>
-          <button className="sm:hidden w-auto h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90">
-            <a href="" className="flex items-center gap-2">
+
+          {/* Button with bounce animation */}
+          <motion.button
+            className="sm:hidden w-auto h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90"
+            variants={buttonBounce}
+            whileHover="hover"
+            onClick={scrollToNextSection} // Use the function on click
+          >
+            <a className="flex items-center gap-2">
               READ MORE
               <img
                 src={chevron_down_black}
@@ -98,7 +118,7 @@ export default function Hero() {
                 className="h-5"
               />
             </a>
-          </button>
+          </motion.button>
         </div>
       </motion.div>
     </div>
