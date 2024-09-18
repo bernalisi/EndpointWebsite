@@ -88,7 +88,7 @@ export default function Footer() {
                   <img
                     src={Linkedin}
                     alt="Linkedin"
-                    className="h-7 ld:h-12 hover:opacity-70"
+                    className="h-7 ld:h-10 hover:opacity-70"
                   />
                 </a>
               </li>
@@ -101,7 +101,7 @@ export default function Footer() {
                   <img
                     src={Medium}
                     alt="Medium"
-                    className="h-7 ld:h-12 hover:opacity-70"
+                    className="h-7 ld:h-10 hover:opacity-70"
                   />
                 </a>
               </li>
@@ -119,7 +119,7 @@ export default function Footer() {
         <div className="w-full md:w-[700px] h-auto flex flex-col justify-end">
           <ul className="flex flex-col md:flex-row justify-center md:justify-end text-black text-center md:text-left">
             {/* Copyright Item */}
-            <li className="mb-2 md:mb-0 md:mr-4">All Content Copyright 2024</li>
+            <li className="mb-2 md:mb-0 md:mr-4 ld:text-[20px]">All Content Copyright 2024</li>
 
             {/* Navigation Items */}
             {Navigation.map((item, index) => (

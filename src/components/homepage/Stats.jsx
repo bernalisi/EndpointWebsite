@@ -52,13 +52,13 @@ export default function Stats() {
   return (
     <div
       ref={ref}
-      className="w-full h-screen bg-black flex flex-col justify-start items-start gap-4 px-6 mb-20 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:py-20"
+      className="w-full ld:h-screen bg-black flex flex-col justify-start items-start gap-4 px-6 mb-20 ld:mb-0 sm:px-10 lg:px-14 ld:pt-0 sm:pt-16 lg:py-20 "
     >
       <SectionSeparator TitleSection="UNLOCKING DISCOVERY" />
 
       <div className="w-full flex flex-col gap-10 justify-between items-start">
         {/* Header Section */}
-        <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-[48px] mt-3">
+        <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-[48px] mt-3 py-10">
           Global, High-Quality RWD Ecosystem
         </h2>
 

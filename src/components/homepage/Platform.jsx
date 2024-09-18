@@ -20,7 +20,7 @@ export default function Platform() {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full bg-black h-screen flex flex-col justify-center items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20">
+    <div className="w-full bg-black ld:h-screen flex flex-col justify-center ld:justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-0 sm:pt-16 lg:pt-20 ld:pt-20">
       <SectionSeparator TitleSection="OUR PLATFORM" />
 
       <div className="w-full flex flex-col gap-5 justify-between items-start">
@@ -35,7 +35,7 @@ export default function Platform() {
         </p>
 
         {/* Cards */}
-        <div className="w-full flex flex-col lg:flex-row justify-evenly items-center gap-8 sm:gap-10 lg:gap-12 mt-10 sm:mt-12 lg:mt-14 mb-10 sm:mb-14 lg:mb-20">
+        <div className="w-full flex flex-col ld:pt-40 lg:flex-row justify-evenly items-center gap-8 sm:gap-10 lg:gap-12 mt-10 sm:mt-12 lg:mt-14 mb-10 sm:mb-14 lg:mb-20">
           {/* Life Science Card */}
           <motion.div
             onClick={() => {

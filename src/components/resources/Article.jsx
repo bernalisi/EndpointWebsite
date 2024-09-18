@@ -25,7 +25,7 @@ export default function Article({ thumbnail, title, description, link }) {
       )}
       <h6 className="text-xs ld:text-[16px] md:text-[12px] font-light">BLOG</h6>{" "}
       {/* You can adjust or remove this */}
-      <p className="text-lg ld:text-[30px] md:text-[24px] line-clamp-2 font-semibold">
+      <p className="text-lg ld:text-[30px] md:text-[24px] line-clamp-2 font-semibold ld:leading-normal">
         {title}
       </p>
       <button className="w-full h-10 md:h-8 py-1 flex justify-start items-center font-extralight tracking-widest transition duration-150 ease-in-out text-white hover:opacity-80">
