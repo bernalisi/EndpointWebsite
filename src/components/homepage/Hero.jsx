@@ -81,7 +81,7 @@ export default function Hero({ scrollToNextSection }) {
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[75%] md:w-[90%] lg:w-[60%] xl:w-[55%] ld:text-[35px] px-4 hidden sm:block max-md:text-center text-white xl:text-[20px] md:text-[25px] sm:text-[20px] font-normal pt-5 leading-relaxed"
+          className="w-[75%] md:w-[90%] lg:w-[60%] xl:w-[55%] ld:text-[35px] px-4 hidden sm:block max-md:text-center text-white xl:text-[20px] md:text-[22px] sm:text-[20px] font-normal pt-5 leading-relaxed"
         >
           Our self-service platform enables quick discovery and access to
           curated healthcare data from leading organizations worldwide,
