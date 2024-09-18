@@ -39,7 +39,7 @@ export default function Footer() {
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white"
+                className="h-8 ld:text-[20px] px-5 py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white"
               >
                 LOG IN
               </button>
@@ -65,11 +65,11 @@ export default function Footer() {
               )}
             </div>
 
-            <button className="h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white">
+            {/* <button className="h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white">
               <a href="/contact us">CONTACT US</a>
-            </button>
+            </button> */}
 
-            <button className="h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-violet-900 border-violet-900 text-white transition duration-150 ease-in-out hover:opacity-70">
+            <button className="h-8 ld:text-[20px] px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-violet-900 border-violet-900 text-white transition duration-150 ease-in-out hover:opacity-70">
               <a
                 href="https://calendly.com/bernardo-tryendpoint/book-a-demo-with-bernardo"
                 target="_blank"
@@ -80,30 +80,37 @@ export default function Footer() {
             </button>
             <ul className="flex md:flex-row justify-center md:justify-start pt-4 gap-2">
               <li>
-              <a href="https://www.linkedin.com/company/endpointdata" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.linkedin.com/company/endpointdata"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src={Linkedin}
                     alt="Linkedin"
-                    className="h-7 hover:opacity-70"
+                    className="h-7 ld:h-10 hover:opacity-70"
                   />
-                 </a>
+                </a>
               </li>
               <li>
-                <a href="https://medium.com/@endpoint-data" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://medium.com/@endpoint-data"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src={Medium}
                     alt="Medium"
-                    className="h-7 hover:opacity-70"
+                    className="h-7 ld:h-10 hover:opacity-70"
                   />
-                 </a>
+                </a>
               </li>
             </ul>
           </div>
 
-          {/* Social Icons */}
           <div className="flex flex-col">
             <div className="flex justify-center md:justify-start">
-              <img src={Logo} alt="Logo" className="h-10 md:h-11" />
+              <img src={Logo} alt="Logo" className="h-10 ld:h-12" />
             </div>
           </div>
         </div>
@@ -112,7 +119,7 @@ export default function Footer() {
         <div className="w-full md:w-[700px] h-auto flex flex-col justify-end">
           <ul className="flex flex-col md:flex-row justify-center md:justify-end text-black text-center md:text-left">
             {/* Copyright Item */}
-            <li className="mb-2 md:mb-0 md:mr-4">All Content Copyright 2024</li>
+            <li className="mb-2 md:mb-0 md:mr-4 ld:text-[20px]">All Content Copyright 2024</li>
 
             {/* Navigation Items */}
             {Navigation.map((item, index) => (
@@ -129,7 +136,7 @@ export default function Footer() {
                       navigate(`/${item.replace(/\s+/g, " ").toLowerCase()}`);
                       window.scrollTo(0, 0);
                     }}
-                    className="hover:underline cursor-pointer"
+                    className="hover:underline cursor-pointer ld:text-[20px]"
                   >
                     {item}
                   </a>

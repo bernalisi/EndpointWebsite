@@ -57,7 +57,7 @@ export default function Hero({ scrollToNextSection }) {
   // Receive the function as a prop
   return (
     <div
-      className="w-screen h-screen lg:h-auto bg-cover bg-center bg-repeat bg-black flex flex-row"
+      className="w-screen h-full lg:h-auto bg-cover bg-center bg-repeat bg-black flex flex-row"
       style={{ backgroundImage: `url(${background})` }}
     >
       <motion.div
@@ -71,7 +71,7 @@ export default function Hero({ scrollToNextSection }) {
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[100%] lg:w-[65%] xl:w-[60% text-white px-4 xl:text-[60px] lg:text-[50px] md:text-[60px] sm:text-[50px] text-[40px] max-sm:text-left max-md:text-center font-semibold leading-tight"
+          className="w-[100%] lg:w-[65%] xl:w-[60%] ld:text-[100px] text-white px-4 xl:text-[60px] lg:text-[52px] sm:text-[50px] text-[40px] max-sm:text-left max-md:text-center font-semibold leading-tight"
         >
           Instantly find RWD for smarter pharmaceutical research
         </motion.h1>
@@ -81,7 +81,7 @@ export default function Hero({ scrollToNextSection }) {
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[75%] md:w-[90%] lg:w-[60%] xl:w-[55%] px-4 max-sm:hidden max-md:text-center text-white lg:text-[15px] xl:text-[20px] md:text-[20px] sm:text-[15px] font-normal pt-5 leading-relaxed"
+          className="w-[75%] md:w-[90%] lg:w-[60%] xl:w-[55%] ld:text-[35px] px-4 hidden sm:block max-md:text-center text-white xl:text-[20px] md:text-[25px] sm:text-[20px] font-normal pt-5 leading-relaxed"
         >
           Our self-service platform enables quick discovery and access to
           curated healthcare data from leading organizations worldwide,
@@ -89,7 +89,7 @@ export default function Hero({ scrollToNextSection }) {
           just a few clicks.
         </motion.a>
 
-        <div className="w-[50%] cursor-pointer max-sm:w-[100%] max-sm:px-5 flex flex-row justify-center max-sm:justify-start">
+        <div className="w-[50%] cursor-pointer max-sm:w-[100%] max-sm:px-5 flex flex-row sm:justify-center ml-5 max-sm:justify-start">
           <motion.div
             variants={scrollVariants}
             initial="hidden"
@@ -99,13 +99,13 @@ export default function Hero({ scrollToNextSection }) {
             <img
               src={scroll_down}
               alt="chevron down icon"
-              className="h-3 max-sm:hidden md:h-3 xl:mt-5 2xl:h-5 2xl:mt-12"
+              className="hidden sm:block sm:h-3 md:h-3 lg:h-4 ld:h-5 xl:mt-5 2xl:mt-12"
             />
           </motion.div>
 
           {/* Button with bounce animation */}
           <motion.button
-            className="sm:hidden cursor-pointer w-auto h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90"
+            className="sm:hidden w-auto cursor-pointer h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90"
             variants={buttonBounce}
             whileHover="hover"
             onClick={scrollToNextSection} // Use the function on click

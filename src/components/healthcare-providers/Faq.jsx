@@ -27,18 +27,20 @@ export default function Faq() {
           >
             {/* Question Row */}
             <div
-              className="flex justify-between items-center p-4 cursor-pointer hover:bg-gray-100"
+              className="flex justify-between items-center p-4 ld:p-8 cursor-pointer hover:bg-gray-100"
               onClick={() => toggleAnswer(index)}
             >
-              <h3 className="text-lg font-medium text-black">{faq.question}</h3>
+              <h3 className="text-lg ld:text-[24px] font-medium text-black">
+                {faq.question}
+              </h3>
               <span className="text-black font-bold">
                 {activeIndex === index ? "-" : "+"}
               </span>
             </div>
             {/* Answer Row */}
             {activeIndex === index && (
-              <div className="p-4 bg-violet-100 transition-all duration-300 ease-in-out">
-                <p className="text-base">{faq.answer}</p>
+              <div className="p-4 ld:py-4 ld:px-8 bg-violet-100 transition-all duration-300 ease-in-out">
+                <p className="ld:text-[20px] text-base">{faq.answer}</p>
               </div>
             )}
           </div>
