@@ -76,7 +76,7 @@ export default function DesktopNavbar() {
                   scrolling || hovering || isSpecificPage ? Logo : Logo_white
                 }
                 alt="Logo"
-                className="h-11 ld:h-14"
+                className="h-10 ld:h-12"
               />
             </a>
           </div>

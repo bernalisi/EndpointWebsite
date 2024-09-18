@@ -26,32 +26,35 @@ export default function UseCase({ defaultUseCase }) {
 
       {/* Client Section */}
       <div className="m-4 sm:m-7 flex flex-col xl:flex-row justify-start items-start gap-4 xl:gap-10">
-        <p className="text-violet-900 w-[130px] text-[16px] sm:text-[20px] font-medium min-w-[100px]">
+        <p className="text-violet-900 w-[130px] text-[16px] sm:text-[20px] ld:text[24px] font-medium min-w-[100px]">
           Client
         </p>
-        <p className="text-[14px] w-full sm:text-[16px]">
+        <p className="text-[14px] w-full ld:text-[20px] sm:text-[16px]">
           {selectedUseCase.client}
         </p>
       </div>
 
       {/* Challenge Section */}
       <div className="m-4 sm:m-7 flex flex-col xl:flex-row justify-start items-start gap-4 xl:gap-10">
-        <p className="text-violet-900 w-[130px] text-[16px] sm:text-[20px] font-medium min-w-[100px]">
+        <p className="text-violet-900 w-[130px] text-[16px] sm:text-[20px] ld:text[24px] font-medium min-w-[100px]">
           Challenge
         </p>
-        <p className="text-[14px] w-full sm:text-[16px]">
+        <p className="text-[14px] w-full ld:text-[20px] sm:text-[16px]">
           {selectedUseCase.challenge.main_challenge}
         </p>
       </div>
 
       {/* Solution Section */}
       <div className="m-4 sm:m-7 flex flex-col xl:flex-row justify-start items-start gap-4 xl:gap-10">
-        <p className="text-violet-900 w-[130px] text-[16px] sm:text-[20px] font-medium min-w-[100px]">
+        <p className="text-violet-900 w-[130px] text-[16px] sm:text-[20px] ld:text[24px] font-medium min-w-[100px]">
           Solution
         </p>
         <ul className="list-decimal pl-5">
           {Object.values(selectedUseCase.solution).map((solution, index) => (
-            <li key={index} className="text-[14px] sm:text-[16px] mb-2">
+            <li
+              key={index}
+              className="text-[14px] ld:text-[20px] sm:text-[16px] mb-2"
+            >
               {solution}
             </li>
           ))}
@@ -60,12 +63,15 @@ export default function UseCase({ defaultUseCase }) {
 
       {/* Outcome Section */}
       <div className="m-4 sm:m-7 flex flex-col xl:flex-row justify-start items-start gap-4 xl:gap-10">
-        <p className="text-violet-900 w-[130px] text-[16px] sm:text-[20px] font-medium min-w-[100px]">
+        <p className="text-violet-900 w-[130px] text-[16px] sm:text-[20px] ld:text[24px] font-medium min-w-[100px]">
           Outcome
         </p>
         <ul className="list-disc pl-5">
           {Object.values(selectedUseCase.outcome).map((outcome, index) => (
-            <li key={index} className="text-[14px] sm:text-[16px] mb-2">
+            <li
+              key={index}
+              className="text-[14px] ld:text-[20px] sm:text-[16px] mb-2"
+            >
               {outcome}
             </li>
           ))}
@@ -74,14 +80,14 @@ export default function UseCase({ defaultUseCase }) {
 
       {/* Benefits Section */}
       <div className="m-4 sm:m-7 flex flex-col xl:flex-row justify-start items-start gap-4 xl:gap-10">
-        <p className="text-violet-900 w-[130px] text-[16px] sm:text-[20px] font-medium min-w-[100px] max-w-[100px]">
+        <p className="text-violet-900 w-[130px] text-[16px] sm:text-[20px] ld:text[24px] font-medium min-w-[100px] max-w-[100px]">
           Benefits
         </p>
         <ul className="pl-5">
           {Object.values(selectedUseCase.benefits).map((benefit, index) => (
             <li
               key={index}
-              className="text-[14px] sm:text-[16px] mb-2 flex items-center pb-2"
+              className="text-[14px] sm:text-[16px] ld:text-[20px] mb-2 flex items-center pb-2"
             >
               <FaCheckCircle className="text-violet-900 mr-2 w-7 h-7" />{" "}
               {benefit}
