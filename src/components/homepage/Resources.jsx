@@ -36,7 +36,7 @@ export default function Resources() {
   };
 
   return (
-    <div className="w-full h-auto lg:min-h-screen lg:max-h-auto bg-black flex flex-col justify-center items-start gap-4 px-6 pb-20 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:py-0">
+    <div className="w-full h-auto lg:py-40 lg:max-h-auto bg-black flex flex-col justify-center items-start gap-4 px-6 pb-20 sm:px-10 lg:px-14 pt-10 sm:pt-16">
       <SectionSeparator TitleSection="NEWS AND PRESS RELEASES" />
 
       <div className="w-full flex flex-col gap-10 md:gap-32 justify-between items-start">

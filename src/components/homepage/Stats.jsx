@@ -52,7 +52,7 @@ export default function Stats() {
   return (
     <div
       ref={ref}
-      className="w-full h-auto bg-black flex flex-col justify-start items-start gap-4 px-6 mb-20 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:py-20"
+      className="w-full h-screen bg-black flex flex-col justify-start items-start gap-4 px-6 mb-20 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:py-20"
     >
       <SectionSeparator TitleSection="UNLOCKING DISCOVERY" />
 
@@ -67,11 +67,11 @@ export default function Stats() {
           {Statistics.map((s) => (
             <div
               key={s.type}
-              className="flex flex-col justify-center items-start md:items-start gap-1 text-center md:text-left"
+              className="flex flex-col justify-center items-start md:items-start gap-1 ld:gap-6 text-center md:text-left"
             >
               {/* Using custom hook to animate the numbers */}
-              <p className="text-white text-[48px] md:text-[70px] lg:text-[85px] font-medium">
-                {useCountUp(s.data, 2000, startCounting).toLocaleString()}+
+              <p className="text-white ld:text-[130px] text-[48px] md:text-[70px] lg:text-[85px] font-medium">
+                {useCountUp(s.data, 1000, startCounting).toLocaleString()}+
               </p>
               <img src={line_icon} alt="line icon" className="h-1 my-2" />
               <h6 className="text-white text-xl md:text-2xl font-extralight">

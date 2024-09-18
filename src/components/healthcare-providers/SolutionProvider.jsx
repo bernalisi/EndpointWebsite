@@ -88,8 +88,8 @@ export default function SolutionProvider() {
                 onClick={() => handleScroll(`card-${key}`)}
                 className={`flex items-center ${
                   currentCard === Number(key)
-                    ? "border-l-4 border-violet-900 text-left text-violet-900 font-bold py-4 px-2 sm:px-4 w-full text-sm sm:text-base"
-                    : "border-l-4 hover:border-violet-900 text-left hover:text-violet-900 py-4 px-2 sm:px-4 w-full text-sm sm:text-base"
+                    ? "border-l-4 ld:text-[22px] border-violet-900 text-left text-violet-900 font-bold py-4 px-2 sm:px-4 w-full text-sm sm:text-base"
+                    : "border-l-4 ld:text-[22px] hover:border-violet-900 text-left hover:text-violet-900 py-4 px-2 sm:px-4 w-full text-sm sm:text-base"
                 }`}
               >
                 {useCaseNavigation[key].title}
@@ -99,7 +99,7 @@ export default function SolutionProvider() {
         </div>
 
         {/* Right Side: Scrollable Cards with Scroll Indicator & Gradient */}
-        <div className="card-container relative flex flex-col items-center gap-10 lg:gap-20 max-lg:w-full lg:w-[70%] h-[460px] sm:h-[520px] overflow-y-auto snap-y snap-mandatory">
+        <div className="card-container ld:ml-20 relative flex flex-col items-center gap-10 lg:gap-20 max-lg:w-full lg:w-[70%] h-[460px] sm:h-[520px] overflow-y-auto snap-y snap-mandatory">
           {Object.keys(useCaseNavigation).map((key) => {
             const { ref, inView } = useInView({
               threshold: 0.6, // Trigger when 50% of the card is in view

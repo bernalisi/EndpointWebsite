@@ -35,11 +35,11 @@ export default function WhyProvider() {
         </h3>
         <p className="text-black text-base sm:text-lg lg:text-xl xl:text-2xl mb-8">
           Become part of a network where your data fuels life-saving research
-          while keeping you in control of who accesses it, how it&apos;s used, and
-          for what purpose
+          while keeping you in control of who accesses it, how it&apos;s used,
+          and for what purpose
         </p>
       </div>
-      <div className="lg:h-[80%] xl:h-[100%] flex flex-wrap justify-center items-center gap-10 lg:gap-20 xl:gap-48 w-full">
+      <div className="lg:h-[80%] xl:h-[100%] ld:gap-20 flex flex-wrap justify-center items-center w-full">
         {reasons.map((reason, index) => (
           <div
             key={index}

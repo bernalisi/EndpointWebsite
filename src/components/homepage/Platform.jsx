@@ -20,7 +20,7 @@ export default function Platform() {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full bg-black flex flex-col justify-center items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20">
+    <div className="w-full bg-black h-screen flex flex-col justify-center items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20">
       <SectionSeparator TitleSection="OUR PLATFORM" />
 
       <div className="w-full flex flex-col gap-5 justify-between items-start">
@@ -45,7 +45,7 @@ export default function Platform() {
             variants={CardVariations}
             initial="start"
             whileHover="hover"
-            className="w-full lg:w-[640px] h-auto cursor-pointer lg:h-[500px] flex flex-col justify-start pt-10 gap-7 items-start bg-blue-400 rounded-xl"
+            className="w-full ld:w-[1000px] ld:h-[650px] ld:pt-20 lg:w-[640px] h-auto cursor-pointer lg:h-[500px] flex flex-col justify-start pt-10 gap-7 items-start bg-blue-400 rounded-xl"
           >
             <div className="w-full flex flex-row justify-between items-center pr-6 sm:pr-10 lg:pr-14">
               <img src={line_icon} alt="line icon" className="h-1" />
@@ -56,18 +56,18 @@ export default function Platform() {
               />
             </div>
             <div className="flex flex-col gap-5 px-6 sm:px-10 lg:px-14">
-              <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-[36px] font-semibold">
+              <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-[36px] ld:pb-8 font-semibold">
                 For Life Sciences
               </h3>
-              <p className="text-sm sm:text-base lg:text-lg lg:line-clamp-4 xl:text-[20px]">
+              <p className="text-sm sm:text-base ld:text-[25px] lg:text-lg lg:line-clamp-4 xl:text-[20px]">
                 Speed up observational research, facilitate deeper insights into
                 diseases, enhance clinical trials, improve safety surveillance,
                 streamline regulatory submissions, boost commercialization
                 strategies.
               </p>
             </div>
-            <div className="w-full mt-8 sm:mt-10 lg:mt-12 border-t-2 border-black">
-              <button className="w-full h-full px-6 sm:px-10 lg:px-14 py-6 sm:py-7 flex justify-start items-center font-extralight tracking-widest transition duration-150 ease-in-out text-black hover:opacity-80 hover:font-extrabold">
+            <div className="w-full mt-8 sm:mt-10 lg:mt-12 ld:mt-36 border-t-2 border-black">
+              <button className="w-full ld:text-[18px] h-full px-6 sm:px-10 lg:px-14 py-6 sm:py-7 flex justify-start items-center font-extralight tracking-widest transition duration-150 ease-in-out text-black hover:opacity-80 hover:font-extrabold">
                 <p>Learn more</p>
                 <img
                   src={chevron_icon}
@@ -87,7 +87,7 @@ export default function Platform() {
             variants={CardVariations}
             initial="start"
             whileHover="hover"
-            className="w-full lg:w-[640px] cursor-pointer h-auto lg:h-[500px] flex flex-col justify-start pt-10 gap-7 items-start bg-violet-400 rounded-xl"
+            className="w-full ld:w-[1000px] ld:h-[650px] ld:pt-20 xl:pt-10 lg:w-[640px] cursor-pointer h-auto lg:h-[500px] flex flex-col justify-start pt-10 gap-7 items-start bg-violet-400 rounded-xl"
           >
             <div className="w-full flex flex-row justify-between items-center pr-6 sm:pr-10 lg:pr-14">
               <img src={line_icon} alt="line icon" className="h-1" />
@@ -98,17 +98,17 @@ export default function Platform() {
               />
             </div>
             <div className="flex flex-col gap-5 px-6 sm:px-10 lg:px-14">
-              <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-[36px] font-semibold">
+              <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-[36px]  ld:pb-8 font-semibold">
                 For Healthcare Providers
               </h3>
-              <p className="text-sm sm:text-base lg:text-lg xl:text-[20px] lg:line-clamp-4">
+              <p className="text-sm sm:text-base ld:text-[25px] lg:text-lg xl:text-[20px] lg:line-clamp-4">
                 Your data can drive groundbreaking innovation in healthcare.
                 Endpoint helps providers activate their data for both internal
                 research and life sciences collaborations.
               </p>
             </div>
-            <div className="w-full mt-8 sm:mt-10 lg:mt-12 border-t-2 border-black">
-              <button className="w-full h-full px-6 sm:px-10 lg:px-14 py-6 sm:py-7 flex justify-start items-center font-extralight tracking-widest transition duration-150 ease-in-out text-black hover:opacity-80 hover:font-extrabold">
+            <div className="w-full mt-8 sm:mt-10 lg:mt-12 ld:mt-36  border-t-2 border-black">
+              <button className="w-full ld:text-[18px] h-full px-6 sm:px-10 lg:px-14 py-6 sm:py-7 flex justify-start items-center font-extralight tracking-widest transition duration-150 ease-in-out text-black hover:opacity-80 hover:font-extrabold">
                 <p>Learn more</p>
                 <img
                   src={chevron_icon}
