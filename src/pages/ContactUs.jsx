@@ -1,31 +1,14 @@
 import ContactForm from "../components/contact-us/ContactForm";
 import CallUsIcon from "../assets/images/ui/CallUsIcon.svg";
 import background from "../assets/images/homepage/Snake_violet.svg"; // Replace with your background image path
-import { useEffect, useState } from "react";
 
 export default function ContactUs() {
-  // code to resize bg image snake
-
-  const [bgSize, setBgSize] = useState(
-    window.innerWidth < 600 ? "1000px" : "2900px"
-  );
-
-  useEffect(() => {
-    const handleResize = () => {
-      setBgSize(window.innerWidth < 600 ? "1000px" : "2900px");
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <div
       className="bg-black bg-center w-full min-h-[1100px] max-h-auto lg:min-h-[1200px] lg:max-h-auto flex flex-col justify-start items-center lg:flex-row lg:items-start lg:justify-evenly lg:pt-40 gap-10 lg:gap-0 pt-20 pb-20"
       style={{
         backgroundImage: `url(${background})`,
-        backgroundSize: bgSize, // Example dimensions for width and height
+        backgroundSize: "185%",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}

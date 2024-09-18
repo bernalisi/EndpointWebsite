@@ -78,9 +78,9 @@ export default function SolutionProvider() {
         </p>
       </div>
 
-      <div className="w-full flex flex-col justify-start items-center md:flex-row md:justify-start md:items-start xl:justify-start mt-16 gap-20">
+      <div className="w-full flex flex-col justify-start items-center md:flex-row md:justify-start md:items-start xl:justify-start mt-8 sm:mt-16 gap-20">
         {/* Left Side: Navigation Titles */}
-        <div className="flex flex-col max-lg:hidden md:w-[20%] lg:w-[20%] 2xl:w-[15%] sticky top-20">
+        <div className="flex-col hidden lg:flex md:w-[20%] lg:w-[20%] 2xl:w-[15%] sticky top-20">
           <ul className="">
             {Object.keys(useCaseNavigation).map((key) => (
               <button
@@ -99,7 +99,7 @@ export default function SolutionProvider() {
         </div>
 
         {/* Right Side: Scrollable Cards with Scroll Indicator & Gradient */}
-        <div className="card-container relative flex flex-col items-center gap-10 lg:gap-20 max-lg:w-full lg:w-[70%] h-[500px] overflow-y-auto snap-y snap-mandatory">
+        <div className="card-container relative flex flex-col items-center gap-10 lg:gap-20 max-lg:w-full lg:w-[70%] h-[460px] sm:h-[520px] overflow-y-auto snap-y snap-mandatory">
           {Object.keys(useCaseNavigation).map((key) => {
             const { ref, inView } = useInView({
               threshold: 0.6, // Trigger when 50% of the card is in view
@@ -119,7 +119,7 @@ export default function SolutionProvider() {
                   inView ? "opacity-100" : "opacity-0"
                 }`}
               >
-                <div className="bg-violet-100 border hover:border-violet-900 p-8 rounded-lg max-lg:w-[90%] lg:w-[85%] xl:w-[85%] 2xl:w-[80%] max-h-auto h-[400px] sm:h-[300px] md:h-[550px] lg:h-[500px] xl:h-[500px] mb-2 mx-6">
+                <div className="bg-violet-100 border hover:border-violet-900 p-8 rounded-lg max-lg:w-[90%] lg:w-[85%] xl:w-[85%] 2xl:w-[80%] max-h-auto h-[450px] sm:h-[470px] md:h-[500px] lg:h-[500px] xl:h-[500px] mb-2 mx-6">
                   <div className="flex flex-row justify-start items-center gap-10">
                     <img
                       src={useCaseNavigation[key].url}

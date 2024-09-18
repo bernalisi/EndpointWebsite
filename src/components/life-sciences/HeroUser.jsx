@@ -52,14 +52,14 @@ export default function HeroUser({ scrollToNextSection }) {
         variants={ParentVariations}
         initial="hidden"
         animate="visible"
-        className="w-screen h-screen mt-[60px] lg:mt-[100px] px-2 sm:px-6 lg:px-14 xl:px-52 pt-32 pb-[333px] flex max-md:items-center max-sm:justify-end items-end flex-col gap-6"
+        className="w-screen h-screen mt-[60px] lg:mt-[100px] px-2 sm:px-6 lg:px-14 xl:px-52 pt-32 pb-[333px] flex max-md:items-center max-sm:justify-end items-start sm:items-end flex-col gap-6"
       >
         {/* First paragraph */}
         <motion.h1
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[100%] lg:w-[40%] xl:w-[50%] text-white px-4 xl:text-[80px] lg:text-[50px] md:text-[60px] sm:text-[50px] xl:mb-16 text-[40px] max-sm:text-left max-md:text-center font-semibold leading-tight"
+          className="w-[100%] lg:w-[40%] xl:w-[50%] text-white px-4 ld:text-[120px] xl:text-[80px] lg:text-[50px] md:text-[60px] sm:text-[50px] xl:mb-16 text-[40px] max-sm:text-left max-md:text-center font-semibold leading-tight"
         >
           Life Sciences
         </motion.h1>
@@ -69,7 +69,7 @@ export default function HeroUser({ scrollToNextSection }) {
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[75%] md:w-[100%] lg:w-[40%] font-thin xl:w-[50%] px-4 max-sm:hidden max-md:text-center text-white lg:text-[15px] xl:text-[20px] md:text-[20px] sm:text-[15px] pt-5 leading-relaxed text-justify"
+          className="w-[75%] md:w-[100%] lg:w-[40%] ld:text-[35px] font-thin xl:w-[50%] px-4 max-sm:hidden max-md:text-center text-white lg:text-[15px] xl:text-[20px] md:text-[20px] sm:text-[15px] pt-0 sm:pt-5 leading-relaxed text-justify"
         >
           Navigate the most extensive universe of RWD sources to unleash the the
           full potential of observational research.
@@ -85,7 +85,7 @@ export default function HeroUser({ scrollToNextSection }) {
             <img
               src={scroll_down}
               alt="chevron down icon"
-              className="h-3 max-sm:hidden md:h-3 xl:mt-5 2xl:h-5 2xl:mt-12"
+              className="hidden sm:block sm:ht-3 md:h-3 xl:mt-5 2xl:h-5 2xl:mt-12"
             />
           </motion.div>
           <button

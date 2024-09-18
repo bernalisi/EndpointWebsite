@@ -65,9 +65,9 @@ export default function Footer() {
               )}
             </div>
 
-            <button className="h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white">
+            {/* <button className="h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white">
               <a href="/contact us">CONTACT US</a>
-            </button>
+            </button> */}
 
             <button className="h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-violet-900 border-violet-900 text-white transition duration-150 ease-in-out hover:opacity-70">
               <a
@@ -80,22 +80,30 @@ export default function Footer() {
             </button>
             <ul className="flex md:flex-row justify-center md:justify-start pt-4 gap-2">
               <li>
-              <a href="https://www.linkedin.com/company/endpointdata" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.linkedin.com/company/endpointdata"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src={Linkedin}
                     alt="Linkedin"
                     className="h-7 hover:opacity-70"
                   />
-                 </a>
+                </a>
               </li>
               <li>
-                <a href="https://medium.com/@endpoint-data" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://medium.com/@endpoint-data"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src={Medium}
                     alt="Medium"
                     className="h-7 hover:opacity-70"
                   />
-                 </a>
+                </a>
               </li>
             </ul>
           </div>
