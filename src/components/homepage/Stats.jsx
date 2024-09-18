@@ -58,7 +58,7 @@ export default function Stats() {
 
       <div className="w-full flex flex-col gap-10 justify-between items-start">
         {/* Header Section */}
-        <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-[48px] mt-3 py-10">
+        <h2 className="text-white text-[28px] lg:text-[48px] font-semibold mt-3 py-[10px]">
           Global, High-Quality RWD Ecosystem
         </h2>
 
