@@ -20,12 +20,12 @@ export default function Platform() {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full bg-black ld:h-screen flex flex-col justify-center ld:justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-0 sm:pt-16 lg:pt-20 ld:pt-20">
+    <div className="w-full bg-black ld:mb-40 ld:h-screen flex flex-col justify-center ld:justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20 ld:pt-20">
       <SectionSeparator TitleSection="OUR PLATFORM" />
 
       <div className="w-full flex flex-col gap-5 justify-between items-start">
         {/* Header Section */}
-        <h2 className="text-white text-[28px] lg:text-[48px] font-semibold mt-3 py-[20px]">
+        <h2 className="text-white text-[28px] lg:text-[48px] font-semibold mt-3 py-[10px]">
           The largest ecosystem of RWD providers
         </h2>
         <p className="text-white text-base sm:text-lg lg:text-xl xl:text-2xl mb-8">

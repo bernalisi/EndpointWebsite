@@ -75,7 +75,7 @@ export default function HeroProvider({ scrollToNextSection }) {
           medical research with Endpoint
         </motion.a>
 
-        <div className="w-[50%] cursor-pointer max-sm:w-[100%] max-sm:px-5 flex flex-row sm:justify-center ml-5 max-sm:justify-start md:justify-start lg:justify-center">
+        <div className="lg:w-[40%] cursor-pointer xl:w-[50%] w-[50%] max-lg:w-[100%] max-sm:px-5 flex flex-row justify-center md:justify-start lg:justify-center">
           <motion.div
             variants={scrollVariants}
             initial="hidden"

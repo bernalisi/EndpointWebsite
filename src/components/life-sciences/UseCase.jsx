@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import json from "../../../public/use_cases.json";
 import { FaCheckCircle } from "react-icons/fa";
 
@@ -9,8 +10,20 @@ export default function UseCase({ defaultUseCase }) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
+  const useCaseRef = useRef(null);
+
+  useEffect(() => {
+    // Scroll the container to the top when defaultUseCase changes
+    if (useCaseRef.current) {
+      useCaseRef.current.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [defaultUseCase]);
+
   return (
-    <div className="w-full xl:w-[85%] h-[550px] lg:h-[1000px] xl:h-[700px] ld:h-[1300px] xl:pb-50 overflow-y-scroll flex flex-col justify-start items-start bg-white border-[1.5px] border-gray-200 mt-10 xl:mt-20 px-4 sm:px-7 shadow-lg">
+    <div
+      ref={useCaseRef}
+      className="w-full xl:w-[85%] h-[600px] ld:h-[1500px] overflow-y-scroll flex flex-col justify-start items-start bg-white border-[1.5px] border-gray-200 mt-10 xl:mt-20 px-4 sm:px-7 shadow-lg"
+    >
       {/* Use Case Title */}
       <p className="m-4 sm:m-7 px-3 sm:px-4 py-1 bg-black text-white rounded-full">
         Use Case
