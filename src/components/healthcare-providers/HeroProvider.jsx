@@ -1,4 +1,4 @@
-import chevron_down_black from "../../assets/images/ui/Chevron down black.svg";
+import { FaArrowDown } from "react-icons/fa";
 import scroll_down from "../../assets/images/ui/Scroll_down.svg";
 import background from "../../assets/images/healthcare-providers/Healthcare Providers background.svg";
 import { motion } from "framer-motion";
@@ -75,7 +75,7 @@ export default function HeroProvider({ scrollToNextSection }) {
           medical research with Endpoint
         </motion.a>
 
-        <div className="lg:w-[40%] cursor-pointer xl:w-[50%] w-[50%] max-lg:w-[100%] max-sm:px-5 flex flex-row justify-center md:justify-start lg:justify-center">
+        <div className="w-[50%] cursor-pointer max-sm:w-[100%] max-sm:px-5 flex flex-row sm:justify-center ml-5 max-sm:justify-start md:justify-start lg:justify-center">
           <motion.div
             variants={scrollVariants}
             initial="hidden"
@@ -94,11 +94,7 @@ export default function HeroProvider({ scrollToNextSection }) {
           >
             <a className="flex items-center gap-2">
               READ MORE
-              <img
-                src={chevron_down_black}
-                alt="chevron-button"
-                className="h-5"
-              />
+              <FaArrowDown alt="chevron-button" className="h-5" />
             </a>
           </button>
         </div>
