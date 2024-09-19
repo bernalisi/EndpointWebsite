@@ -1,4 +1,4 @@
-import chevron_down_black from "../../assets/images/ui/Chevron down black.svg";
+import { FaArrowDown } from "react-icons/fa";
 import scroll_down from "../../assets/images/ui/Scroll_down.svg";
 import background from "../../assets/images/homepage/Background homepage.svg";
 import { motion } from "framer-motion";
@@ -112,11 +112,7 @@ export default function Hero({ scrollToNextSection }) {
           >
             <a className="flex items-center gap-2">
               READ MORE
-              <img
-                src={chevron_down_black}
-                alt="chevron-button"
-                className="h-5"
-              />
+              <FaArrowDown alt="chevron-button" className="h-5" />
             </a>
           </motion.button>
         </div>

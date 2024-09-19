@@ -1,7 +1,7 @@
 import Logo from "../../../assets/logos/Endpoint logo black dot purle.svg";
 import Logo_white from "../../../assets/logos/Endpoint logo white.svg";
 import { useState, useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom"; // Import useLocation
+import { useLocation } from "react-router-dom";
 
 export default function DesktopNavbar() {
   const Navigation = [
@@ -10,35 +10,43 @@ export default function DesktopNavbar() {
     { title: "BLOG", url: "https://endpoint-data.medium.com/" },
   ];
 
-  const [scrolling, setScrolling] = useState(false);
+  const [isTransparent, setIsTransparent] = useState(true);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [hovering, setHovering] = useState(false);
-  const dropdownRef = useRef(null); // Ref to detect clicks outside the dropdown
-  const location = useLocation(); // Get the current URL
+  const dropdownRef = useRef(null);
+  const location = useLocation();
+  const observerRef = useRef(null);
 
+  // Intersection Observer to detect transparency change
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsTransparent(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    if (observerRef.current) {
+      observer.observe(observerRef.current);
+    }
+
+    return () => {
+      if (observerRef.current) {
+        observer.unobserve(observerRef.current);
+      }
+    };
   }, []);
 
-  const handleScroll = () => {
-    if (window.scrollY > 10) {
-      setScrolling(true);
-    } else {
-      setScrolling(false);
-    }
-  };
-
-  // Toggle dropdown visibility on button click
+  // Toggle dropdown visibility
   const handleLoginClick = () => {
-    setIsDropdownOpen(!isDropdownOpen); // Toggle dropdown visibility
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
-  // Close the dropdown when clicking outside of it
+  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false); // Close dropdown
+        setIsDropdownOpen(false);
       }
     };
 
@@ -53,50 +61,48 @@ export default function DesktopNavbar() {
     };
   }, [isDropdownOpen]);
 
-  // Check if the URL is "/Privacy%20Policy" or "/Terms%20of%20use"
   const isSpecificPage =
     location.pathname === "/privacy%20policy" ||
     location.pathname === "/terms%20of%20use";
 
   return (
-    <div className="absolute w-full h-16 z-40">
+    <div>
+      <div ref={observerRef} />
       <nav
-        className={
-          scrolling || hovering || isSpecificPage
-            ? "fixed top-0 w-full h-16 flex items-center justify-between bg-white borde px-6"
-            : "fixed top-0 w-full h-16 flex items-center justify-between bg-transparent px-6"
-        }
+        className={`fixed top-0 w-full h-16 z-40 flex items-center justify-between px-6 ${
+          isTransparent && !hovering && !isSpecificPage
+            ? "bg-transparent"
+            : "bg-white"
+        }`}
       >
         <div className="flex items-center space-x-14">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <a href="/">
-              <img
-                src={
-                  scrolling || hovering || isSpecificPage ? Logo : Logo_white
-                }
-                alt="Logo"
-                className="h-10 ld:h-12"
-              />
-            </a>
-          </div>
+          <a href="/">
+            <img
+              src={
+                isTransparent && !hovering && !isSpecificPage
+                  ? Logo_white
+                  : Logo
+              }
+              alt="Logo"
+              className="h-10 ld:h-12"
+            />
+          </a>
 
-          {/* Navigation Menu */}
           <ul className="flex space-x-4">
             {Navigation.map((element, index) => (
               <li key={index}>
                 <a
-                  href={`${element.url}`}
+                  href={element.url}
                   target={
                     element.url === "https://endpoint-data.medium.com/"
                       ? "_blank"
                       : "_self"
                   }
-                  className={
-                    scrolling || hovering || isSpecificPage
-                      ? "text-black ld:text-[20px] hover:text-violet-900 font-medium"
-                      : "text-white ld:text-[20px] hover:text-violet-600 font-medium"
-                  }
+                  className={`ld:text-[20px] font-medium ${
+                    isTransparent && !hovering && !isSpecificPage
+                      ? "text-white hover:text-violet-600"
+                      : "text-black hover:text-violet-900"
+                  }`}
                 >
                   {element.title}
                 </a>
@@ -105,21 +111,19 @@ export default function DesktopNavbar() {
           </ul>
         </div>
 
-        {/* Buttons */}
         <div className="flex flex-row gap-4">
           <div className="relative" ref={dropdownRef}>
             <button
-              onClick={handleLoginClick} // Toggle dropdown on click
-              className={
-                scrolling || hovering || isSpecificPage
-                  ? "h-8 px-5 ld:text-[20px] py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white"
-                  : "h-8 px-5 ld:text-[20px] py-1 flex items-center font-semibold border-2 border-white text-white transition duration-150 ease-in-out hover:bg-white hover:text-black"
-              }
+              onClick={handleLoginClick}
+              className={`h-8 px-5 ld:text-[20px] py-1 flex items-center font-semibold transition duration-150 ease-in-out ${
+                isTransparent && !hovering && !isSpecificPage
+                  ? "border-2 border-white text-white hover:bg-white hover:text-black"
+                  : "border border-black hover:bg-black hover:text-white"
+              }`}
             >
               LOG IN
             </button>
 
-            {/* Dropdown menu */}
             {isDropdownOpen && (
               <div className="absolute top-full mt-1 py-2 w-[220px] bg-white shadow-lg z-50">
                 <a
@@ -141,20 +145,20 @@ export default function DesktopNavbar() {
           </div>
 
           <button
-            className={
-              scrolling || hovering || isSpecificPage
-                ? "h-8 px-5 ld:text-[20px] py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white"
-                : "h-8 px-5 ld:text-[20px] py-1 flex items-center font-semibold border-2 border-white text-white transition duration-150 ease-in-out hover:bg-white hover:text-black"
-            }
+            className={`h-8 px-5 ld:text-[20px] py-1 flex items-center font-semibold transition duration-150 ease-in-out ${
+              isTransparent && !hovering && !isSpecificPage
+                ? "border-2 border-white text-white hover:bg-white hover:text-black"
+                : "border border-black hover:bg-black hover:text-white"
+            }`}
           >
             <a href="/CONTACT US">CONTACT US</a>
           </button>
           <button
-            className={
-              scrolling || hovering || isSpecificPage
-                ? "h-8 px-5 ld:text-[20px] py-1 flex flex-row items-center justify-center font-semibold border bg-violet-900 border-violet-900 text-white transition duration-150 ease-in-out hover:opacity-70"
-                : "h-8 px-5 ld:text-[20px] py-1 flex flex-row items-center justify-center font-semibold border bg-white border-white text-black transition duration-150 ease-in-out hover:opacity-70"
-            }
+            className={`h-8 px-5 ld:text-[20px] py-1 flex items-center font-semibold transition duration-150 ease-in-out ${
+              isTransparent && !hovering && !isSpecificPage
+                ? "bg-white border-white text-black hover:opacity-70"
+                : "bg-violet-900 border-violet-900 text-white hover:opacity-70"
+            }`}
           >
             <a href="https://calendly.com/bernardo-tryendpoint/book-a-demo-with-bernardo">
               BOOK DEMO

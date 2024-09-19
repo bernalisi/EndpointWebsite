@@ -10,11 +10,11 @@ export default function Faq() {
   };
 
   return (
-    <div className="w-full pt-10 bg-white flex flex-col justify-center items-start px-14 pb-20">
+    <div className="w-full bg-white flex flex-col justify-center ld:justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20 ld:pt-20 pb-20">
       <SectionSeparator TitleSection="FAQS" />
 
       {/* Title */}
-      <h3 className="text-black text-[28px] lg:text-[48px] font-semibold mt-3 py-[20px]">
+      <h3 className="text-black text-[28px] lg:text-[48px] font-semibold mt-3 py-[10px]">
         Frequently Asked Questions
       </h3>
 
