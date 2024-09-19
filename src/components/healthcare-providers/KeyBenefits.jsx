@@ -30,7 +30,7 @@ export default function WhyProvider() {
 
       {/* Title & Paragraph */}
       <div className="w-full flex flex-col gap-6 justify-between items-start">
-        <h3 className="text-black text-[28px] lg:text-[48px] font-semibold mt-3 py-[20px]">
+        <h3 className="text-black text-[28px] lg:text-[48px] font-semibold mt-3 py-[10px]">
           Why join Endpoint?
         </h3>
         <p className="text-black text-base sm:text-lg lg:text-xl xl:text-2xl mb-8">

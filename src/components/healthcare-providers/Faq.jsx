@@ -14,7 +14,7 @@ export default function Faq() {
       <SectionSeparator TitleSection="FAQS" />
 
       {/* Title */}
-      <h3 className="text-black text-[28px] lg:text-[48px] font-semibold mt-3 py-[20px]">
+      <h3 className="text-black text-[28px] lg:text-[48px] font-semibold mt-3 py-[10px]">
         Frequently Asked Questions
       </h3>
 
