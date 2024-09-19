@@ -12,14 +12,14 @@ export default function ContactProvider() {
 
       <div className="w-full flex flex-col gap-10 md:gap-20 justify-between items-start">
         {/* header section */}
-        <h2 className="text-white text-3xl lg:text-4xl leading-normal xl:leading-tight mt-3">
+        <h2 className="text-white text-3xl lg:text-4xl leading-normal xl:leading-tight mt-3 py-[20px]">
           Let’s discuss how Endpoint can help you securely share your data. Get
           the conversation started today.
         </h2>
       </div>
 
       {/* Content here */}
-      <div className="mt-32 md:mt-14 flex flex-col justify-center items-start gap-8 md:gap-10">
+      <div className="mt-20 md:mt-14 ld:mt-60  flex flex-col justify-center items-start gap-8 md:gap-10">
         <h3 className="text-white text-[40px] sm:text-[60px] max-xs:text-[40px] md:text-[70px] lg:text-[85px] font-medium">
           Unlocking data. Uncovering insights.
         </h3>

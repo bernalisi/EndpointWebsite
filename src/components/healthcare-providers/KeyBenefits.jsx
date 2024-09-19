@@ -25,7 +25,7 @@ export default function WhyProvider() {
   ];
 
   return (
-    <div className="w-full lg:h-[900px] bg-white flex flex-col justify-center items-start px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 xl:mt-10">
+    <div className="w-full lg:h-[900px] bg-white flex flex-col justify-center ld:justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20 ld:pt-20">
       <SectionSeparator TitleSection="KEY BENEFITS" />
 
       {/* Title & Paragraph */}

@@ -36,11 +36,11 @@ export default function Resources() {
   };
 
   return (
-    <div className="w-full h-auto lg:pt-20 lg:pb-32 lg:max-h-auto bg-black flex flex-col justify-center items-start gap-4 px-6 pb-20 sm:px-10 lg:px-14 pt-10 sm:pt-16">
+    <div className="w-full bg-black flex flex-col justify-center ld:justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20 ld:pt-20 pb-20">
       <SectionSeparator TitleSection="NEWS AND PRESS RELEASES" />
 
-      <div className="w-full flex flex-col gap-10 md:gap-32 justify-between items-start">
-        <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-[48px] leading-normal xl:leading-tight mt-3">
+      <div className="w-full flex flex-col gap-10 md:gap-20 justify-between items-start">
+        <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-[48px] leading-normal xl:leading-tight mt-3 py-4">
           Check out our latest news and updates
         </h2>
 
@@ -48,7 +48,7 @@ export default function Resources() {
           variants={animation_variants}
           initial="hidden"
           animate="show"
-          className="w-full flex flex-col lg:flex-row justify-center lg:justify-evenly items-center lg:items-start gap-10 md:gap-10"
+          className="w-full flex flex-col lg:flex-row justify-center lg:justify-evenly items-center lg:items-start gap-10 md:gap-14"
         >
           {articles.map((article) => (
             <Article

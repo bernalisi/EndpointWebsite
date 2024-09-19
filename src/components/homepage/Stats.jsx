@@ -45,14 +45,14 @@ export default function Stats() {
 
   const Statistics = [
     { type: "Data Providers", data: 200 },
-    { type: "Patients", data: 500000000 },
-    { type: "Countries", data: 50 },
+    { type: "Patients", data: 70000000 },
+    { type: "Countries", data: 40 },
   ];
 
   return (
     <div
       ref={ref}
-      className="w-full ld:h-screen bg-black flex flex-col justify-start items-start gap-4 px-6 mb-20 ld:mb-0 sm:px-10 lg:px-14 ld:pt-0 sm:pt-16 lg:py-20 "
+      className="w-full bg-black ld:h-screen flex flex-col justify-center ld:justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20 ld:pb-0 ld:pt-20 pb-20"
     >
       <SectionSeparator TitleSection="UNLOCKING DISCOVERY" />
 

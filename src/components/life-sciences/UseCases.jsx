@@ -25,7 +25,7 @@ export default function Why() {
   };
 
   return (
-    <div className="w-full h-auto pb-20 ld:pb-10 ld:h-[2100px] bg-white flex flex-col justify-start xl:justify-start items-start gap-4 px-4 sm:px-10 lg:px-14 pt-10 sm:pt-16 xl:mt-10">
+    <div className="w-full bg-white flex flex-col justify-center ld:justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20 ld:pt-20 pb-20">
       <SectionSeparator TitleSection="EXPLORE OUR USE CASES" />
 
       <h3 className="text-black text-[28px] lg:text-[48px] font-semibold mt-3 py-[10px]">

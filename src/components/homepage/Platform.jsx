@@ -20,7 +20,7 @@ export default function Platform() {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full bg-black ld:mb-40 ld:h-screen flex flex-col justify-center ld:justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20 ld:pt-20">
+    <div className="w-full bg-black ld:h-screen flex flex-col justify-center ld:justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20 ld:pt-20">
       <SectionSeparator TitleSection="OUR PLATFORM" />
 
       <div className="w-full flex flex-col gap-5 justify-between items-start">

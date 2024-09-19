@@ -61,7 +61,7 @@ export default function SolutionProvider() {
   };
 
   return (
-    <div className="w-full h-auto 2xl:h-auto bg-white flex flex-col justify-start items-start px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 xl:mt-10">
+    <div className="w-full bg-white flex flex-col justify-center ld:justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20 ld:pt-20">
       <SectionSeparator TitleSection="OUR SOLUTIONS FOR HEALTHCARE PROVIDERS" />
 
       {/* Header Section */}
@@ -78,9 +78,9 @@ export default function SolutionProvider() {
         </p>
       </div>
 
-      <div className="w-full flex flex-col justify-start items-center md:flex-row md:justify-start md:items-start xl:justify-start mt-8 sm:mt-16 gap-20">
+      <div className="w-full flex flex-col h-full justify-start items-center md:flex-row md:justify-start md:items-start xl:justify-start mt-8 sm:mt-16 gap-20">
         {/* Left Side: Navigation Titles */}
-        <div className="flex-col hidden lg:flex md:w-[20%] lg:w-[20%] 2xl:w-[15%] sticky top-20">
+        <div className="flex-col hidden lg:flex md:w-[20%] lg:w-[20%] 2xl:w-[15%] sticky top-20 ld:top-40">
           <ul className="">
             {Object.keys(useCaseNavigation).map((key) => (
               <button
@@ -97,12 +97,11 @@ export default function SolutionProvider() {
             ))}
           </ul>
         </div>
-
         {/* Right Side: Scrollable Cards with Scroll Indicator & Gradient */}
-        <div className="card-container ld:ml-20 relative flex flex-col items-center gap-10 lg:gap-20 max-lg:w-full lg:w-[70%] h-[460px] sm:h-[520px] overflow-y-auto snap-y snap-mandatory">
+        <div className="card-container ld:ml-20 relative flex flex-col items-center gap-10 lg:gap-20 max-lg:w-full lg:w-[70%]">
           {Object.keys(useCaseNavigation).map((key) => {
             const { ref, inView } = useInView({
-              threshold: 0.6, // Trigger when 50% of the card is in view
+              threshold: 0.7,
               triggerOnce: false,
             });
 
