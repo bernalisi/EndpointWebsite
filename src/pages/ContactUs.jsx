@@ -19,7 +19,7 @@ export default function ContactUs() {
         <div className="w-[90%] lg:w-[100%] flex flex-col justify-start lg:justify-start text-white">
           <h1 className="text-[50px] font-normal">Find us</h1>
         </div>
-        <div className="w-[90%] lg:w-[100%] bg-gray-50 p-10 flex flex-col gap-10">
+        <div className="w-[90%] lg:w-[100%] bg-gray-50 p-10 flex flex-col gap-16 sm:gap-10">
           <div className="h-[130px]">
             <h6 className="font-bold text-[22px] max-xs:text-[20px]">
               Endpoint - Europe Office

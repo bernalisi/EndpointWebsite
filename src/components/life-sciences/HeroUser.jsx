@@ -1,5 +1,4 @@
-import { FaArrowDown } from "react-icons/fa";
-import scroll_down from "../../assets/images/ui/Scroll_down.svg";
+import scroll_down from "../../assets/images/ui/Chevron down black.svg";
 import background from "../../assets/images/life-sciences/Life Science Background.svg";
 import { motion } from "framer-motion";
 
@@ -29,12 +28,21 @@ const scrollVariants = {
     opacity: 1,
     y: 0,
   },
-
   show: {
     y: [4, 3, 2, 1, 0, -1, -2, -3, -4, -3, -2, -1, 0, 1, 2, 3, 4],
     opacity: 1,
     transition: {
       duration: 2,
+      ease: "easeInOut",
+      repeat: Infinity,
+      repeatType: "loop",
+    },
+  },
+  show_1: {
+    y: [-2, -3, -4, -3, -2],
+    opacity: 1,
+    transition: {
+      duration: 1,
       ease: "easeInOut",
       repeat: Infinity,
       repeatType: "loop",
@@ -94,7 +102,18 @@ export default function HeroUser({ scrollToNextSection }) {
           >
             <a className="flex items-center gap-2">
               READ MORE
-              <FaArrowDown alt="chevron-button" className="h-5" />
+              <motion.div
+                variants={scrollVariants}
+                initial="hidden"
+                whileInView="show_1"
+                className="flex items-center"
+              >
+                <img
+                  src={scroll_down}
+                  alt="chevron down icon"
+                  className="h-6 rotate-90 mt-2"
+                />
+              </motion.div>
             </a>
           </button>
         </div>
