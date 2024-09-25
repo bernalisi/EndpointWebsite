@@ -26,12 +26,12 @@ export default function Platform() {
       <div className="w-full flex flex-col gap-5 justify-between items-start">
         {/* Header Section */}
         <h2 className="text-white text-[28px] lg:text-[48px] font-semibold mt-3 py-[10px]">
-          The largest ecosystem of RWD providers
+          Connecting the Unconnected - One Dataset at a Time
         </h2>
         <p className="text-white text-base sm:text-lg lg:text-xl xl:text-2xl mb-8">
-          Our platform enables life sciences to search for and explore the most
-          comprehensive collection of RWD assets from leading healthcare
-          organizations worldwide.
+          We’re creating a secure, interoperable platform to simplify how life
+          sciences companies build patient cohorts, analyze real-world data, and
+          plan for observational studies.
         </p>
 
         {/* Cards */}

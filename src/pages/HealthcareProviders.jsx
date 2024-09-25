@@ -3,6 +3,7 @@ import HeroProvider from "../components/healthcare-providers/HeroProvider";
 import SolutionProvider from "../components/healthcare-providers/SolutionProvider";
 import KeyBenefits from "../components/healthcare-providers/KeyBenefits";
 import Faq from "../components/healthcare-providers/Faq";
+import JoinEndpoint from "../components/healthcare-providers/JoinEndpoint";
 import { useRef } from "react";
 
 export default function HealthcareProviders() {
@@ -23,7 +24,8 @@ export default function HealthcareProviders() {
         <SolutionProvider />
       </div>
       <KeyBenefits />
-      <Faq />
+      {/* <Faq /> */}
+      <JoinEndpoint />
       <ContactProvider />
     </div>
   );

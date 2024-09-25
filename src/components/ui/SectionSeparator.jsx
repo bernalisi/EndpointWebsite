@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import dot_separator from "../../assets/images/ui/Dot-separator.svg";
 
-export default function SectionSeparator({ TitleSection }) {
+export default function SectionSeparator({ TitleSection, textColor }) {
   const TextVariant = {
     hidden: {
       opacity: 0,
@@ -22,7 +22,9 @@ export default function SectionSeparator({ TitleSection }) {
         initial="hidden"
         whileInView="show"
         viewport={{ margin: "-100px", once: true }}
-        className="text-white text-sm sm:text-base 2xl:text-[20px]"
+        className={`${
+          textColor ? "text-black" : "text-white"
+        } text-sm sm:text-base 2xl:text-[20px]`}
       >
         {TitleSection}
       </motion.h6>

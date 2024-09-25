@@ -7,19 +7,19 @@ export default function SolutionUser() {
 
   const solutionNavigation = {
     1: {
-      title: "DATA DISCOVERY & SEARCH",
+      title: "BUILD CUSTOM COHORTS",
       description:
-        "Effortlessly search, filter, and save fit-for-purpose datasets from a wide network of data providers, using advanced filtering options to locate the most relevant data for your research.",
+        "Select patients based on diagnosis, treatment history, or other criteria, and track outcomes over time.",
     },
     2: {
-      title: "DATA QUALITY ASSESSMENT",
+      title: "REAL-TIME DATA INSIGHTS",
       description:
-        "Preview key quality metrics such as completeness, consistency, and relevance before purchasing datasets, ensuring high-quality data that meets your research standards.",
+        "Visualize patient counts and data overlaps in real time, ensuring you get the right data fast.",
     },
     3: {
-      title: "SYNTHETIC DATA SANDBOX",
+      title: "ENHANCE RWE GENERATION",
       description:
-        "Test hypotheses and refine methodologies in a risk-free, compliant environment using synthetic data, allowing you to experiment and validate research approaches before committing to full datasets.",
+        "Support regulatory submissions or market access by leveraging the latest real-world evidence.",
     },
   };
 
@@ -38,12 +38,13 @@ export default function SolutionUser() {
       {/* Header Section */}
       <div className="w-full flex flex-col gap-6 justify-between items-start">
         <h3 className="text-black text-[28px] lg:text-[48px] font-semibold mt-3 py-[10px]">
-          Discover, Compare, Access RWD Seamlessly
+          Discover Insights with Real-World Data
         </h3>
         <p className="text-black text-lg sm:text-xl lg:text-2xl leading-relaxed">
-          Our platform empowers life sciences to explore over 200 real-world
-          data sources globally, helping you answer key research questions
-          across the product lifecycle with ease.
+          Life sciences companies need the right data to make decisions that
+          matter. We are building a platform that brings together multimodal
+          real-world datasets into a unified, interoperable environment. With
+          real-time patient data discovery and instant cohort creation, you can:
         </p>
       </div>
 

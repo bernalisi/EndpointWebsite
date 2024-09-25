@@ -59,7 +59,7 @@ export default function HeroUser({ scrollToNextSection }) {
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[100%] lg:w-[40%] xl:w-[50%] ld:text-[100px] text-white px-4 xl:text-[80px] lg:text-[52px] md:text-[60px] sm:text-[50px] xl:mb-16 text-[40px] max-sm:text-left max-md:text-center font-semibold leading-tight"
+          className="w-[100%] lg:w-[40%] xl:w-[65%] ld:text-[100px] text-white px-4 xl:text-[80px] lg:text-[52px] md:text-[60px] sm:text-[50px] xl:mb-16 text-[40px] max-sm:text-left max-md:text-center font-semibold leading-tight"
         >
           Life Sciences
         </motion.h1>
@@ -69,13 +69,23 @@ export default function HeroUser({ scrollToNextSection }) {
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[75%] md:w-[100%] lg:w-[40%] ld:text-[35px] font-thin xl:w-[50%] px-4 max-sm:hidden max-md:text-center text-white xl:text-[25px] md:text-[22px] sm:text-[15px] pt-0 s:pt-5 leading-relaxed text-justify"
+          className="w-[75%] md:w-[100%] lg:w-[40%] ld:text-[35px] font-thin xl:w-[65%] px-4 max-sm:hidden max-md:text-center text-white xl:text-[25px] md:text-[22px] sm:text-[15px] pt-0 s:pt-5 leading-relaxed text-justify"
         >
-          Navigate the most extensive universe of RWD sources to unleash the the
-          full potential of observational research.
+          At Endpoint, we’re building the foundation for a new era in healthcare
+          innovation. Our platform is designed to help life sciences companies
+          navigate the complex landscape of real-world data by making it{" "}
+          <span className="font-semibold">
+            <em>secure, accessible</em>
+          </span>
+          , and
+          <span className="font-semibold">
+            {" "}
+            <em>discoverable</em>
+          </span>
+          .
         </motion.a>
 
-        <div className="w-[50%] cursor-pointer max-sm:w-[100%] max-sm:px-5 flex flex-row sm:justify-center ml-5 max-sm:justify-start md:justify-start lg:justify-center">
+        <div className="w-[65%] cursor-pointer max-sm:w-[100%] max-sm:px-5 flex flex-row sm:justify-center ml-5 max-sm:justify-start md:justify-start lg:justify-center">
           <motion.div
             variants={scrollVariants}
             initial="hidden"
