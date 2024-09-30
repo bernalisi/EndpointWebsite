@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function PlatformOverview() {
   return (
-    <div className="w-full bg-gray-100 flex flex-col items-start gap-6 px-6 sm:px-10 lg:px-14 py-10 sm:py-16 lg:py-20">
+    <div className="w-full bg-white flex flex-col items-start gap-6 px-6 sm:px-10 lg:px-14 py-10 sm:py-16 lg:py-20">
       <SectionSeparator
         TitleSection="JOIN THE ENDPOINT NETWORK"
         textColor={true}
