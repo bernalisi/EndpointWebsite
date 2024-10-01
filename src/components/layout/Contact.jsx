@@ -12,7 +12,7 @@ export default function Contact() {
 
       <div className="w-full flex flex-col gap-10 md:gap-20 justify-between items-start">
         {/* header section */}
-        <h2 className="text-white text-3xl lg:text-4xl leading-normal xl:leading-tight mt-3 py-[20px]">
+        <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-normal xl:leading-tight mt-3 py-[20px]">
           Let’s discuss how Endpoint can help you explore RWD like never before
         </h2>
       </div>
