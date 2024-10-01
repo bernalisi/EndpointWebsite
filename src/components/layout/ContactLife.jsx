@@ -20,7 +20,7 @@ export default function Contact() {
       </div>
 
       {/* Content here */}
-      <div className="mt-20 md:mt-14 ld:mt-20 flex flex-col justify-center items-start gap-8 md:gap-10">
+      <div className="mt-10 sm:mt-20 md:mt-14 ld:mt-20 flex flex-col justify-center items-start gap-8 md:gap-10">
         <h3 className="text-white text-[40px] sm:text-[60px] max-xs:text-[40px] md:text-[70px] lg:text-[85px] font-medium">
           Partner with Endpoint
         </h3>

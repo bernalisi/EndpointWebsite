@@ -52,7 +52,7 @@ export default function Stats() {
   return (
     <div
       ref={ref}
-      className="w-full bg-black ld:h-screen flex flex-col justify-center ld:justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20 ld:pb-0 ld:pt-20 pb-20 ld:mb-60"
+      className="w-full bg-black ld:h-screen flex flex-col justify-center ld:justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20 ld:pb-0 ld:pt-20 pb-20"
     >
       <SectionSeparator TitleSection="UNLOCKING DISCOVERY" />
 
