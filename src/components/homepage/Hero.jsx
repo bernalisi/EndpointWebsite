@@ -81,7 +81,7 @@ export default function Hero({ scrollToNextSection }) {
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[100%] lg:w-[65%] xl:w-[60%] ld:text-[100px] text-white px-4 xl:text-[60px] lg:text-[52px] sm:text-[50px] text-[40px] max-sm:text-left max-md:text-center font-semibold leading-tight"
+          className="w-[100%] lg:w-[65%] xl:w-[60%] ld:text-[100px] text-white px-4 xl:text-[60px] lg:text-[52px] ld:pt-52 sm:text-[50px] text-[40px] max-sm:text-left max-md:text-center font-semibold leading-tight"
         >
           Unlock the world’s health data
         </motion.h1>
@@ -112,12 +112,11 @@ export default function Hero({ scrollToNextSection }) {
             />
           </motion.div>
 
-          {/* Button with bounce animation */}
           <motion.button
             className="sm:hidden w-auto cursor-pointer h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90"
             variants={buttonBounce}
             whileHover="hover"
-            onClick={scrollToNextSection} // Use the function on click
+            onClick={scrollToNextSection}
           >
             <a className="flex items-center gap-2">
               READ MORE

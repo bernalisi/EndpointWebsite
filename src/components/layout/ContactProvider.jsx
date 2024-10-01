@@ -5,7 +5,7 @@ import SectionSeparatorWhite from "../../components/ui/SectionSeparator_white";
 export default function ContactProvider() {
   return (
     <div
-      className="bg-cover bg-center bg-no-repeat w-full max-sm:h-auto h-[800px] ld:h-[750px] flex flex-col justify-start items-start px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20"
+      className="bg-cover bg-center bg-no-repeat w-full max-sm:h-auto max-sm:pb-20 h-[750px] ld:h-[625px] flex flex-col justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20"
       style={{ backgroundImage: `url(${bg_image})` }}
     >
       <SectionSeparatorWhite TitleSection="READY TO SIMPLIFY HOW YOU DISCOVER HEALTH DATA?" />
@@ -19,11 +19,11 @@ export default function ContactProvider() {
       </div>
 
       {/* Content here */}
-      <div className="mt-20 md:mt-14 ld:mt-60  flex flex-col justify-center items-start gap-8 md:gap-10">
+      <div className="mt-6 md:mt-14 ld:mt-20  flex flex-col justify-center items-start gap-8 md:gap-10">
         <h3 className="text-white text-[40px] sm:text-[60px] max-xs:text-[40px] md:text-[70px] lg:text-[85px] font-medium">
           Unlocking data. Uncovering insights.
         </h3>
-        <button className="w-auto h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90">
+        <button className="w-auto ld:h-14 ld:ml-4 h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90">
           <a href="/contact us" className="flex items-center gap-2">
             CONTACT US
             <img src={chevron_icon} alt="chevron-button" className="h-5" />

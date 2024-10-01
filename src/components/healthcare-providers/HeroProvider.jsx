@@ -78,7 +78,7 @@ export default function HeroProvider({ scrollToNextSection }) {
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[75%] md:w-[100%] lg:w-[40%] ld:text-[35px] font-thin xl:w-[50%] px-4 max-sm:hidden max-md:text-center text-white xl:text-[25px] md:text-[22px] sm:text-[15px] pt-0 s:pt-5 leading-relaxed text-justify"
+          className="w-[75%] md:w-[100%] lg:w-[40%] ld:text-[35px] font-thin xl:w-[50%] px-4  hidden sm:block max-md:text-center text-white xl:text-[25px] md:text-[22px] sm:text-[15px] pt-0 s:pt-5 leading-relaxed text-justify"
         >
           Securely share, control, and monetize your healthcare data to advance
           medical research with Endpoint

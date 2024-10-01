@@ -3,16 +3,16 @@ import { motion } from "framer-motion";
 
 export default function PlatformOverview() {
   return (
-    <div className="w-full bg-white flex flex-col items-start gap-6 px-6 sm:px-10 lg:px-14 py-10 sm:py-16 lg:py-20">
-      <SectionSeparator TitleSection="OUR PLATFORM" textColor={true} />
+    <div className="w-full bg-black flex flex-col items-start gap-6 px-6 sm:px-10 lg:px-14 py-10 sm:py-16 lg:py-20">
+      <SectionSeparator TitleSection="OUR PLATFORM" textColor={false} />
 
       <div className="w-full flex flex-col gap-5">
         {/* Header Section */}
-        <h2 className="text-black text-[28px] lg:text-[48px] font-semibold mt-3 py-[10px]">
+        <h2 className="text-white text-[28px] lg:text-[48px] font-semibold mt-3 py-[10px]">
           At Endpoint, we believe that the future of healthcare depends on
           seamless access to real-world data.
         </h2>
-        <p className="text-black text-lg sm:text-xl lg:text-2xl leading-relaxed">
+        <p className="text-white text-lg sm:text-xl lg:text-2xl leading-relaxed">
           We’re building a platform to help life sciences companies across
           Europe unlock valuable patient insights by securely connecting
           fragmented datasets and enabling better decision-making in clinical

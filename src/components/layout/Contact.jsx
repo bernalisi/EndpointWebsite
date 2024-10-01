@@ -5,7 +5,7 @@ import SectionSeparatorWhite from "../../components/ui/SectionSeparator_white";
 export default function Contact() {
   return (
     <div
-      className="bg-cover bg-center bg-no-repeat w-full max-sm:h-auto max-sm:pb-20 h-[700px] ld:h-[750px] flex flex-col justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20"
+      className="bg-cover bg-center bg-no-repeat w-full max-sm:h-auto max-sm:pb-20  h-[750px] ld:h-[625px] flex flex-col justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20"
       style={{ backgroundImage: `url(${bg_image})` }}
     >
       <SectionSeparatorWhite TitleSection="READY TO SIMPLIFY HOW YOU DISCOVER HEALTH DATA?" />
@@ -18,7 +18,7 @@ export default function Contact() {
       </div>
 
       {/* Content here */}
-      <div className="mt-32 md:mt-14 ld:mt-60 flex flex-col justify-center items-start gap-8 md:gap-10">
+      <div className="mt-32 md:mt-14 ld:mt-30 flex flex-col justify-center items-start gap-8 md:gap-10">
         <h3 className="text-white text-[40px] sm:text-[60px] max-xs:text-[40px] md:text-[70px] lg:text-[85px] font-medium">
           Unlocking data. Uncovering insights.
         </h3>
