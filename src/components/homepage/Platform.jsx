@@ -35,7 +35,7 @@ export default function Platform() {
         </p>
 
         {/* Cards */}
-        <div className="w-full flex flex-col ld:pt-40 lg:flex-row justify-evenly items-center gap-8 sm:gap-10 lg:gap-12 mt-10 sm:mt-12 lg:mt-14 mb-10 sm:mb-14 lg:mb-20">
+        <div className="w-full flex flex-col ld:pt-20 lg:flex-row justify-evenly items-center gap-8 sm:gap-10 lg:gap-12 mt-10 sm:mt-12 lg:mt-14 mb-10 sm:mb-14 lg:mb-20">
           {/* Life Science Card */}
           <motion.div
             onClick={() => {

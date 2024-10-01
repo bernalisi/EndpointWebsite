@@ -23,7 +23,7 @@ export default function Contact() {
       </div>
 
       {/* Updated Content Section */}
-      <div className="mt-32 md:mt-14 ld:mt-60 flex flex-col justify-center items-start gap-8 md:gap-10">
+      <div className="mt-32 md:mt-14 ld:mt-20 flex flex-col justify-center items-start gap-8 md:gap-10">
         <button className="w-auto ld:h-14 ld:ml-4 h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90">
           <a href="/contact us" className="flex items-center gap-2">
             CONTACT US
