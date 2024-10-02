@@ -9,7 +9,7 @@ export default function PlatformOverview() {
       <div className="w-full flex flex-col gap-5">
         {/* Header Section */}
         <h3 className="text-black text-[28px] lg:text-[48px] font-semibold mt-3 py-[10px]">
-          Why Life Sciences Trust Endpoint
+          Why Life Sciences trust Endpoint
         </h3>
         <p className="text-black text-lg sm:text-xl lg:text-2xl leading-relaxed">
           Endpoint is designed to meet the growing needs of pharmaceutical
