@@ -12,7 +12,7 @@ export default function PlatformOverview() {
           At Endpoint, we believe that the future of healthcare depends on
           seamless access to real-world data.
         </h2>
-        <p className="text-white text-lg sm:text-xl lg:text-2xl leading-relaxed">
+        <p className="text-white text-lg hidden xs:block sm:text-xl lg:text-2xl leading-relaxed">
           We’re building a platform to help life sciences companies across
           Europe unlock valuable patient insights by securely connecting
           fragmented datasets and enabling better decision-making in clinical
