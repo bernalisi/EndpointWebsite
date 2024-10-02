@@ -31,12 +31,16 @@ export default function WhyProvider() {
       {/* Title & Paragraph */}
       <div className="w-full flex flex-col gap-6 justify-between items-start">
         <h3 className="text-black text-[28px] lg:text-[48px] font-semibold mt-3 py-[10px]">
-          Why join Endpoint?
+          Control and privacy by design
         </h3>
         <p className="text-black text-base sm:text-lg lg:text-xl xl:text-2xl mb-8">
-          Become part of a network where your data fuels life-saving research
-          while keeping you in control of who accesses it, how it&apos;s used,
-          and for what purpose
+          We understand that privacy and control over data use are
+          non-negotiable for providers. Endpoint is designed with{" "}
+          <span className="font-bold">privacy-first technology</span>, ensuring
+          that your data remains local, de-identified, secure, and compliant
+          with <span className="font-bold">GDPR</span>. As a provider, you
+          retain full control over who can access your data and for what
+          purposes.
         </p>
       </div>
       <div className="lg:h-[80%] xl:h-[100%] ld:gap-20 flex flex-wrap justify-center items-center w-full">

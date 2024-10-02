@@ -1,4 +1,5 @@
-import scroll_down from "../../assets/images/ui/Chevron down black.svg";
+import scroll_down from "../../assets/images/ui/Chevron down white.svg";
+import read_down from "../../assets/images/ui/Chevron down black.svg";
 import background from "../../assets/images/homepage/Background homepage.svg";
 import { motion } from "framer-motion";
 
@@ -80,9 +81,9 @@ export default function Hero({ scrollToNextSection }) {
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[100%] lg:w-[65%] xl:w-[60%] ld:text-[100px] text-white px-4 xl:text-[60px] lg:text-[52px] sm:text-[50px] text-[40px] max-sm:text-left max-md:text-center font-semibold leading-tight"
+          className="w-[100%] lg:w-[65%] xl:w-[60%] ld:text-[100px] text-white px-4 xl:text-[60px] lg:text-[52px] ld:pt-52 sm:text-[50px] text-[40px] max-sm:text-left max-md:text-center font-semibold leading-tight"
         >
-          Instantly find RWD for smarter pharmaceutical research
+          Unlock the world’s health data
         </motion.h1>
 
         {/* Second paragraph */}
@@ -90,12 +91,11 @@ export default function Hero({ scrollToNextSection }) {
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[75%] md:w-[90%] lg:w-[60%] xl:w-[55%] ld:text-[35px] px-4 hidden sm:block max-md:text-center text-white xl:text-[20px] md:text-[22px] sm:text-[20px] font-normal pt-5 leading-relaxed"
+          className="w-[75%] md:w-[90%] lg:w-[60%] xl:w-[55%] ld:text-[35px] px-4 hidden sm:block max-md:text-center text-white xl:text-[25px] md:text-[22px] sm:text-[20px] font-normal pt-5 leading-relaxed"
         >
-          Our self-service platform enables quick discovery and access to
-          curated healthcare data from leading organizations worldwide,
-          streamlining research and data analysis for observational studies with
-          just a few clicks.
+          Building the infrastructure to connect real-world data across life
+          sciences and healthcare, empowering better patient outcomes through
+          data-driven decisions.
         </motion.a>
 
         <div className="w-[50%] cursor-pointer max-sm:w-[100%] max-sm:px-5 flex flex-row sm:justify-center ml-5 max-sm:justify-start">
@@ -108,16 +108,15 @@ export default function Hero({ scrollToNextSection }) {
             <img
               src={scroll_down}
               alt="chevron down icon"
-              className="hidden sm:block sm:h-3 md:h-3 lg:h-4 ld:h-5 xl:mt-5 2xl:mt-12"
+              className="hidden sm:block sm:h-6 md:h-6 lg:h-8 ld:h-12 xl:mt-5 2xl:mt-12 rotate-90"
             />
           </motion.div>
 
-          {/* Button with bounce animation */}
           <motion.button
             className="sm:hidden w-auto cursor-pointer h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90"
             variants={buttonBounce}
             whileHover="hover"
-            onClick={scrollToNextSection} // Use the function on click
+            onClick={scrollToNextSection}
           >
             <a className="flex items-center gap-2">
               READ MORE
@@ -128,7 +127,7 @@ export default function Hero({ scrollToNextSection }) {
                 className="flex items-center"
               >
                 <img
-                  src={scroll_down}
+                  src={read_down}
                   alt="chevron down icon"
                   className="h-6 rotate-90 mt-2"
                 />

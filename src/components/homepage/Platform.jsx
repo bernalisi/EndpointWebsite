@@ -26,16 +26,16 @@ export default function Platform() {
       <div className="w-full flex flex-col gap-5 justify-between items-start">
         {/* Header Section */}
         <h2 className="text-white text-[28px] lg:text-[48px] font-semibold mt-3 py-[10px]">
-          The largest ecosystem of RWD providers
+          Connecting the Unconnected - One Dataset at a Time
         </h2>
         <p className="text-white text-base sm:text-lg lg:text-xl xl:text-2xl mb-8">
-          Our platform enables life sciences to search for and explore the most
-          comprehensive collection of RWD assets from leading healthcare
-          organizations worldwide.
+          We’re creating a secure, interoperable platform to simplify how life
+          sciences companies build patient cohorts, analyze real-world data, and
+          plan for observational studies.
         </p>
 
         {/* Cards */}
-        <div className="w-full flex flex-col ld:pt-40 lg:flex-row justify-evenly items-center gap-8 sm:gap-10 lg:gap-12 mt-10 sm:mt-12 lg:mt-14 mb-10 sm:mb-14 lg:mb-20">
+        <div className="w-full flex flex-col ld:pt-20 lg:flex-row justify-evenly items-center gap-8 sm:gap-10 lg:gap-12 mt-10 sm:mt-12 lg:mt-14 mb-10 sm:mb-14 lg:mb-20">
           {/* Life Science Card */}
           <motion.div
             onClick={() => {

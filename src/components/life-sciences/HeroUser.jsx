@@ -1,4 +1,5 @@
-import scroll_down from "../../assets/images/ui/Chevron down black.svg";
+import scroll_down from "../../assets/images/ui/Chevron down white.svg";
+import read_down from "../../assets/images/ui/Chevron down black.svg";
 import background from "../../assets/images/life-sciences/Life Science Background.svg";
 import { motion } from "framer-motion";
 
@@ -60,14 +61,14 @@ export default function HeroUser({ scrollToNextSection }) {
         variants={ParentVariations}
         initial="hidden"
         animate="visible"
-        className="w-screen h-screen mt-[60px] lg:mt-[100px] px-2 sm:px-6 lg:px-14 xl:px-52 pt-32 pb-[333px] flex max-md:items-center max-sm:justify-end items-start md:items-end flex-col gap-6"
+        className="w-screen h-screen mt-[100px] sm:mt-60 lg:mt-[100px] px-2 sm:px-6 lg:px-14 xl:px-52 pt-32 pb-[333px] flex max-md:items-center max-sm:justify-end items-start md:items-end flex-col gap-6"
       >
         {/* First paragraph */}
         <motion.h1
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[100%] lg:w-[40%] xl:w-[50%] ld:text-[100px] text-white px-4 xl:text-[80px] lg:text-[52px] md:text-[60px] sm:text-[50px] xl:mb-16 text-[40px] max-sm:text-left max-md:text-center font-semibold leading-tight"
+          className="w-[100%] lg:w-[40%] xl:w-[65%] ld:text-[100px] text-white px-4 xl:text-[80px] lg:text-[52px] md:text-[60px] sm:text-[50px] xl:mb-16 text-[40px] max-sm:text-left max-md:text-center font-semibold leading-tight"
         >
           Life Sciences
         </motion.h1>
@@ -77,13 +78,22 @@ export default function HeroUser({ scrollToNextSection }) {
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[75%] md:w-[100%] lg:w-[40%] ld:text-[35px] font-thin xl:w-[50%] px-4 max-sm:hidden max-md:text-center text-white xl:text-[25px] md:text-[22px] sm:text-[15px] pt-0 s:pt-5 leading-relaxed text-justify"
+          className="w-[75%] md:w-[100%] lg:w-[40%] ld:text-[35px] font-thin xl:w-[65%] px-4 hidden sm:block max-md:text-center text-white xl:text-[25px] md:text-[22px] sm:text-[15px] pt-0 s:pt-5 leading-relaxed text-justify"
         >
-          Navigate the most extensive universe of RWD sources to unleash the the
-          full potential of observational research.
+          We’re building the foundation for a new era in healthcare
+          innovation. Navigate the complex landscape of real-world data by making it{" "}
+          <span className="font-semibold">
+            <b>secure, accessible</b>
+          </span>
+          , and
+          <span className="font-semibold">
+            {" "}
+            <b>discoverable</b>
+          </span>
+          .
         </motion.a>
 
-        <div className="w-[50%] cursor-pointer max-sm:w-[100%] max-sm:px-5 flex flex-row sm:justify-center ml-5 max-sm:justify-start md:justify-start lg:justify-center">
+        <div className="w-[65%] cursor-pointer max-sm:w-[100%] max-sm:px-5 flex flex-row sm:justify-center ml-5 max-sm:justify-start md:justify-start lg:justify-center">
           <motion.div
             variants={scrollVariants}
             initial="hidden"
@@ -93,7 +103,7 @@ export default function HeroUser({ scrollToNextSection }) {
             <img
               src={scroll_down}
               alt="chevron down icon"
-              className="hidden sm:block sm:h-3 md:h-3 lg:h-4 ld:h-5 xl:mt-5 2xl:mt-12"
+              className="hidden sm:block sm:h-6 md:h-6 lg:h-8 ld:h-12 xl:mt-5 2xl:mt-12 rotate-90"
             />
           </motion.div>
           <button
@@ -109,7 +119,7 @@ export default function HeroUser({ scrollToNextSection }) {
                 className="flex items-center"
               >
                 <img
-                  src={scroll_down}
+                  src={read_down}
                   alt="chevron down icon"
                   className="h-6 rotate-90 mt-2"
                 />

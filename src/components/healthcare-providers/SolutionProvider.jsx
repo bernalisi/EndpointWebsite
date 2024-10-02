@@ -67,14 +67,13 @@ export default function SolutionProvider() {
       {/* Header Section */}
       <div className="w-full flex flex-col gap-6 justify-between items-start">
         <h3 className="text-black text-[28px] lg:text-[48px] font-semibold mt-3 py-[10px]">
-          Safeguard privacy, maximize data utilization
+          Make your data easy to find and access for researchers
         </h3>
         <p className="text-black text-lg sm:text-xl lg:text-2xl leading-relaxed">
-          Endpoint connects researchers to a vast network of data providers,
-          allowing them to explore fragmented health data from multiple sources—
-          registries, hospitals, labs, pharmacies, and more—in a unified
-          platform. Data providers gain visibility to top biopharma researchers,
-          while retaining full control over who gets to access their data.
+          We make it simple to contribute your data to a broader ecosystem of
+          researchers and healthcare organizations. Our platform allows you to
+          securely share de-identified, real-world data with life sciences
+          companies and researchers who are transforming healthcare.
         </p>
       </div>
 
@@ -98,7 +97,7 @@ export default function SolutionProvider() {
           </ul>
         </div>
         {/* Right Side: Scrollable Cards with Scroll Indicator & Gradient */}
-        <div className="card-container ld:ml-20 relative flex flex-col items-center gap-10 lg:gap-20 max-lg:w-full lg:w-[70%]">
+        <div className="card-container ld:ml-20 h-[520px] overflow-y-scroll relative flex flex-col items-center max-lg:w-full lg:w-[70%]">
           {Object.keys(useCaseNavigation).map((key) => {
             const { ref, inView } = useInView({
               threshold: 0.7,

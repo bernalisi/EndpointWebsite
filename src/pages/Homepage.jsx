@@ -4,6 +4,7 @@ import Resources from "../components/homepage/Resources";
 import Stats from "../components/homepage/Stats";
 import Platform from "../components/homepage/Platform";
 import Contact from "../components/layout/Contact";
+import AtEndpoint from "../components/homepage/AtEndpoint";
 
 export default function Homepage() {
   // Reference for the Platform section
@@ -23,6 +24,7 @@ export default function Homepage() {
         <Platform />
       </div>
       <Stats />
+      <AtEndpoint />
       <Contact />
       <Resources />
     </div>

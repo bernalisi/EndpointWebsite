@@ -1,4 +1,5 @@
-import scroll_down from "../../assets/images/ui/Chevron down black.svg";
+import scroll_down from "../../assets/images/ui/Chevron down white.svg";
+import read_down from "../../assets/images/ui/Chevron down black.svg";
 import background from "../../assets/images/healthcare-providers/Healthcare Providers background.svg";
 import { motion } from "framer-motion";
 
@@ -77,7 +78,7 @@ export default function HeroProvider({ scrollToNextSection }) {
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[75%] md:w-[100%] lg:w-[40%] ld:text-[35px] font-thin xl:w-[50%] px-4 max-sm:hidden max-md:text-center text-white xl:text-[25px] md:text-[22px] sm:text-[15px] pt-0 s:pt-5 leading-relaxed text-justify"
+          className="w-[75%] md:w-[100%] lg:w-[40%] ld:text-[35px] font-thin xl:w-[50%] px-4  hidden sm:block max-md:text-center text-white xl:text-[25px] md:text-[22px] sm:text-[15px] pt-0 s:pt-5 leading-relaxed text-justify"
         >
           Securely share, control, and monetize your healthcare data to advance
           medical research with Endpoint
@@ -93,7 +94,7 @@ export default function HeroProvider({ scrollToNextSection }) {
             <img
               src={scroll_down}
               alt="chevron down icon"
-              className="hidden sm:block sm:h-3 md:h-3 lg:h-4 ld:h-5 xl:mt-5 2xl:mt-12"
+              className="hidden sm:block sm:h-6 md:h-6 lg:h-8 ld:h-12 xl:mt-5 2xl:mt-12 rotate-90"
             />
           </motion.div>
           <button
@@ -109,7 +110,7 @@ export default function HeroProvider({ scrollToNextSection }) {
                 className="flex items-center"
               >
                 <img
-                  src={scroll_down}
+                  src={read_down}
                   alt="chevron down icon"
                   className="h-6 rotate-90 mt-2"
                 />
