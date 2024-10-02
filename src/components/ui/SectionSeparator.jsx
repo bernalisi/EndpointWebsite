@@ -24,7 +24,7 @@ export default function SectionSeparator({ TitleSection, textColor }) {
         viewport={{ margin: "-100px", once: true }}
         className={`${
           textColor ? "text-black" : "text-white"
-        } text-sm sm:text-base 2xl:text-[20px]`}
+        } text-sm font-medium sm:text-base 2xl:text-[20px]`}
       >
         {TitleSection}
       </motion.h6>

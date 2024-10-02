@@ -97,7 +97,7 @@ export default function SolutionProvider() {
           </ul>
         </div>
         {/* Right Side: Scrollable Cards with Scroll Indicator & Gradient */}
-        <div className="card-container ld:ml-20 relative flex flex-col items-center gap-10 lg:gap-20 max-lg:w-full lg:w-[70%]">
+        <div className="card-container ld:ml-20 h-[520px] overflow-y-scroll relative flex flex-col items-center max-lg:w-full lg:w-[70%]">
           {Object.keys(useCaseNavigation).map((key) => {
             const { ref, inView } = useInView({
               threshold: 0.7,

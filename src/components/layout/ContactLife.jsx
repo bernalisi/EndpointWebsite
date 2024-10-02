@@ -5,14 +5,14 @@ import SectionSeparatorWhite from "../ui/SectionSeparator_white";
 export default function Contact() {
   return (
     <div
-      className="bg-cover bg-center bg-no-repeat w-full max-sm:pb-20 h-[750px] ld:h-[675px] flex flex-col justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20"
+      className="bg-cover bg-center bg-no-repeat w-full max-sm:pb-20 h-[650px] ld:h-[675px] flex flex-col justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20"
       style={{ backgroundImage: `url(${bg_image})` }}
     >
       <SectionSeparatorWhite TitleSection="READY TO SIMPLIFY HOW YOU DISCOVER HEALTH DATA?" />
 
       <div className="w-full flex flex-col gap-10 md:gap-20 justify-between items-start">
         {/* header section */}
-        <h2 className="text-white text-2xl md:text-3xl lg:text-4xl leading-normal xl:leading-tight mt-3 py-[20px]">
+        <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-normal xl:leading-tight mt-3 py-[20px]">
           Join us as we build the future of healthcare data for life sciences.
           Get early access to our platform, and discover how Endpoint will
           transform how you access and use health data to drive innovation.
@@ -20,7 +20,7 @@ export default function Contact() {
       </div>
 
       {/* Content here */}
-      <div className="mt-20 md:mt-14 ld:mt-20 flex flex-col justify-center items-start gap-8 md:gap-10">
+      <div className="mt-0 sm:mt-20 md:mt-14 ld:mt-20 flex flex-col justify-center items-start gap-8 md:gap-10">
         <h3 className="text-white text-[40px] sm:text-[60px] max-xs:text-[40px] md:text-[70px] lg:text-[85px] font-medium">
           Partner with Endpoint
         </h3>
