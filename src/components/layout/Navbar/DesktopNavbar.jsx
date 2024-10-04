@@ -66,10 +66,10 @@ export default function DesktopNavbar() {
     location.pathname === "/terms%20of%20use";
 
   return (
-    <div>
+    <div className={isTransparent ? "" : "i"}>
       <div ref={observerRef} />
       <nav
-        className={`fixed top-0 w-full h-16 z-40 flex items-center justify-between px-6 ${
+        className={`fixed top-0 w-full h-16 z-40 flex items-center justify-between px-6 transition duration-500 ease-in-out ${
           isTransparent && !hovering && !isSpecificPage
             ? "bg-transparent"
             : "bg-white"
@@ -88,7 +88,7 @@ export default function DesktopNavbar() {
             />
           </a>
 
-          <ul className="flex space-x-4">
+          {/* <ul className="flex space-x-4">
             {Navigation.map((element, index) => (
               <li key={index}>
                 <a
@@ -98,7 +98,7 @@ export default function DesktopNavbar() {
                       ? "_blank"
                       : "_self"
                   }
-                  className={`ld:text-[20px] font-medium ${
+                  className={`ld:text-[20px] font-medium transition duration-500 ease-in-out ${
                     isTransparent && !hovering && !isSpecificPage
                       ? "text-white hover:text-violet-600"
                       : "text-black hover:text-violet-900"
@@ -108,16 +108,16 @@ export default function DesktopNavbar() {
                 </a>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
 
         <div className="flex flex-row gap-4">
-          <div className="relative" ref={dropdownRef}>
+          {/* <div className="relative" ref={dropdownRef}>
             <button
               onClick={handleLoginClick}
               className={`h-8 px-5 ld:text-[20px] py-1 flex items-center font-semibold transition duration-150 ease-in-out ${
                 isTransparent && !hovering && !isSpecificPage
-                  ? "border-2 border-white text-white hover:bg-white hover:text-black"
+                  ? "border border-white text-white hover:bg-white hover:text-black"
                   : "border border-black hover:bg-black hover:text-white"
               }`}
             >
@@ -142,19 +142,19 @@ export default function DesktopNavbar() {
                 </a>
               </div>
             )}
-          </div>
+          </div> */}
 
           <button
-            className={`h-8 px-5 ld:text-[20px] py-1 flex items-center font-semibold transition duration-150 ease-in-out ${
+            className={`h-8 px-5 ld:text-[20px] py-1 flex items-center font-semibold transition duration-500 ease-in-out ${
               isTransparent && !hovering && !isSpecificPage
-                ? "border-2 border-white text-white hover:bg-white hover:text-black"
+                ? "border border-white text-white hover:bg-white hover:text-black"
                 : "border border-black hover:bg-black hover:text-white"
             }`}
           >
             <a href="/CONTACT US">CONTACT US</a>
           </button>
           <button
-            className={`h-8 px-5 ld:text-[20px] py-1 flex items-center font-semibold transition duration-150 ease-in-out ${
+            className={`h-8 px-5 ld:text-[20px] py-1 flex items-center font-semibold transition duration-500 ease-in-out ${
               isTransparent && !hovering && !isSpecificPage
                 ? "bg-white border-white text-black hover:opacity-70"
                 : "bg-violet-900 border-violet-900 text-white hover:opacity-70"

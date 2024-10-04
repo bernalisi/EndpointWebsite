@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function PlatformOverview() {
   return (
     <div className="w-full bg-black flex flex-col items-start gap-6 px-6 sm:px-10 lg:px-14 py-10 sm:py-16 lg:py-20">
-      <SectionSeparator TitleSection="OUR PLATFORM" textColor={false} />
+      <SectionSeparator TitleSection="WHY US" textColor={false} />
 
       <div className="w-full flex flex-col gap-5">
         {/* Header Section */}
@@ -12,7 +12,7 @@ export default function PlatformOverview() {
           At Endpoint, we believe that the future of healthcare depends on
           seamless access to real-world data.
         </h2>
-        <p className="text-white text-lg hidden xs:block sm:text-xl lg:text-2xl leading-relaxed">
+        <p className="text-white text-lg hidden xs:block sm:text-xl lg:text-2xl leading-relaxed pb-12">
           We’re building a platform to help life sciences companies across
           Europe unlock valuable patient insights by securely connecting
           fragmented datasets and enabling better decision-making in clinical
@@ -30,32 +30,30 @@ export default function PlatformOverview() {
             </h3>
             <p className="text-gray-600 mt-2">
               Access, connect, and analyze data from diverse, siloed sources
-              across healthcare, all in one place.
+              across the healthcare landscape, all in one place
             </p>
           </motion.div>
 
           <motion.div
-            className="bg-white shadow-lg rounded-lg p-6"
+            className="bg-white shadow-lg rounded-lg p-6 "
             whileHover={{ scale: 1.02 }}
           >
             <h3 className="text-xl font-semibold">Privacy First</h3>
             <p className="text-gray-600 mt-2">
-              We’re designing our platform to comply with GDPR and the strictest
-              European data privacy regulations, ensuring that patient data
-              remains de-identified and secure.
+              Our platform complies with HIPAA, GDPR and the strictest European
+              data privacy regulations, ensuring that patient data remains
+              de-identified and secure
             </p>
           </motion.div>
 
           <motion.div
-            className="bg-white shadow-lg rounded-lg p-6"
+            className="bg-white shadow-lg rounded-lg p-6 ∞"
             whileHover={{ scale: 1.02 }}
           >
-            <h3 className="text-xl font-semibold">
-              Data-Driven Cohort Creation
-            </h3>
+            <h3 className="text-xl font-semibold">Granular Data Discovery</h3>
             <p className="text-gray-600 mt-2">
-              With a focus on observational studies, our platform will allow for
-              precise cohort building that’s informed by real-time data.
+              Rapidly identify and build study cohorts by geography, gender,
+              age, diagnosis, treatment, and outcome
             </p>
           </motion.div>
         </div>

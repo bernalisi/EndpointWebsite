@@ -74,14 +74,14 @@ export default function Hero({ scrollToNextSection }) {
         variants={ParentVariations}
         initial="hidden"
         animate="visible"
-        className="w-screen h-screen mt-[60px] lg:mt-[100px] px-2 sm:px-6 lg:px-8 pt-32 pb-[333px] flex max-md:items-center max-sm:justify-end items-start flex-col gap-6"
+        className="w-screen h-screen mt-[60px] lg:mt-[100px] px-2 sm:px-6 lg:px-8 pt-32 lg:pt-72 ml-10 pb-[333px] flex max-md:items-center max-sm:justify-end items-start flex-col gap-6"
       >
         {/* First paragraph */}
         <motion.h1
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[100%] lg:w-[65%] xl:w-[60%] ld:text-[100px] text-white px-4 xl:text-[60px] lg:text-[52px] ld:pt-52 sm:text-[50px] text-[40px] max-sm:text-left max-md:text-center font-semibold leading-tight"
+          className="w-[100%] lg:w-[65%] xl:w-[70%] ld:text-[100px] text-white px-4 xl:text-[70px] lg:text-[52px] ld:pt-52 sm:text-[50px] text-[40px] max-sm:text-left max-md:text-center font-semibold leading-tight"
         >
           Unlock the world’s health data
         </motion.h1>
@@ -95,11 +95,11 @@ export default function Hero({ scrollToNextSection }) {
         >
           Building the infrastructure to connect real-world data across life
           sciences and healthcare, empowering better patient outcomes through
-          data-driven decisions.
+          data-driven decisions
         </motion.a>
 
         <div className="w-[50%] cursor-pointer max-sm:w-[100%] max-sm:px-5 flex flex-row sm:justify-center ml-5 max-sm:justify-start">
-          <motion.div
+          {/* <motion.div
             variants={scrollVariants}
             initial="hidden"
             whileInView="show"
@@ -110,7 +110,7 @@ export default function Hero({ scrollToNextSection }) {
               alt="chevron down icon"
               className="hidden sm:block sm:h-6 md:h-6 lg:h-8 ld:h-12 xl:mt-5 2xl:mt-12 rotate-90"
             />
-          </motion.div>
+          </motion.div> */}
 
           <motion.button
             className="sm:hidden w-auto cursor-pointer h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90"

@@ -80,8 +80,8 @@ export default function HeroUser({ scrollToNextSection }) {
           animate="visible"
           className="w-[75%] md:w-[100%] lg:w-[40%] ld:text-[35px] font-thin xl:w-[65%] px-4 hidden sm:block max-md:text-center text-white xl:text-[25px] md:text-[22px] sm:text-[15px] pt-0 s:pt-5 leading-relaxed text-justify"
         >
-          We’re building the foundation for a new era in healthcare
-          innovation. Navigate the complex landscape of real-world data by making it{" "}
+          We’re building the foundation for a new era in healthcare innovation.
+          Navigate the complex landscape of real-world data by making it{" "}
           <span className="font-semibold">
             <b>secure, accessible</b>
           </span>

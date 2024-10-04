@@ -36,7 +36,7 @@ export default function Footer() {
         <div className="w-[75%] md:w-[500px] h-auto flex flex-col gap-6 md:gap-10 items-center md:items-start justify-end flex-grow">
           {/* Buttons */}
           <div className="flex flex-col items-center md:items-start gap-4 mb-8">
-            <div className="relative" ref={dropdownRef}>
+            {/* <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 className="h-8 ld:text-[20px] px-5 py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white"
@@ -44,7 +44,6 @@ export default function Footer() {
                 LOG IN
               </button>
 
-              {/* Dropdown Menu */}
               {isDropdownOpen && (
                 <div className="absolute top-full mt-1 w-48 bg-white shadow-lg rounded-lg z-50">
                   <a
@@ -63,7 +62,7 @@ export default function Footer() {
                   </a>
                 </div>
               )}
-            </div>
+            </div> */}
 
             {/* <button className="h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white">
               <a href="/contact us">CONTACT US</a>

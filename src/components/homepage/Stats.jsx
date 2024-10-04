@@ -44,18 +44,17 @@ export default function Stats() {
   }, [inView]);
 
   const Statistics = [
-    { type: "Data Providers", data: 200 },
     { type: "Patients", data: 70000000 },
+    { type: "Data Providers", data: 200 },
     { type: "Countries", data: 40 },
   ];
 
   return (
     <div
       ref={ref}
-      className="w-full bg-black ld:h-screen flex flex-col justify-center ld:justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20 ld:pb-0 ld:pt-20 pb-20"
+      className="w-full bg-black ld:h-screen flex flex-col justify-start ld:justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20 ld:pb-0 ld:pt-20 pb-20"
     >
-      <SectionSeparator TitleSection="UNLOCKING DISCOVERY" />
-
+      <SectionSeparator TitleSection="STATS" />
       <div className="w-full flex flex-col gap-10 justify-between items-start">
         {/* Header Section */}
         <h2 className="text-white text-[28px] lg:text-[48px] font-semibold mt-3 py-[10px]">
@@ -63,22 +62,37 @@ export default function Stats() {
         </h2>
 
         {/* Content of section */}
-        <div className="flex flex-col gap-10 md:gap-12 items-start">
-          {Statistics.map((s) => (
-            <div
-              key={s.type}
-              className="flex flex-col justify-center items-start md:items-start gap-1 ld:gap-6 text-center md:text-left"
-            >
-              {/* Using custom hook to animate the numbers */}
-              <p className="text-white ld:text-[130px] text-[48px] md:text-[70px] lg:text-[85px] font-medium">
-                {useCountUp(s.data, 1000, startCounting).toLocaleString()}+
-              </p>
-              <img src={line_icon} alt="line icon" className="h-1 my-2" />
-              <h6 className="text-white text-xl md:text-2xl font-extralight">
-                {s.type}
-              </h6>
-            </div>
-          ))}
+        <div className="flex flex-col gap-10 md:gap-12 justify-start w-full">
+          <div className="flex flex-col md:items-start gap-1 ld:gap-6 text-center md:text-left">
+            {/* Using custom hook to animate the numbers */}
+            <p className="text-white ld:text-[130px] text-[48px] md:text-[70px] lg:text-[85px] xl:text-[180px] font-thin">
+              {useCountUp(7000000, 1000, startCounting).toLocaleString()}+
+            </p>
+            <img src={line_icon} alt="line icon" className="h-1 my-2" />
+            <h6 className="text-white text-xl md:text-2xl font-extralight xl:text-3xl">
+              Patients
+            </h6>
+          </div>
+          <div className="flex flex-col md:items-start gap-1 ld:gap-6 text-center md:text-left">
+            {/* Using custom hook to animate the numbers */}
+            <p className="text-white ld:text-[130px] text-[48px] md:text-[70px] lg:text-[85px] xl:text-[180px] font-thin">
+              {useCountUp(200, 1000, startCounting).toLocaleString()}+
+            </p>
+            <img src={line_icon} alt="line icon" className="h-1 my-2" />
+            <h6 className="text-white text-xl md:text-2xl font-extralight xl:text-3xl">
+              Data Providers
+            </h6>
+          </div>
+          <div className="flex flex-col md:items-start gap-1 ld:gap-6 text-center md:text-left">
+            {/* Using custom hook to animate the numbers */}
+            <p className="text-white ld:text-[130px] text-[48px] md:text-[70px] lg:text-[85px] xl:text-[180px] font-thin">
+              {useCountUp(40, 1000, startCounting).toLocaleString()}+
+            </p>
+            <img src={line_icon} alt="line icon" className="h-1 my-2" />
+            <h6 className="text-white text-xl md:text-2xl font-extralight xl:text-3xl">
+              Countries
+            </h6>
+          </div>
         </div>
       </div>
     </div>

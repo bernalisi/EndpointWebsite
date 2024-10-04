@@ -26,12 +26,13 @@ export default function Platform() {
       <div className="w-full flex flex-col gap-5 justify-between items-start">
         {/* Header Section */}
         <h2 className="text-white text-[28px] lg:text-[48px] font-semibold mt-3 py-[10px]">
-          Connecting the Unconnected - One Dataset at a Time
+          Bridging the data gap between life sciences and healthcare
         </h2>
         <p className="text-white text-base sm:text-lg lg:text-xl xl:text-2xl mb-8">
           We’re creating a secure, interoperable platform to simplify how life
-          sciences companies build patient cohorts, analyze real-world data, and
-          plan for observational studies.
+          sciences and healthcare providers partner to share and analyze
+          real-world data, optimize clinical trials, and run observational
+          studies
         </p>
 
         {/* Cards */}

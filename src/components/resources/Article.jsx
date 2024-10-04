@@ -16,7 +16,7 @@ export default function Article({ thumbnail, title, description, link }) {
         <img
           src={thumbnail}
           alt={title}
-          className="h-40 md:h-52 ld:h-80 bg-slate-100 object-cover"
+          className="h-40 md:h-52 ld:h-80 bg-slate-100 object-cover filter grayscale brightness-90"
         />
       ) : (
         <div className="h-40 md:h-52 bg-slate-100 flex items-center justify-center text-gray-500">
