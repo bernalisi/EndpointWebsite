@@ -74,7 +74,7 @@ export default function Hero({ scrollToNextSection }) {
         variants={ParentVariations}
         initial="hidden"
         animate="visible"
-        className="w-screen h-screen mt-[60px] lg:mt-[100px] px-2 sm:px-6 lg:px-8 pt-32 lg:pt-72 ml-10 pb-[333px] flex max-md:items-center max-sm:justify-end items-start flex-col gap-6"
+        className="w-screen h-screen mt-[60px] lg:mt-[60px] px-2 sm:px-6 lg:px-8 pt-32 lg:pt-56 ml-10 pb-[333px] flex max-md:items-center max-sm:justify-end items-start flex-col gap-6"
       >
         {/* First paragraph */}
         <motion.h1
