@@ -1,4 +1,4 @@
-import Logo from "../../assets/logos/Endpoint logo black dot purle.svg";
+import Logo from "../../assets/logos/Endpoint logo white dot purple.svg";
 import Linkedin from "../../assets/images/footer/Linkedin.svg";
 import Medium from "../../assets/images/footer/Medium.svg";
 import React, { useRef, useState, useEffect } from "react";
@@ -8,20 +8,17 @@ export default function Footer() {
   const Navigation = ["Privacy Policy", "Terms of use", "Cookies Settings"];
   const navigate = useNavigate();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null); // Reference for detecting clicks outside the dropdown
+  const dropdownRef = useRef(null);
 
-  // Handle clicks outside the dropdown to close it
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false); // Close dropdown if clicked outside
+        setIsDropdownOpen(false);
       }
     };
 
     if (isDropdownOpen) {
       document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
@@ -30,45 +27,13 @@ export default function Footer() {
   }, [isDropdownOpen]);
 
   return (
-    <div className="w-full bg-white flex flex-col items-center px-4 md:px-14 pt-5 pb-10 md:pb-20">
-      <div className="w-full pt-10 border-t-2 border-white flex flex-col md:flex-row gap-10 md:gap-20 justify-between items-center md:items-end">
+    <div className="w-full bg-black flex flex-col items-center gap-6 px-4 md:px-14 pt-10">
+      <div className="w-full flex flex-col md:flex-row gap-10 md:gap-20 justify-between items-center py-8">
         {/* First block */}
-        <div className="w-[75%] md:w-[500px] h-auto flex flex-col gap-6 md:gap-10 items-center md:items-start justify-end flex-grow">
+        <div className="w-full md:w-[500px] flex flex-col gap-8 items-center md:items-start">
           {/* Buttons */}
-          <div className="flex flex-col items-center md:items-start gap-4 mb-8">
-            {/* <div className="relative" ref={dropdownRef}>
-              <button
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="h-8 ld:text-[20px] px-5 py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white"
-              >
-                LOG IN
-              </button>
-
-              {isDropdownOpen && (
-                <div className="absolute top-full mt-1 w-48 bg-white shadow-lg rounded-lg z-50">
-                  <a
-                    href="https://endpoint-discover.vercel.app/"
-                    className="block px-4 py-2 text-black hover:bg-gray-100"
-                    target="_blank"
-                  >
-                    as Life Science
-                  </a>
-                  <a
-                    href="https://endpoint-providers-frontend.vercel.app/"
-                    className="block px-4 py-2 text-black hover:bg-gray-100"
-                    target="_blank"
-                  >
-                    as Healthcare Provider
-                  </a>
-                </div>
-              )}
-            </div> */}
-
-            {/* <button className="h-8 px-5 py-1 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white">
-              <a href="/contact us">CONTACT US</a>
-            </button> */}
-
-            <button className="h-8 ld:text-[20px] px-5 py-1 flex flex-row items-center justify-center font-semibold border bg-violet-900 border-violet-900 text-white transition duration-150 ease-in-out hover:opacity-70">
+          <div className="flex flex-col items-center md:items-start gap-4">
+            <button className="h-10 px-5 py-2 flex items-center justify-center font-semibold bg-white text-black transition hover:opacity-80">
               <a
                 href="https://calendly.com/bernardo-tryendpoint/book-a-demo-with-bernardo"
                 target="_blank"
@@ -77,7 +42,8 @@ export default function Footer() {
                 BOOK DEMO
               </a>
             </button>
-            <ul className="flex md:flex-row justify-center md:justify-start pt-4 gap-2">
+
+            <ul className="flex justify-center md:justify-start gap-4 pt-4">
               <li>
                 <a
                   href="https://www.linkedin.com/company/endpointdata"
@@ -86,8 +52,8 @@ export default function Footer() {
                 >
                   <img
                     src={Linkedin}
-                    alt="Linkedin"
-                    className="h-7 ld:h-10 hover:opacity-70"
+                    alt="LinkedIn"
+                    className="h-6 md:h-8 hover:opacity-80 border"
                   />
                 </a>
               </li>
@@ -100,50 +66,39 @@ export default function Footer() {
                   <img
                     src={Medium}
                     alt="Medium"
-                    className="h-7 ld:h-10 hover:opacity-70"
+                    className="h-6 md:h-8 hover:opacity-80 border"
                   />
                 </a>
               </li>
             </ul>
           </div>
 
-          <div className="flex flex-col">
-            <div className="flex justify-center md:justify-start">
-              <img src={Logo} alt="Logo" className="h-10 ld:h-12" />
-            </div>
+          <div className="flex justify-center md:justify-start">
+            <img src={Logo} alt="Logo" className="h-10 md:h-12" />
           </div>
         </div>
 
-        {/* Second block - Copyright */}
-        <div className="w-full md:w-[700px] h-auto flex flex-col justify-end">
-          <ul className="flex flex-col md:flex-row justify-center md:justify-end text-black text-center md:text-left">
-            {/* Copyright Item */}
-            <li className="mb-2 md:mb-0 md:mr-4 ld:text-[20px] ld:mr-14 ld:min-w-[260px]">
-              All Content Copyright 2024
-            </li>
-
-            {/* Navigation Items */}
-            {Navigation.map((item, index) => (
+        {/* Second block */}
+        <div className="w-full max-w-full flex flex-col items-center md:items-end h-full">
+          <ul className="flex flex-col md:flex-row absolute bottom-10 justify-center md:justify-end items-center md:items-end w-full gap-4 text-white text-center md:text-left">
+            {Navigation.map((item) => (
               <React.Fragment key={item}>
-                {/* Separator */}
-                {index > 0 && (
-                  <span className="hidden md:inline-block md:px-2"></span>
-                )}
-
-                {/* Navigation Link */}
-                <li className="mb-2 ld:min-w-[160px] md:mb-0">
+                <li className="text-sm md:text-lg font-light cursor-pointer px-4 hover:underline">
                   <a
                     onClick={() => {
                       navigate(`/${item.replace(/\s+/g, " ").toLowerCase()}`);
                       window.scrollTo(0, 0);
                     }}
-                    className="hover:underline cursor-pointer ld:text-[20px]"
                   >
                     {item}
                   </a>
                 </li>
               </React.Fragment>
             ))}
+            {/* Copyright Section */}
+            <li className="text-sm md:text-lg font-light">
+              © 2024 All Rights Reserved
+            </li>
           </ul>
         </div>
       </div>

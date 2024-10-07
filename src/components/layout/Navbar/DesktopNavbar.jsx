@@ -69,23 +69,15 @@ export default function DesktopNavbar() {
     <div className={isTransparent ? "" : "i"}>
       <div ref={observerRef} />
       <nav
-        className={`fixed top-0 w-full h-16 z-40 flex items-center justify-between px-6 transition duration-500 ease-in-out ${
+        className={`fixed top-0 w-full h-16 z-40 flex items-center justify-between px-6 transition duration-1000 ease-in-out ${
           isTransparent && !hovering && !isSpecificPage
-            ? "bg-transparent"
-            : "bg-white"
+            ? "opacity-100"
+            : "opacity-0"
         }`}
       >
         <div className="flex items-center space-x-14">
           <a href="/">
-            <img
-              src={
-                isTransparent && !hovering && !isSpecificPage
-                  ? Logo_white
-                  : Logo
-              }
-              alt="Logo"
-              className="h-10 ld:h-12"
-            />
+            <img src={Logo_white} alt="Logo" className="h-10 ld:h-12" />
           </a>
 
           {/* <ul className="flex space-x-4">
@@ -148,7 +140,7 @@ export default function DesktopNavbar() {
             className={`h-8 px-5 ld:text-[20px] py-1 flex items-center font-semibold transition duration-500 ease-in-out ${
               isTransparent && !hovering && !isSpecificPage
                 ? "border border-white text-white hover:bg-white hover:text-black"
-                : "border border-black hover:bg-black hover:text-white"
+                : "border border-white text-white hover:bg-white hover:text-black"
             }`}
           >
             <a href="/CONTACT US">CONTACT US</a>
@@ -157,7 +149,7 @@ export default function DesktopNavbar() {
             className={`h-8 px-5 ld:text-[20px] py-1 flex items-center font-semibold transition duration-500 ease-in-out ${
               isTransparent && !hovering && !isSpecificPage
                 ? "bg-white border-white text-black hover:opacity-70"
-                : "bg-violet-900 border-violet-900 text-white hover:opacity-70"
+                : "bg-white border-white text-black hover:opacity-70"
             }`}
           >
             <a href="https://calendly.com/bernardo-tryendpoint/book-a-demo-with-bernardo">

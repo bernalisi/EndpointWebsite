@@ -3,7 +3,7 @@ import { ArticlesContext } from "../resources/ArticlesContext";
 import Article from "../../components/resources/Article";
 import { motion } from "framer-motion";
 import SectionSeparator from "../ui/SectionSeparator";
-import { get } from "react-hook-form";
+import Slider from "react-slick"; // Import react-slick
 
 export default function Resources() {
   const { articles } = useContext(ArticlesContext);
@@ -13,54 +13,76 @@ export default function Resources() {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 1,
+        staggerChildren: 0.5,
       },
     },
   };
 
   const getImageLink = (description) => {
-    // Regular expression to match the src attribute inside an img tag
     const imgRegex = /<img[^>]+src="([^">]+)"/;
-
-    // Extract the URL using the regex
     const match = description.match(imgRegex);
+    return match && match[1] ? match[1] : null;
+  };
 
-    // If a match is found, the URL will be in the first capture group (index 1)
-    if (match && match[1]) {
-      const imageUrl = match[1];
-      return imageUrl;
-    } else {
-      console.log("No image URL found");
-      return null;
-    }
+  // Slick carousel settings
+  const settings = {
+    dots: true, // Shows navigation dots
+    infinite: true, // Carousel will loop back to the start
+    speed: 500, // Transition speed
+    slidesToShow: 3, // Number of articles to show at a time
+    slidesToScroll: 1, // How many to scroll when navigating
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+    ],
   };
 
   return (
-    <div className="w-full bg-black flex flex-col justify-center ld:justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20 ld:pt-20 pb-20">
+    <div className="w-full bg-black flex flex-col items-start justify-start gap-8 px-6 sm:px-10 lg:px-14 pt-20 pb-20">
       <SectionSeparator TitleSection="NEWS AND PRESS RELEASES" />
 
-      <div className="w-full flex flex-col gap-10 md:gap-20 justify-between items-start">
-        <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-[48px] leading-normal xl:leading-tight mt-3 py-4">
-          Check out our latest news and updates
-        </h2>
+      <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl leading-snug text-center my-6">
+        Latest News and Updates
+      </h2>
 
-        <motion.div
-          variants={animation_variants}
-          initial="hidden"
-          animate="show"
-          className="w-full flex flex-col lg:flex-row justify-center lg:justify-evenly items-center lg:items-start gap-10 md:gap-14"
-        >
+      <motion.div
+        variants={animation_variants}
+        initial="hidden"
+        animate="show"
+        className="w-full px-12"
+      >
+        <Slider {...settings}>
           {articles.map((article) => (
-            <Article
-              key={article.link}
-              thumbnail={getImageLink(article.description)}
-              title={article.title}
-              description={article.description}
-              link={article.link}
-            />
+            <div key={article.link} className="px-20">
+              {" "}
+              {/* Add padding between slides */}
+              <Article
+                thumbnail={getImageLink(article.description)}
+                title={article.title}
+                description={article.description}
+                link={article.link}
+                pubDate={article.pubDate} // Include pubDate if needed
+              />
+            </div>
           ))}
-        </motion.div>
-      </div>
+        </Slider>
+      </motion.div>
     </div>
   );
 }

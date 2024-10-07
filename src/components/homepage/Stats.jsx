@@ -1,97 +1,141 @@
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 import line_icon from "../../assets/images/ui/Line_icon_white.svg";
-import SectionSeparator from "../ui/SectionSeparator";
 
-// Custom Hook for Counting Up Animation when the section is in view
-function useCountUp(endValue, duration = 0, startCounting) {
-  const [count, setCount] = useState(0);
+// Framer Motion animation for number counting with scaling effect and sliding
+const countUpAnimation = (endValue, duration = 0.8) => ({
+  initial: { opacity: 0, scale: 0.8 },
+  animate: { opacity: 1, scale: 1, transition: { duration } },
+});
 
-  useEffect(() => {
-    if (!startCounting) return; // Only start counting when the section is in view
+// Sliding animation variants
+const slideLeft = {
+  hidden: { x: -100, opacity: 0 },
+  visible: { x: 0, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
+};
 
-    let startTime = null;
-
-    const step = (timestamp) => {
-      if (!startTime) startTime = timestamp;
-
-      const progress = timestamp - startTime;
-      const increment = Math.min((progress / duration) * endValue, endValue); // Progress to the endValue smoothly
-      setCount(Math.floor(increment));
-
-      if (increment < endValue) {
-        requestAnimationFrame(step); // Keep the animation going
-      }
-    };
-
-    requestAnimationFrame(step);
-  }, [endValue, duration, startCounting]);
-
-  return count;
-}
+const slideRight = {
+  hidden: { x: 100, opacity: 0 },
+  visible: { x: 0, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
+};
 
 export default function Stats() {
   const [startCounting, setStartCounting] = useState(false);
   const { ref, inView } = useInView({
-    triggerOnce: true, // Trigger the animation only once when in view
-    threshold: 0.5, // Start the animation when 50% of the section is visible
+    triggerOnce: true,
+    threshold: 0.5,
   });
 
   useEffect(() => {
     if (inView) {
-      setStartCounting(true); // Start counting when the section is in view
+      setStartCounting(true);
     }
   }, [inView]);
-
-  const Statistics = [
-    { type: "Patients", data: 70000000 },
-    { type: "Data Providers", data: 200 },
-    { type: "Countries", data: 40 },
-  ];
 
   return (
     <div
       ref={ref}
-      className="w-full bg-black ld:h-screen flex flex-col justify-start ld:justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20 ld:pb-0 ld:pt-20 pb-20"
+      className="relative w-full bg-[#060606] flex flex-col justify-center items-center gap-6 px-12 sm:px-16 lg:px-20 py-16 sm:py-24 lg:py-28"
     >
-      <SectionSeparator TitleSection="STATS" />
-      <div className="w-full flex flex-col gap-10 justify-between items-start">
-        {/* Header Section */}
-        <h2 className="text-white text-[28px] lg:text-[48px] font-semibold mt-3 py-[10px]">
+      {/* Stats Content */}
+      <div className="w-full flex flex-col gap-12 justify-center items-center z-10">
+        <h2 className="text-white text-[48px] lg:text-[60px] font-semibold mt-6">
           Global, High-Quality RWD Ecosystem
         </h2>
 
-        {/* Content of section */}
-        <div className="flex flex-col gap-10 md:gap-12 justify-start w-full">
-          <div className="flex flex-col md:items-start gap-1 ld:gap-6 text-center md:text-left">
-            {/* Using custom hook to animate the numbers */}
-            <p className="text-white ld:text-[130px] text-[48px] md:text-[70px] lg:text-[85px] xl:text-[180px] font-thin">
-              {useCountUp(7000000, 1000, startCounting).toLocaleString()}+
-            </p>
-            <img src={line_icon} alt="line icon" className="h-1 my-2" />
-            <h6 className="text-white text-xl md:text-2xl font-extralight xl:text-3xl">
+        <div className="flex flex-col gap-10 md:gap-12 justify-center w-full relative z-20">
+          {/* Patients */}
+          <div className="flex flex-col md:items-center gap-4 text-center">
+            <motion.p
+              className="text-white text-[72px] md:text-[120px] lg:text-[140px] font-thin"
+              initial="hidden"
+              whileInView="visible"
+              variants={slideLeft}
+              viewport={{ margin: "-200px", once: true }}
+            >
+              {Math.floor(7000000).toLocaleString()}+
+            </motion.p>
+            <motion.img
+              src={line_icon}
+              alt="line icon"
+              className="h-1 my-2"
+              initial="hidden"
+              whileInView="visible"
+              variants={slideRight}
+              viewport={{ once: true }}
+            />
+            <motion.h6
+              className="text-white text-xl md:text-2xl font-extralight"
+              initial="hidden"
+              whileInView="visible"
+              variants={slideRight}
+              viewport={{ once: true }}
+            >
               Patients
-            </h6>
+            </motion.h6>
           </div>
-          <div className="flex flex-col md:items-start gap-1 ld:gap-6 text-center md:text-left">
-            {/* Using custom hook to animate the numbers */}
-            <p className="text-white ld:text-[130px] text-[48px] md:text-[70px] lg:text-[85px] xl:text-[180px] font-thin">
-              {useCountUp(200, 1000, startCounting).toLocaleString()}+
-            </p>
-            <img src={line_icon} alt="line icon" className="h-1 my-2" />
-            <h6 className="text-white text-xl md:text-2xl font-extralight xl:text-3xl">
+
+          {/* Data Providers */}
+          <div className="flex flex-col md:items-center gap-4 text-center">
+            <motion.p
+              className="text-white text-[72px] md:text-[120px] lg:text-[140px] font-thin"
+              initial="hidden"
+              whileInView="visible"
+              variants={slideRight}
+              viewport={{ margin: "-200px", once: true }}
+            >
+              {Math.floor(200).toLocaleString()}+
+            </motion.p>
+            <motion.img
+              src={line_icon}
+              alt="line icon"
+              className="h-1 my-2"
+              initial="hidden"
+              whileInView="visible"
+              variants={slideLeft}
+              viewport={{ once: true }}
+            />
+            <motion.h6
+              className="text-white text-xl md:text-2xl font-extralight"
+              initial="hidden"
+              whileInView="visible"
+              variants={slideLeft}
+              viewport={{ once: true }}
+            >
               Data Providers
-            </h6>
+            </motion.h6>
           </div>
-          <div className="flex flex-col md:items-start gap-1 ld:gap-6 text-center md:text-left">
-            {/* Using custom hook to animate the numbers */}
-            <p className="text-white ld:text-[130px] text-[48px] md:text-[70px] lg:text-[85px] xl:text-[180px] font-thin">
-              {useCountUp(40, 1000, startCounting).toLocaleString()}+
-            </p>
-            <img src={line_icon} alt="line icon" className="h-1 my-2" />
-            <h6 className="text-white text-xl md:text-2xl font-extralight xl:text-3xl">
+
+          {/* Countries */}
+          <div className="flex flex-col md:items-center gap-4 text-center">
+            <motion.p
+              className="text-white text-[72px] md:text-[120px] lg:text-[140px] font-thin"
+              initial="hidden"
+              whileInView="visible"
+              variants={slideLeft}
+              viewport={{ margin: "-200px", once: true }}
+            >
+              {Math.floor(40).toLocaleString()}+
+            </motion.p>
+            <motion.img
+              src={line_icon}
+              alt="line icon"
+              className="h-1 my-2"
+              initial="hidden"
+              whileInView="visible"
+              variants={slideRight}
+              viewport={{ once: true }}
+            />
+            <motion.h6
+              className="text-white text-xl md:text-2xl font-extralight"
+              initial="hidden"
+              whileInView="visible"
+              variants={slideRight}
+              viewport={{ once: true }}
+            >
               Countries
-            </h6>
+            </motion.h6>
           </div>
         </div>
       </div>

@@ -5,14 +5,38 @@ import line_icon from "../../assets/images/ui/Line_icon.svg";
 import SectionSeparator from "../ui/SectionSeparator";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import violet_pattern from "../../assets/images/homepage/Violet pattern.png";
+import blue_pattern from "../../assets/images/homepage/Blue pattern.png";
 
-const CardVariations = {
-  start: {
-    scale: 1,
+const CardVariants = {
+  initial: { opacity: 0 },
+  inView: {
+    filter: "grayscale(0%)",
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeInOut" },
   },
   hover: {
-    scale: 1.03,
-    transition: { duration: 0.3, ease: "linear" },
+    boxShadow: "0 15px 40px rgba(0, 0, 0, 0.3)",
+    transition: { duration: 0.4, ease: "easeInOut" },
+  },
+};
+
+const titleVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1, ease: "easeOut" },
+  },
+};
+
+const paragraphVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1.2, ease: "easeOut", delay: 0.2 },
   },
 };
 
@@ -20,107 +44,97 @@ export default function Platform() {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full bg-black ld:h-screen flex flex-col justify-center ld:justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20 ld:pt-20">
+    <div className="w-full bg-[#060606] flex flex-col justify-center items-start gap-8 px-8 sm:px-12 lg:px-16 pt-12 sm:pt-18 lg:pt-22">
       <SectionSeparator TitleSection="OUR PLATFORM" />
 
-      <div className="w-full flex flex-col gap-5 justify-between items-start">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        className="w-full flex flex-col gap-6"
+      >
         {/* Header Section */}
-        <h2 className="text-white text-[28px] lg:text-[48px] font-semibold mt-3 py-[10px]">
+        <motion.h2
+          variants={titleVariants}
+          className="text-white text-[32px] lg:text-[50px] font-semibold mt-3 py-[12px] leading-tight"
+        >
           Bridging the data gap between life sciences and healthcare
-        </h2>
-        <p className="text-white text-base sm:text-lg lg:text-xl xl:text-2xl mb-8">
-          We’re creating a secure, interoperable platform to simplify how life
-          sciences and healthcare providers partner to share and analyze
-          real-world data, optimize clinical trials, and run observational
-          studies
-        </p>
+        </motion.h2>
 
-        {/* Cards */}
-        <div className="w-full flex flex-col ld:pt-20 lg:flex-row justify-evenly items-center gap-8 sm:gap-10 lg:gap-12 mt-10 sm:mt-12 lg:mt-14 mb-10 sm:mb-14 lg:mb-20">
-          {/* Life Science Card */}
-          <motion.div
-            onClick={() => {
-              navigate("/life sciences");
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-            variants={CardVariations}
-            initial="start"
-            whileHover="hover"
-            className="w-full ld:w-[1000px] ld:h-[650px] ld:pt-20 lg:w-[640px] h-auto cursor-pointer lg:h-[500px] flex flex-col justify-start pt-10 gap-7 items-start bg-blue-400 rounded-xl"
-          >
-            <div className="w-full flex flex-row justify-between items-center pr-6 sm:pr-10 lg:pr-14">
+        <motion.p
+          variants={paragraphVariants}
+          className="text-gray-300 text-lg sm:text-xl lg:text-2xl xl:text-2xl"
+        >
+          We’re creating a secure, interoperable platform to simplify how life
+          sciences and healthcare providers share and analyze real-world data,
+          optimize clinical trials, and run observational studies.
+        </motion.p>
+      </motion.div>
+
+      {/* Cards */}
+      <motion.div className="w-full flex flex-col lg:flex-row justify-around gap-12 items-center mt-12 lg:mt-16 mb-14 lg:mb-20 ">
+        {/* Life Science Card */}
+        <div className="relative w-full lg:w-[45%] cursor-pointer min-h-[500px] py-10 flex flex-col justify-between gap-6 shadow-lg transition-transform filter grayscale-[35%] hover:grayscale-0">
+          {/* Scalable Background */}
+          <div
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-500 hover:scale-105"
+            style={{ backgroundImage: `url(${blue_pattern})` }}
+          ></div>
+
+          {/* Card Content */}
+          <div className="relative z-10 w-full flex flex-col justify-between h-full px-6">
+            <div className="w-full flex justify-between items-center">
               <img src={line_icon} alt="line icon" className="h-1" />
               <img
                 src={life_science_icon}
-                alt="provider icon"
-                className="h-16 sm:h-20 lg:h-28"
+                alt="Life Science icon"
+                className="h-20 lg:h-28 pr-8"
               />
             </div>
-            <div className="flex flex-col gap-5 px-6 sm:px-10 lg:px-14">
-              <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-[36px] ld:pb-8 font-semibold">
+            <div className="flex-grow">
+              <h3 className="text-black text-[28px] lg:text-[36px] font-bold">
                 For Life Sciences
               </h3>
-              <p className="text-sm sm:text-base ld:text-[25px] lg:text-lg lg:line-clamp-4 xl:text-[20px]">
+              <p className="text-black text-base lg:text-lg leading-relaxed">
                 Speed up observational research, facilitate deeper insights into
                 diseases, enhance clinical trials, improve safety surveillance,
                 streamline regulatory submissions, boost commercialization
                 strategies.
               </p>
             </div>
-            <div className="w-full mt-8 sm:mt-10 lg:mt-12 ld:mt-36 border-t-2 border-black">
-              <button className="w-full ld:text-[18px] h-full px-6 sm:px-10 lg:px-14 py-6 sm:py-7 flex justify-start items-center font-extralight tracking-widest transition duration-150 ease-in-out text-black hover:opacity-80 hover:font-extrabold">
-                <p>Learn more</p>
-                <img
-                  src={chevron_icon}
-                  alt="chevron-button"
-                  className="h-4 sm:h-5 lg:h-6 px-2 sm:px-3"
-                />
-              </button>
-            </div>
-          </motion.div>
+          </div>
+        </div>
 
-          {/* Providers Card */}
-          <motion.div
-            onClick={() => {
-              navigate("/providers");
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-            variants={CardVariations}
-            initial="start"
-            whileHover="hover"
-            className="w-full ld:w-[1000px] ld:h-[650px] ld:pt-20 xl:pt-10 lg:w-[640px] cursor-pointer h-auto lg:h-[500px] flex flex-col justify-start pt-10 gap-7 items-start bg-violet-400 rounded-xl"
-          >
-            <div className="w-full flex flex-row justify-between items-center pr-6 sm:pr-10 lg:pr-14">
+        {/* Providers Card */}
+        <div className="relative w-full lg:w-[45%] cursor-pointer min-h-[500px] py-10 flex flex-col justify-between gap-6 shadow-lg transition-transform filter grayscale-[35%] hover:grayscale-0">
+          {/* Scalable Background */}
+          <div
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-500 hover:scale-105"
+            style={{ backgroundImage: `url(${violet_pattern})` }}
+          ></div>
+
+          {/* Card Content */}
+          <div className="relative z-10 w-full flex flex-col justify-between h-full px-6">
+            <div className="w-full flex justify-between items-center">
               <img src={line_icon} alt="line icon" className="h-1" />
               <img
                 src={provider_icon}
-                alt="provider icon"
-                className="h-16 sm:h-20 lg:h-28"
+                alt="Provider icon"
+                className="h-20 lg:h-28 pr-8"
               />
             </div>
-            <div className="flex flex-col gap-5 px-6 sm:px-10 lg:px-14">
-              <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-[36px]  ld:pb-8 font-semibold">
+            <div className="flex-grow">
+              <h3 className="text-black text-[28px] lg:text-[36px] font-bold">
                 For Healthcare Providers
               </h3>
-              <p className="text-sm sm:text-base ld:text-[25px] lg:text-lg xl:text-[20px] lg:line-clamp-4">
+              <p className="text-black text-base lg:text-lg leading-relaxed">
                 Your data can drive groundbreaking innovation in healthcare.
                 Endpoint helps providers activate their data for both internal
                 research and life sciences collaborations.
               </p>
             </div>
-            <div className="w-full mt-8 sm:mt-10 lg:mt-12 ld:mt-36  border-t-2 border-black">
-              <button className="w-full ld:text-[18px] h-full px-6 sm:px-10 lg:px-14 py-6 sm:py-7 flex justify-start items-center font-extralight tracking-widest transition duration-150 ease-in-out text-black hover:opacity-80 hover:font-extrabold">
-                <p>Learn more</p>
-                <img
-                  src={chevron_icon}
-                  alt="chevron-button"
-                  className="h-4 sm:h-5 lg:h-6 px-2 sm:px-3"
-                />
-              </button>
-            </div>
-          </motion.div>
+          </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

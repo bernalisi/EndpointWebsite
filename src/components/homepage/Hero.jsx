@@ -64,17 +64,20 @@ const buttonBounce = {
 };
 
 export default function Hero({ scrollToNextSection }) {
-  // Receive the function as a prop
   return (
     <div
-      className="w-screen h-full lg:h-auto bg-cover bg-center bg-repeat bg-black flex flex-row"
+      className="relative w-screen h-full lg:h-auto bg-cover bg-center bg-repeat bg-black flex flex-row"
       style={{ backgroundImage: `url(${background})` }}
     >
+      {/* Gradient Overlay */}
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent opacity-80"></div>
+
+      {/* Content */}
       <motion.div
         variants={ParentVariations}
         initial="hidden"
         animate="visible"
-        className="w-screen h-screen mt-[60px] lg:mt-[60px] px-2 sm:px-6 lg:px-8 pt-32 lg:pt-56 ml-10 pb-[333px] flex max-md:items-center max-sm:justify-end items-start flex-col gap-6"
+        className="relative w-screen h-screen mt-[60px] lg:mt-[60px] px-2 sm:px-6 lg:px-8 pt-32 lg:pt-52 ml-10 pb-[333px] flex max-md:items-center max-sm:justify-end items-start flex-col gap-6"
       >
         {/* First paragraph */}
         <motion.h1
@@ -98,20 +101,8 @@ export default function Hero({ scrollToNextSection }) {
           data-driven decisions
         </motion.a>
 
+        {/* Call-to-action */}
         <div className="w-[50%] cursor-pointer max-sm:w-[100%] max-sm:px-5 flex flex-row sm:justify-center ml-5 max-sm:justify-start">
-          {/* <motion.div
-            variants={scrollVariants}
-            initial="hidden"
-            whileInView="show"
-            onClick={scrollToNextSection}
-          >
-            <img
-              src={scroll_down}
-              alt="chevron down icon"
-              className="hidden sm:block sm:h-6 md:h-6 lg:h-8 ld:h-12 xl:mt-5 2xl:mt-12 rotate-90"
-            />
-          </motion.div> */}
-
           <motion.button
             className="sm:hidden w-auto cursor-pointer h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90"
             variants={buttonBounce}
