@@ -5,7 +5,7 @@ import SectionSeparatorWhiteBg from "../../components/ui/SectionSeparator_white"
 export default function Contact() {
   return (
     <div
-      className="relative bg-cover bg-center bg-no-repeat w-full h-[600px] xl:h-screen sm:h-[850px] ld:h-[625px] flex flex-col justify-start items-start gap-8 px-8 sm:px-12 lg:px-16 pt-10 sm:pt-16 lg:pt-20"
+      className="relative bg-cover bg-center bg-no-repeat bg-[#1a1a1a] w-full h-[600px] xl:h-screen sm:h-[850px] ld:h-[625px] flex flex-col justify-start items-start gap-8 px-8 sm:px-12 lg:px-16 pt-10 sm:pt-16 lg:pt-20"
       style={{
         backgroundImage: `url(${bg_image})`,
         filter: "saturate(0.6)", // Adjust the saturation level here

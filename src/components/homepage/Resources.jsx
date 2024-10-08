@@ -54,7 +54,7 @@ export default function Resources() {
   };
 
   return (
-    <div className="w-full bg-black flex flex-col items-start justify-start gap-8 px-6 sm:px-10 lg:px-14 pt-20 pb-20">
+    <div className="w-full bg-[#1a1a1a] flex flex-col items-start justify-start gap-8 px-6 sm:px-10 lg:px-14 pt-20 pb-20">
       <SectionSeparator TitleSection="NEWS AND PRESS RELEASES" />
 
       <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl leading-snug text-center my-6">
@@ -65,11 +65,11 @@ export default function Resources() {
         variants={animation_variants}
         initial="hidden"
         animate="show"
-        className="w-full px-12"
+        className="w-full"
       >
         <Slider {...settings}>
           {articles.map((article) => (
-            <div key={article.link} className="px-20">
+            <div key={article.link} className="ml-6">
               {" "}
               {/* Add padding between slides */}
               <Article

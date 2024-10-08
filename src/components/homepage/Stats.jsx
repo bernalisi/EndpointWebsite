@@ -36,7 +36,7 @@ export default function Stats() {
   return (
     <div
       ref={ref}
-      className="relative w-full bg-[#060606] flex flex-col justify-center items-center gap-6 px-12 sm:px-16 lg:px-20 py-16 sm:py-24 lg:py-28"
+      className="relative w-full bg-[#1a1a1a] flex flex-col justify-center items-center gap-6 px-12 sm:px-16 lg:px-20 py-16 sm:py-24 lg:py-28"
     >
       {/* Stats Content */}
       <div className="w-full flex flex-col gap-12 justify-center items-center z-10">

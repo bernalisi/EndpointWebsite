@@ -66,11 +66,11 @@ const buttonBounce = {
 export default function Hero({ scrollToNextSection }) {
   return (
     <div
-      className="relative w-screen h-full lg:h-auto bg-cover bg-center bg-repeat bg-black flex flex-row"
+      className="relative w-screen h-full lg:h-auto bg-cover bg-center bg-repeat bg-[#1a1a1a] flex flex-row"
       style={{ backgroundImage: `url(${background})` }}
     >
       {/* Gradient Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent opacity-80"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-[#1a1a1a]to-transparent opacity-80"></div>
 
       {/* Content */}
       <motion.div

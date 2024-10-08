@@ -17,7 +17,7 @@ const CardVariants = {
     transition: { duration: 0.7, ease: "easeInOut" },
   },
   hover: {
-    boxShadow: "0 15px 40px rgba(0, 0, 0, 0.3)",
+    boxShadow: "0 15px 30px rgba(0, 0, 0, 0.2)",
     transition: { duration: 0.4, ease: "easeInOut" },
   },
 };
@@ -44,7 +44,7 @@ export default function Platform() {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full bg-[#060606] flex flex-col justify-center items-start gap-8 px-8 sm:px-12 lg:px-16 pt-12 sm:pt-18 lg:pt-22">
+    <div className="w-full bg-[#1a1a1a] flex flex-col justify-center items-start gap-8 px-8 sm:px-12 lg:px-16 pt-12 sm:pt-18 lg:pt-22">
       <SectionSeparator TitleSection="OUR PLATFORM" />
 
       <motion.div
@@ -62,7 +62,7 @@ export default function Platform() {
 
         <motion.p
           variants={paragraphVariants}
-          className="text-gray-300 text-lg sm:text-xl lg:text-2xl xl:text-2xl"
+          className="text-gray-400 text-lg sm:text-xl lg:text-2xl xl:text-2xl"
         >
           We’re creating a secure, interoperable platform to simplify how life
           sciences and healthcare providers share and analyze real-world data,
@@ -73,11 +73,14 @@ export default function Platform() {
       {/* Cards */}
       <motion.div className="w-full flex flex-col lg:flex-row justify-around gap-12 items-center mt-12 lg:mt-16 mb-14 lg:mb-20 ">
         {/* Life Science Card */}
-        <div className="relative w-full lg:w-[45%] cursor-pointer min-h-[500px] py-10 flex flex-col justify-between gap-6 shadow-lg transition-transform filter grayscale-[35%] hover:grayscale-0">
+        <div className="relative w-full lg:w-[45%] cursor-pointer min-h-[400px] py-10 flex flex-col justify-between gap-6 shadow-lg transition-transform filter saturate-[70%] hover:saturate-100 overflow-hidden group hover:shadow-xl">
           {/* Scalable Background */}
           <div
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-500 hover:scale-105"
-            style={{ backgroundImage: `url(${blue_pattern})` }}
+            className="absolute inset-0 bg-cover bg-center rotate-180 transform transition-transform duration-500 scale-150 group-hover:scale-100"
+            style={{
+              backgroundImage: `url(${blue_pattern})`,
+              backgroundColor: "rgba(0, 123, 255, 0.2)",
+            }}
           ></div>
 
           {/* Card Content */}
@@ -105,11 +108,14 @@ export default function Platform() {
         </div>
 
         {/* Providers Card */}
-        <div className="relative w-full lg:w-[45%] cursor-pointer min-h-[500px] py-10 flex flex-col justify-between gap-6 shadow-lg transition-transform filter grayscale-[35%] hover:grayscale-0">
+        <div className="relative w-full lg:w-[45%] cursor-pointer min-h-[400px] py-10 flex flex-col justify-between gap-6 shadow-lg transition-transform filter saturate-[70%] hover:saturate-100 overflow-hidden group hover:shadow-xl">
           {/* Scalable Background */}
           <div
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-500 hover:scale-105"
-            style={{ backgroundImage: `url(${violet_pattern})` }}
+            className="absolute inset-0 bg-cover bg-center transform transition-transform duration-500  scale-150 group-hover:scale-100"
+            style={{
+              backgroundImage: `url(${violet_pattern})`,
+              backgroundColor: "rgba(123, 63, 255, 0.2)",
+            }}
           ></div>
 
           {/* Card Content */}
