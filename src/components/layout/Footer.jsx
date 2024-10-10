@@ -27,7 +27,7 @@ export default function Footer() {
   }, [isDropdownOpen]);
 
   return (
-    <div className="w-full bg-black flex flex-col items-center gap-6 px-4 md:px-14 pt-10">
+    <div className="w-full bg-black flex flex-col items-center gap-6 px-4 md:px-14 pt-10 ">
       <div className="w-full flex flex-col md:flex-row gap-10 md:gap-20 justify-between items-center py-8 min-h-[400px]">
         {/* First block */}
         <div className="w-full md:w-[500px] flex flex-col gap-8 items-center md:items-start">

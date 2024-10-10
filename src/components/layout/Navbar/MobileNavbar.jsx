@@ -8,8 +8,8 @@ import { useState, useEffect, useRef } from "react";
 export default function MobileNavbar() {
   const navigation = [
     { title: "HOMEPAGE", url: "/" },
-    { title: "LIFE SCIENCES", url: "life sciences" },
-    { title: "PROVIDERS", url: "providers" },
+    // { title: "LIFE SCIENCES", url: "life sciences" },
+    // { title: "PROVIDERS", url: "providers" },
     { title: "BLOG", url: "https://endpoint-data.medium.com/" },
   ];
 
@@ -85,9 +85,9 @@ export default function MobileNavbar() {
             <button className="h-8 px-5 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white">
               <a href="/CONTACT US">CONTACT US</a>
             </button>
-            <button className="h-8 px-5 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white">
+            {/* <button className="h-8 px-5 flex flex-row items-center justify-center font-semibold border border-black transition duration-150 ease-in-out hover:bg-black hover:text-white">
               LOG IN
-            </button>
+            </button> */}
           </div>
           <img
             src={Menu_open_black}

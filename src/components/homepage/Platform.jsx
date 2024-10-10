@@ -56,7 +56,7 @@ export default function Platform() {
   });
 
   return (
-    <div className="w-full bg-[#000002] flex flex-col justify-center items-start gap-8 px-8 sm:px-12 lg:px-16 pt-12 sm:pt-18 lg:pt-22">
+    <div className="w-full bg-[#000002] flex flex-col justify-center items-start gap-8 px-8 sm:px-12 lg:px-24 xl:px-32 ld:px-[420px] pt-12 sm:pt-18 lg:pt-22">
       <SectionSeparator TitleSection="OUR PLATFORM" />
 
       {/* Header Section */}
@@ -121,14 +121,6 @@ export default function Platform() {
                 strategies.
               </p>
             </div>
-            {/* <div className="hidden xl:flex justify-between mt-4">
-              <div className="absolute mt-28 left-8">
-                <span className="text-white text-base lg:text-lg">
-                  Learn More
-                </span>
-              </div>
-              <div className="absolute mt-28 right-10">{arrowIcon}</div>
-            </div> */}
           </div>
         </motion.a>
 
@@ -166,14 +158,6 @@ export default function Platform() {
                 research and life sciences collaborations.
               </p>
             </div>
-            {/* <div className="hidden xl:flex justify-between mt-4">
-              <div className="absolute mt-28 left-8">
-                <span className="text-white text-base lg:text-lg">
-                  Learn More
-                </span>
-              </div>
-              <div className="absolute mt-28 right-10">{arrowIcon}</div>
-            </div> */}
           </div>
         </motion.a>
       </div>

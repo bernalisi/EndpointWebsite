@@ -16,7 +16,7 @@ const contentVariants = {
 
 export default function PlatformOverview() {
   return (
-    <div className="w-full bg-[#000002] flex flex-col items-start gap-6  px-8 sm:px-10 lg:px-14 py-10 sm:py-16 lg:py-20">
+    <div className="w-full bg-[#000002] flex flex-col items-start gap-6  px-8 sm:px-10 lg:px-14 py-10 sm:py-16 lg:py-20 ld:px-[420px] ">
       <SectionSeparator TitleSection="WHY US" textColor={false} />
 
       <motion.div

@@ -63,14 +63,14 @@ const buttonBounce = {
 
 export default function Hero({ scrollToNextSection }) {
   return (
-    <div className="relative w-screen h-full lg:h-auto bg-[#060606] flex flex-row">
+    <div className="relative w-screen h-full lg:h-auto bg-[#060606] flex flex-row ">
       {/* Video Background */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-0 ld:filter ld:brightness-200"
+        className="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-200 lg:brightness-100 ld:filter ld:brightness-200"
       >
         <source src={background} type="video/mp4" />
         Your browser does not support the video tag.
@@ -84,7 +84,7 @@ export default function Hero({ scrollToNextSection }) {
         variants={ParentVariations}
         initial="hidden"
         animate="visible"
-        className="relative w-screen h-screen mt-[60px] lg:mt-[60px] px-2 sm:px-6 lg:px-8 pt-32 lg:pt-52 pb-[333px] flex flex-col max-md:items-center max-sm:justify-end items-center gap-6 z-20"
+        className="relative w-screen h-screen mt-[60px] lg:mt-[60px] px-2 sm:px-6 lg:px-8 pt-32 lg:pt-52 pb-[333px] flex flex-col max-md:items-center max-sm:justify-end items-start lg:items-center gap-6 z-20"
       >
         {/* First paragraph */}
         <motion.h1
@@ -108,7 +108,7 @@ export default function Hero({ scrollToNextSection }) {
         </motion.a>
 
         {/* Call-to-action */}
-        <div className="w-[50%] cursor-pointer max-sm:w-[100%] max-sm:px-5 flex flex-row sm:justify-center ml-5 max-sm:justify-start">
+        <div className="w-[50%] cursor-pointer max-sm:w-[100%] max-sm:px-5 flex flex-row sm:justify-center ml-4">
           <motion.button
             className="sm:hidden w-auto cursor-pointer h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90"
             variants={buttonBounce}

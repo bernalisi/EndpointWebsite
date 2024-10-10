@@ -34,7 +34,7 @@ export default function Stats() {
   const yMovement3 = useTransform(scrollY, [0, 500], [0, 200]);
 
   return (
-    <div className="relative w-full bg-[#000002] flex flex-col justify-center items-center gap-6 px-12 sm:px-16 lg:px-20 py-16 sm:py-24 lg:py-28">
+    <div className="relative w-full bg-[#000002] flex flex-col justify-center items-center gap-6 px-12 sm:px-16 lg:px-20 ld:px-[420px]  py-16 sm:py-24 lg:py-28">
       {/* Parallax Shapes with Random Animations */}
 
       <motion.div

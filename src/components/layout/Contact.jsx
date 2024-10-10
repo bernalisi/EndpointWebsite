@@ -5,7 +5,7 @@ import SectionSeparatorWhiteBg from "../../components/ui/SectionSeparator_white"
 export default function Contact() {
   return (
     <div
-      className="relative w-full h-[600px] xl:h-screen sm:h-[850px] ld:h-[900px] flex flex-col justify-start items-start gap-8 px-8 sm:px-12 lg:px-16 pt-10 sm:pt-16 lg:pt-20 transition-all duration-500 ease-in-out group" // Added hover and transition classes
+      className="relative w-full h-[600px] xl:h-screen sm:h-[850px] ld:h-[900px] ld:px-[420px]  flex flex-col justify-start items-start gap-8 px-8 sm:px-12 lg:px-16 pt-10 sm:pt-16 lg:pt-20 transition-all duration-500 ease-in-out group" // Added hover and transition classes
     >
       {/* Background image with default saturation */}
       <div
@@ -29,7 +29,7 @@ export default function Contact() {
 
         {/* Content Section */}
         <div className="relative flex flex-col justify-center items-start gap-6">
-          <h3 className="text-white text-[36px] md:text-[60px] lg:text-[100px] font-bold leading-tight pt-24 ld:pt-72">
+          <h3 className="text-white text-[36px] md:text-[60px] lg:text-[100px] font-bold leading-tight pt-24">
             Unlocking data. Uncovering insights.
           </h3>
           <button className="flex items-center gap-3 bg-white text-black font-semibold px-6 py-3 transition duration-150 ease-in-out hover:opacity-90">
