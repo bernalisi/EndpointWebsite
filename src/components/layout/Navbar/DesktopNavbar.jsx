@@ -2,6 +2,16 @@ import Logo from "../../../assets/logos/Endpoint logo black dot purle.svg";
 import Logo_white from "../../../assets/logos/Endpoint logo white.svg";
 import { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
+
+// Animation variant for sliding text from above
+const slideDownVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { duration: 3, ease: "easeOut" },
+  },
+};
 
 export default function DesktopNavbar() {
   const Navigation = [
@@ -77,12 +87,24 @@ export default function DesktopNavbar() {
       >
         <div className="flex items-center space-x-14">
           <a href="/">
-            <img src={Logo_white} alt="Logo" className="h-10 ld:h-12" />
+            <motion.img
+              src={Logo_white}
+              alt="Logo"
+              className="h-10 ld:h-12"
+              variants={slideDownVariants}
+              initial="hidden"
+              animate="visible"
+            />
           </a>
 
           {/* <ul className="flex space-x-4">
             {Navigation.map((element, index) => (
-              <li key={index}>
+              <motion.li
+                key={index}
+                variants={slideDownVariants}
+                initial="hidden"
+                animate="visible"
+              >
                 <a
                   href={element.url}
                   target={
@@ -98,64 +120,40 @@ export default function DesktopNavbar() {
                 >
                   {element.title}
                 </a>
-              </li>
+              </motion.li>
             ))}
           </ul> */}
         </div>
 
         <div className="flex flex-row gap-4">
-          {/* <div className="relative" ref={dropdownRef}>
-            <button
-              onClick={handleLoginClick}
-              className={`h-8 px-5 ld:text-[20px] py-1 flex items-center font-semibold transition duration-150 ease-in-out ${
-                isTransparent && !hovering && !isSpecificPage
-                  ? "border border-white text-white hover:bg-white hover:text-black"
-                  : "border border-black hover:bg-black hover:text-white"
-              }`}
-            >
-              LOG IN
-            </button>
-
-            {isDropdownOpen && (
-              <div className="absolute top-full mt-1 py-2 w-[220px] bg-white shadow-lg z-50">
-                <a
-                  href="https://endpoint-discover.vercel.app/"
-                  className="block px-4 py-2 text-black hover:bg-gray-100"
-                  target="_blank"
-                >
-                  as Life Sciences
-                </a>
-                <a
-                  href="https://endpoint-providers-frontend.vercel.app/"
-                  className="block px-4 py-2 text-black hover:bg-violet-100"
-                  target="_blank"
-                >
-                  as Healthcare Provider
-                </a>
-              </div>
-            )}
-          </div> */}
-
-          <button
-            className={`h-8 px-5 ld:text-[20px] py-1 flex items-center font-semibold transition duration-500 ease-in-out ${
+          {/* <motion.button
+            onClick={handleLoginClick}
+            className={`h-8 px-5 ld:text-[20px] py-1 flex items-center font-semibold transition duration-150 ease-in-out ${
               isTransparent && !hovering && !isSpecificPage
                 ? "border border-white text-white hover:bg-white hover:text-black"
-                : "border border-white text-white hover:bg-white hover:text-black"
+                : "border border-black hover:bg-black hover:text-white"
             }`}
+            variants={slideDownVariants}
+            initial="hidden"
+            animate="visible"
           >
-            <a href="/CONTACT US">CONTACT US</a>
-          </button>
-          <button
-            className={`h-8 px-5 ld:text-[20px] py-1 flex items-center font-semibold transition duration-500 ease-in-out ${
+            LOG IN
+          </motion.button> */}
+
+          <motion.button
+            className={`h-8 px-5 ld:text-[20px] py-1 flex items-center font-semibold transition duration-150 ease-in-out ${
               isTransparent && !hovering && !isSpecificPage
                 ? "bg-white border-white text-black hover:opacity-70"
                 : "bg-white border-white text-black hover:opacity-70"
             }`}
+            variants={slideDownVariants}
+            initial="hidden"
+            animate="visible"
           >
             <a href="https://calendly.com/bernardo-tryendpoint/book-a-demo-with-bernardo">
               BOOK DEMO
             </a>
-          </button>
+          </motion.button>
         </div>
       </nav>
     </div>

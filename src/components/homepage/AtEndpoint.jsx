@@ -6,17 +6,17 @@ import e2e from "../../assets/images/homepage/e2e.jpeg";
 
 // Animation variant for content
 const contentVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: 150 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: "easeOut" },
+    transition: { duration: 1.5, ease: "easeOut" },
   },
 };
 
 export default function PlatformOverview() {
   return (
-    <div className="w-full bg-[#1a1a1a] flex flex-col items-start gap-6 px-6 sm:px-10 lg:px-14 py-10 sm:py-16 lg:py-20">
+    <div className="w-full bg-[#000002] flex flex-col items-start gap-6  px-8 sm:px-10 lg:px-14 py-10 sm:py-16 lg:py-20">
       <SectionSeparator TitleSection="WHY US" textColor={false} />
 
       <motion.div
@@ -26,7 +26,7 @@ export default function PlatformOverview() {
         variants={contentVariants}
         className="w-full flex flex-col gap-5"
       >
-        <h2 className="text-white text-[28px] lg:text-[48px] font-semibold mt-3 py-[10px]">
+        <h2 className="text-white text-[32px] lg:text-[50px] font-semibold mt-3 py-[12px] leading-tight">
           At Endpoint, we believe that the future of healthcare depends on
           seamless access to real-world data.
         </h2>
@@ -37,7 +37,7 @@ export default function PlatformOverview() {
           environments.
         </p>
 
-        <div className="w-full flex flex-col gap-32 px-36 mt-8">
+        <div className="w-full flex flex-col gap-10 xl:gap-32 px-10 xl:px-36 mt-8">
           <motion.div
             transition={{ duration: 0.8, ease: "easeOut" }}
             initial={{ opacity: 0, y: 100 }}
@@ -48,15 +48,15 @@ export default function PlatformOverview() {
             <img
               src={e2e}
               alt=""
-              className="w-full lg:w-1/2 h-[400px] rounded-lg shadow-lg"
+              className="w-full lg:w-1/2 hidden xl:block h-[400px] ld:h-[500px] rounded-lg shadow-lg"
             />
             <div className="w-full lg:w-1/2">
-              <h3 className="text-white text-[28px] lg:text-[36px] font-semibold">
-                End-to-End Interoperability
+              <h3 className="text-white text-[22px] md:text-[28px] lg:text-[36px] font-semibold">
+                Real-Time Data Discovery
               </h3>
               <p className="text-gray-400 mt-4">
-                Access, connect, and analyze data from diverse, siloed sources
-                across the healthcare landscape, all in one place.
+                Discover and analyze data from diverse, siloed sources across
+                the healthcare landscape, all in one place.
               </p>
             </div>
           </motion.div>
@@ -71,10 +71,10 @@ export default function PlatformOverview() {
             <img
               src={privacy}
               alt=""
-              className="w-full lg:w-1/2 h-[400px] rounded-lg shadow-lg"
+              className="w-full lg:w-1/2 hidden xl:block h-[400px] ld:h-[500px] rounded-lg shadow-lg"
             />
             <div className="w-full lg:w-1/2">
-              <h3 className="text-white text-[28px] lg:text-[36px] font-semibold">
+              <h3 className="text-white text-[22px] md:text-[28px] lg:text-[36px] font-semibold">
                 Privacy First
               </h3>
               <p className="text-gray-400 mt-4">
@@ -94,10 +94,10 @@ export default function PlatformOverview() {
             <img
               src={granular}
               alt=""
-              className="w-full lg:w-1/2 h-[400px] rounded-lg shadow-lg"
+              className="w-full hidden xl:block lg:w-1/2 h-[400px] ld:h-[500px] rounded-lg shadow-lg"
             />
             <div className="w-full lg:w-1/2">
-              <h3 className="text-white text-[28px] lg:text-[36px] font-semibold">
+              <h3 className="text-white text-[22px] md:text-[28px] lg:text-[36px] font-semibold">
                 Granular Data Discovery
               </h3>
               <p className="text-gray-400 mt-4">

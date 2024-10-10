@@ -18,7 +18,7 @@ export default function Article({ thumbnail, title, link, pubDate }) {
   return (
     <motion.div
       variants={animate_article}
-      className="w-[85%] lg:w-[420px] h-[520px] flex flex-col justify-between bg-[#060606] text-white border border-gray-700 rounded-lg shadow-lg overflow-hidden filter grayscale hover:grayscale-0 "
+      className="w-[85%] lg:w-[420px] ld:w-[500px] h-[520px] flex flex-col justify-between bg-[#060606] text-white border border-gray-700 shadow-lg overflow-hidden transition-all duration-700 filter grayscale hover:grayscale-0 "
     >
       {thumbnail ? (
         <img

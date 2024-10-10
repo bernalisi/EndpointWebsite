@@ -1,6 +1,6 @@
 import scroll_down from "../../assets/images/ui/Chevron down white.svg";
 import read_down from "../../assets/images/ui/Chevron down black.svg";
-import background from "../../assets/images/homepage/Background homepage.svg";
+import background from "../../assets/videos/backgroundHome.mov";
 import { motion } from "framer-motion";
 
 // Animations
@@ -16,12 +16,10 @@ const ParentVariations = {
 const ChildVariations = {
   hidden: {
     opacity: 0,
-    x: -150,
   },
   visible: {
     opacity: 1,
-    x: 0,
-    transition: { ease: "easeOut", duration: 0.7 },
+    transition: { ease: "easeOut", duration: 3 },
   },
 };
 
@@ -65,28 +63,37 @@ const buttonBounce = {
 
 export default function Hero({ scrollToNextSection }) {
   return (
-    <div
-      className="relative w-screen h-full lg:h-auto bg-cover bg-center bg-repeat bg-[#1a1a1a] flex flex-row"
-      style={{ backgroundImage: `url(${background})` }}
-    >
+    <div className="relative w-screen h-full lg:h-auto bg-[#060606] flex flex-row">
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-0 ld:filter ld:brightness-200"
+      >
+        <source src={background} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
       {/* Gradient Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-[#1a1a1a]to-transparent opacity-80"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent opacity-80 z-10"></div>
 
       {/* Content */}
       <motion.div
         variants={ParentVariations}
         initial="hidden"
         animate="visible"
-        className="relative w-screen h-screen mt-[60px] lg:mt-[60px] px-2 sm:px-6 lg:px-8 pt-32 lg:pt-52 ml-10 pb-[333px] flex max-md:items-center max-sm:justify-end items-start flex-col gap-6"
+        className="relative w-screen h-screen mt-[60px] lg:mt-[60px] px-2 sm:px-6 lg:px-8 pt-32 lg:pt-52 pb-[333px] flex flex-col max-md:items-center max-sm:justify-end items-center gap-6 z-20"
       >
         {/* First paragraph */}
         <motion.h1
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[100%] lg:w-[65%] xl:w-[70%] ld:text-[100px] text-white px-4 xl:text-[70px] lg:text-[52px] ld:pt-52 sm:text-[50px] text-[40px] max-sm:text-left max-md:text-center font-semibold leading-tight"
+          className="w-[100%] lg:w-[65%] xl:w-[75%] ld:text-[100px] text-white px-4 xl:text-[80px] lg:text-[52px] ld:pt-52 sm:text-[50px] text-[40px] max-sm:text-left max-md:text-center font-semibold leading-tight"
         >
-          Unlock the world’s health data
+          Connecting the world&apos;s <br /> health data
         </motion.h1>
 
         {/* Second paragraph */}
@@ -94,11 +101,10 @@ export default function Hero({ scrollToNextSection }) {
           variants={ChildVariations}
           initial="hidden"
           animate="visible"
-          className="w-[75%] md:w-[90%] lg:w-[60%] xl:w-[55%] ld:text-[35px] px-4 hidden sm:block max-md:text-center text-white xl:text-[25px] md:text-[22px] sm:text-[20px] font-normal pt-5 leading-relaxed"
+          className="w-[75%] md:w-[90%] lg:w-[60%] xl:w-[75%] ld:text-[35px] px-4 hidden sm:block max-md:text-center text-white xl:text-[25px] md:text-[22px] sm:text-[20px] font-normal pt-5 leading-relaxed"
         >
           Building the infrastructure to connect real-world data across life
-          sciences and healthcare, empowering better patient outcomes through
-          data-driven decisions
+          sciences and healthcare
         </motion.a>
 
         {/* Call-to-action */}
