@@ -150,6 +150,19 @@ export default function DesktopNavbar() {
             initial="hidden"
             animate="visible"
           >
+            <a href="/contact us">CONTACT US</a>
+          </motion.button>
+
+          <motion.button
+            className={`h-8 px-5 ld:text-[20px] py-1 flex items-center font-semibold transition duration-150 ease-in-out ${
+              isTransparent && !hovering && !isSpecificPage
+                ? "bg-white border-white text-black hover:opacity-70"
+                : "bg-white border-white text-black hover:opacity-70"
+            }`}
+            variants={slideDownVariants}
+            initial="hidden"
+            animate="visible"
+          >
             <a
               target="_blank"
               href="https://calendly.com/bernardo-tryendpoint/book-call-with-bernardo"
