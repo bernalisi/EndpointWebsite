@@ -150,7 +150,10 @@ export default function DesktopNavbar() {
             initial="hidden"
             animate="visible"
           >
-            <a href="https://calendly.com/bernardo-tryendpoint/book-a-demo-with-bernardo">
+            <a
+              target="_blank"
+              href="https://calendly.com/bernardo-tryendpoint/book-call-with-bernardo"
+            >
               BOOK DEMO
             </a>
           </motion.button>

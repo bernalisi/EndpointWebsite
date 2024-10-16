@@ -5,7 +5,7 @@ import SectionSeparatorWhiteBg from "../../components/ui/SectionSeparator_white"
 export default function Contact() {
   return (
     <div
-      className="relative w-full h-[600px] xl:h-screen sm:h-[850px] ld:h-[900px] ld:px-[420px]  flex flex-col justify-start items-start gap-8 px-8 sm:px-12 lg:px-16 pt-10 sm:pt-16 lg:pt-20 transition-all duration-500 ease-in-out group" // Added hover and transition classes
+      className="relative w-full h-[600px] xl:[850px] sm:h-[850px] ld:h-[900px] ld:px-[420px]  flex flex-col justify-start items-start gap-8 px-8 sm:px-12 lg:px-16 pt-10 sm:pt-14 lg:pt-12 transition-all duration-500 ease-in-out group" // Added hover and transition classes
     >
       {/* Background image with default saturation */}
       <div

@@ -58,14 +58,6 @@ export default function Stats() {
         }}
         animate={floatAnimation([-10, 20], [-20, 15], 7)}
       />
-      <motion.div
-        className="absolute hidden xl:block bottom-[10%] left-0 w-28 h-28 rounded-full bg-cover"
-        style={{
-          backgroundImage: `url(${bg_image})`,
-        }}
-        animate={floatAnimation([-30, 40], [-40, 30], 9)}
-      />
-
       {/* Stats Content */}
       <div className="w-full flex flex-col gap-12 justify-center items-center z-10">
         <motion.h2

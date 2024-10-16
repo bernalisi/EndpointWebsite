@@ -79,7 +79,7 @@ export default function Platform() {
         >
           We’re creating a secure, interoperable platform to simplify how life
           sciences and healthcare providers share and analyze real-world data,
-          optimize clinical trials, and run observational studies.
+          optimize clinical trials, and run observational studies
         </motion.p>
       </motion.div>
 
@@ -118,7 +118,7 @@ export default function Platform() {
                 Speed up observational research, facilitate deeper insights into
                 diseases, enhance clinical trials, improve safety surveillance,
                 streamline regulatory submissions, boost commercialization
-                strategies.
+                strategies
               </p>
             </div>
           </div>
@@ -155,7 +155,7 @@ export default function Platform() {
               <p className="text-white text-base lg:text-lg leading-relaxed">
                 Your data can drive groundbreaking innovation in healthcare.
                 Endpoint helps providers activate their data for both internal
-                research and life sciences collaborations.
+                research and life sciences collaborations
               </p>
             </div>
           </div>

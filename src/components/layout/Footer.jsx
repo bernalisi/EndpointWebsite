@@ -5,7 +5,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
-  const Navigation = ["Privacy Policy", "Terms of use", "Cookies Settings"];
+  const Navigation = ["Privacy Policy", "Terms of use"];
   const navigate = useNavigate();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -35,7 +35,7 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-start gap-4">
             <button className="h-10 px-5 py-2 flex items-center justify-center font-semibold bg-white text-black transition hover:opacity-80">
               <a
-                href="https://calendly.com/bernardo-tryendpoint/book-a-demo-with-bernardo"
+                href="https://calendly.com/bernardo-tryendpoint/book-call-with-bernardo"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -80,7 +80,7 @@ export default function Footer() {
 
         {/* Second block */}
         <div className="w-full max-w-full flex flex-col items-center md:items-end h-full">
-          <ul className="flex flex-col md:flex-row absolute bottom-10 justify-center md:justify-end items-center md:items-end w-full gap-4 text-white text-center md:text-left">
+          <ul className="flex flex-col mb-20 md:flex-row absolute bottom-10 justify-center md:justify-end items-center md:items-end w-full gap-4 text-white text-center md:text-left">
             {Navigation.map((item) => (
               <React.Fragment key={item}>
                 <li className="text-sm md:text-lg font-light cursor-pointer px-4 hover:underline">
