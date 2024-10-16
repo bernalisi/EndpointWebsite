@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
-// Animation variant for sliding text from above
+// Animation variant for sliding text
 const slideDownVariants = {
   hidden: { opacity: 0 },
   visible: {
