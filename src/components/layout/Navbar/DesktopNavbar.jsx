@@ -143,8 +143,8 @@ export default function DesktopNavbar() {
           <motion.button
             className={`h-8 px-5 ld:text-[20px] py-1 flex items-center font-semibold transition duration-150 ease-in-out ${
               isTransparent && !hovering && !isSpecificPage
-                ? "bg-white border-white text-black hover:opacity-70"
-                : "bg-white border-white text-black hover:opacity-70"
+                ? "bg-white border-white text-black hover:bg-gray-400 hover:scale-105"
+                : "bg-white border-white text-black hover:opacity-30"
             }`}
             variants={slideDownVariants}
             initial="hidden"
@@ -156,8 +156,8 @@ export default function DesktopNavbar() {
           <motion.button
             className={`h-8 px-5 ld:text-[20px] py-1 flex items-center font-semibold transition duration-150 ease-in-out ${
               isTransparent && !hovering && !isSpecificPage
-                ? "bg-white border-white text-black hover:opacity-70"
-                : "bg-white border-white text-black hover:opacity-70"
+                ? "bg-white border-white text-black hover:bg-gray-400 hover:scale-105"
+                : "bg-white border-white text-black hover:opacity-30"
             }`}
             variants={slideDownVariants}
             initial="hidden"
