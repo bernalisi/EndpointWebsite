@@ -1,33 +1,44 @@
 import bg_image from "../../assets/images/homepage/Background_contact.png";
 import chevron_icon from "../../assets/images/ui/Chevron down black.svg";
-import SectionSeparatorWhite from "../../components/ui/SectionSeparator_white";
+import SectionSeparatorWhiteBg from "../../components/ui/SectionSeparator_white";
 
 export default function Contact() {
   return (
     <div
-      className="bg-cover bg-center bg-no-repeat w-full max-sm:h-auto max-sm:pb-20  h-[750px] ld:h-[625px] flex flex-col justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20"
-      style={{ backgroundImage: `url(${bg_image})` }}
+      className="relative w-full h-[600px] xl:[850px] sm:h-[850px] ld:h-[900px] ld:px-[420px]  flex flex-col justify-start items-start gap-8 px-8 sm:px-12 lg:px-16 pt-10 sm:pt-14 lg:pt-12 transition-all duration-500 ease-in-out group" // Added hover and transition classes
     >
-      <SectionSeparatorWhite TitleSection="READY TO SIMPLIFY HOW YOU DISCOVER HEALTH DATA?" />
+      {/* Background image with default saturation */}
+      <div
+        className="absolute inset-0 w-full h-full bg-cover bg-center transition-all duration-700 filter brightness-50 group-hover:brightness-95 saturate-[0.4] group-hover:saturate-[50%]"
+        style={{
+          backgroundImage: `url(${bg_image})`,
+          backgroundAttachment: "fixed",
+        }}
+      ></div>
 
-      <div className="w-full flex flex-col gap-10 md:gap-20 justify-between items-start">
-        {/* header section */}
-        <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-normal xl:leading-tight mt-3 py-[20px]">
-          Let’s discuss how Endpoint can help you explore RWD like never before
-        </h2>
-      </div>
+      <div className="relative z-10 xl:pt-20">
+        <SectionSeparatorWhiteBg TitleSection="READY TO SIMPLIFY HOW YOU DISCOVER HEALTH DATA?" />
 
-      {/* Content here */}
-      <div className="mt-32 md:mt-14 ld:mt-30 flex flex-col justify-center items-start gap-8 md:gap-10">
-        <h3 className="text-white text-[40px] sm:text-[60px] max-xs:text-[40px] md:text-[70px] lg:text-[85px] font-medium">
-          Unlocking data. Uncovering insights.
-        </h3>
-        <button className="w-auto ld:h-14 ld:ml-4 h-10 flex px-4 items-center justify-start font-semibold bg-white text-black transition duration-150 ease-in-out hover:opacity-90">
-          <a href="/contact us" className="flex items-center gap-2">
-            CONTACT US
-            <img src={chevron_icon} alt="chevron-button" className="h-5" />
-          </a>
-        </button>
+        <div className="relative w-full flex flex-col gap-10">
+          {/* Header Section */}
+          <h2 className="text-white text-[24px] lg:text-[40px] font-semibold leading-relaxed mt-6">
+            Let’s discuss how Endpoint can help you explore RWD like never
+            before
+          </h2>
+        </div>
+
+        {/* Content Section */}
+        <div className="relative flex flex-col justify-center items-start gap-6">
+          <h3 className="text-white text-[36px] md:text-[60px] lg:text-[100px] font-bold leading-tight pt-24">
+            Unlocking data. Uncovering insights.
+          </h3>
+          <button className="flex items-center gap-3 bg-white text-black font-semibold px-6 py-3 transition duration-150 ease-in-out hover:opacity-90">
+            <a href="/contact us" className="flex items-center gap-2">
+              CONTACT US
+              <img src={chevron_icon} alt="chevron-button" className="h-5" />
+            </a>
+          </button>
+        </div>
       </div>
     </div>
   );

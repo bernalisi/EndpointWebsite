@@ -1,6 +1,6 @@
 import bg_image from "../../assets/images/homepage/Background_contact.png";
 import chevron_icon from "../../assets/images/ui/Chevron down black.svg";
-import SectionSeparatorWhite from "../../components/ui/SectionSeparator_white";
+import SectionSeparatorWhiteBg from "../../components/ui/SectionSeparator_white";
 
 export default function ContactProvider() {
   return (
@@ -8,7 +8,7 @@ export default function ContactProvider() {
       className="bg-cover bg-center bg-no-repeat w-full max-sm:h-auto max-sm:pb-20 h-[670px] sm:h-[750px] ld:h-[625px] flex flex-col justify-start items-start gap-4 px-6 sm:px-10 lg:px-14 pt-10 sm:pt-16 lg:pt-20"
       style={{ backgroundImage: `url(${bg_image})` }}
     >
-      <SectionSeparatorWhite TitleSection="READY TO SIMPLIFY HOW YOU DISCOVER HEALTH DATA?" />
+      <SectionSeparatorWhiteBg TitleSection="READY TO SIMPLIFY HOW YOU DISCOVER HEALTH DATA?" />
 
       <div className="w-full flex flex-col gap-10 md:gap-20 justify-between items-start">
         {/* header section */}

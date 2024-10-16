@@ -5,7 +5,8 @@ import Homepage from "./pages/Homepage";
 import LifeSciences from "./pages/LifeSciences";
 import HealthcareProviders from "./pages/HealthcareProviders";
 import ContactUs from "./pages/ContactUs";
-// import Resources from "./pages/Resources"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Navbar from "./components/layout/Navbar/Navbar";
 import Footer from "./components/layout/Footer";
 import { ArticlesProvider } from "./components/resources/ArticlesContext";

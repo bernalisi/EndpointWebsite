@@ -1,44 +1,58 @@
 import chevron_icon from "../../assets/images/ui/Chevron down white.svg";
 import { motion } from "framer-motion";
 
-export default function Article({ thumbnail, title, description, link }) {
+export default function Article({ thumbnail, title, link, pubDate }) {
   const animate_article = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
+  const formattedDate = pubDate
+    ? new Date(pubDate).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
+    : "Unknown Date";
+
   return (
     <motion.div
       variants={animate_article}
-      className="w-[80%] lg:w-[400px] h-auto flex flex-col justify-between gap-4 ld:gap-4 text-white"
+      className="w-[85%] lg:w-[420px] ld:w-[500px] h-[520px] flex flex-col justify-between bg-[#060606] text-white border border-gray-700 shadow-lg overflow-hidden transition-all duration-700 filter grayscale hover:grayscale-0 "
     >
       {thumbnail ? (
         <img
           src={thumbnail}
-          alt={title}
-          className="h-40 md:h-52 ld:h-80 bg-slate-100 object-cover"
+          alt={`Thumbnail for ${title || "article"}`}
+          className="w-full h-44 md:h-56  cursor-pointer object-cover transition duration-300"
         />
       ) : (
-        <div className="h-40 md:h-52 bg-slate-100 flex items-center justify-center text-gray-500">
-          No Image
+        <div className="h-44 md:h-56 bg-slate-200 flex items-center justify-center text-gray-500">
+          No Image Available
         </div>
       )}
-      <h6 className="text-xs ld:text-[16px] md:text-[12px] font-light">BLOG</h6>{" "}
-      {/* You can adjust or remove this */}
-      <p className="text-lg ld:text-[30px] md:text-[24px] line-clamp-2 font-semibold ld:leading-normal">
-        {title}
-      </p>
-      <button className="w-full h-10 md:h-8 py-1 flex justify-start items-center font-extralight tracking-widest transition duration-150 ease-in-out text-white hover:opacity-80">
+
+      <div className="flex-grow p-4 flex flex-col justify-between">
+        <div>
+          <h6 className="text-xs md:text-sm font-light text-gray-300">BLOG</h6>
+          <p className="text-sm text-gray-400 mt-4">{formattedDate}</p>
+          <p className="text-lg md:text-2xl font-semibold leading-snug line-clamp-3 mt-2">
+            {title}
+          </p>
+        </div>
+      </div>
+
+      <div className="px-4 pb-4">
         <a
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2"
+          className="w-full h-10 flex items-center justify-start text-sm font-light tracking-wider transition-opacity duration-150 ease-in-out hover:opacity-80"
         >
           Read more
-          <img src={chevron_icon} alt="Chevron button" className="h-5" />
+          <img src={chevron_icon} alt="Chevron icon" className="h-5 ml-2" />
         </a>
-      </button>
+      </div>
     </motion.div>
   );
 }

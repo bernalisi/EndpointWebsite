@@ -10,7 +10,7 @@ export default function SectionSeparator({ TitleSection, textColor }) {
     show: {
       opacity: 1,
       x: 0,
-      transition: { delay: 0.5, duration: 0.2, ease: "easeInOut" },
+      transition: { duration: 1.5, ease: "easeInOut" },
     },
   };
 

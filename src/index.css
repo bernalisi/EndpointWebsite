@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fonts */
+@font-face {
+  font-family: "Rena";
+  src: url("/src/assets/fonts/ttf/Gully-Regular.ttf") format("truetype");
+  font-weight: 400; /* Normal weight */
+  font-style: normal;
+}
+
 @layer base {
   html {
     font-family: "Inter", system-ui, sans-serif;
